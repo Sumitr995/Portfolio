@@ -1,13 +1,13 @@
 import React from 'react'
 
-const About = () => {
+const Project = () => {
   return (
     <div className='flex w-screen flex-col'>
         <div className='w-1/2 min-h-screen border-2 border-zinc-500 m-auto h-[300vh] mt-16.25 ' >
-          About
+          Project
         </div>
     </div>
   )
 }
 
-export default About
+export default Project
