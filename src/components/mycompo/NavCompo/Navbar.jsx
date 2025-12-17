@@ -7,10 +7,13 @@ import NavImage from './NavImage';
 const Navbar = () => {
     
     return (
-        <div className='flex justify-center gap-50 items-center fixed dark:bg-[#09090B] bg-white w-screen z-10 '>
-            <NavImage/>
-            <Navlists/>
+        <div className='w-full h-[10vh] flex items-center justify-center  relative z-20'>
+            <div className='flex w-1/2 justify-between items-center fixed left-[27vw] m-0.75  bg-white dark:bg-[#09090B] '>
+                <NavImage/>
+                <Navlists/>
+            </div>
         </div>
+            
     )
 };
 

@@ -13,7 +13,7 @@ import Contact from "./pages/Contact";
 export default function App() {
   return (
     <ClickSpark sparkSize={10} sparkRadius={15} sparkCount={8} duration={400}>
-      <div className="min-h-screen w-[98vw] relative ">
+      <div className="min-h-screen w-screen overflow-hidden">
         {/* Cat Animation */}
         <Oneko />
         <o-neko class="fixed z-99" speed="10"></o-neko>
