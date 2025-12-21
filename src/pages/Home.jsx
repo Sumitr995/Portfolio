@@ -5,6 +5,8 @@ import HomeButtons from '@/components/mycompo/HomeCompo/HomeButtons'
 import React from 'react'
 import { Button } from '@/components/ui/button';
 import Data from '@/Data/Data.json'
+import { Accordion } from '@/components/ui/accordion';
+import WorkExperience from '@/components/WorkExperience/WorkExperience';
 
 const Home = () => {
 
@@ -22,9 +24,9 @@ const Home = () => {
       </div>
       <div className='h-[80vh] w-1/2 ml-[27vw]  '>
       <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300'>Featured</div>
-      <div className='text-zinc-500 font-bold text-xl '>Experience</div>
-
-
+      <div className='text-zinc-500 dark:text-zinc-300 font-bold text-xl '>Experience</div>
+       <WorkExperience/>
+      
       </div>
     </div>
 
