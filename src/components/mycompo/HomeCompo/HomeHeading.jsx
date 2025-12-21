@@ -10,7 +10,7 @@ const HomeHeading = () => {
                 <span className='text-zinc-500' >Full Stack Web Developer.</span>
             </h1>
             <p className='text-lg font-semibold text-justify text-zinc-400 dark:text-zinc-300 mt-5'>
-                I build full-stack web applications with React and Node.js, focused on clean UI, secure authentication, and cloud-deployed systems that solve real problems end-to-end.</p>
+                I build full-stack web applications with React and Node.js, Express, MongoDB, PostgreSQL focused on clean UI, secure authentication, and cloud-deployed systems that solve real problems end-to-end.</p>
         </div>
 
     )
