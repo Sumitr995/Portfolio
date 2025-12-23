@@ -1,7 +1,122 @@
-[
-    {
-        "name": "Sumit Rathod",
-        "role": "Full Stack Developer",
-        "description": "I am a passionate Full Stack Developer with expertise in building dynamic and responsive web applications. Skilled in both front-end and back-end technologies, I thrive on creating seamless user experiences and efficient server-side solutions."
+{
+  "basics": {
+    "name": "Sumit Rathod",
+    "location": {
+      "city": "Mumbai",
+      "country": "India"
+    },
+    "phone": "+91 8779374948",
+    "email": "itzsumitr995@gmail.com",
+    "profiles": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "linktree": "Linktree"
     }
-]
+  },
+  "workExperience": [
+    {
+      "organization": "Google Developer Groups OnCampus ACE",
+      "imageUrl": "/GDGC-icon.png",
+      "location": "Malad West, Mumbai",
+      "role": "Core Team & Cloud Team Member",
+      "startDate": "Sep 2025",
+      "endDate": "Present",
+      "techStack": ["GCP", "Nginx", "Prometheus", "Ansible", "Flask"],
+      "work": [
+        "Deployed a Flask backend on cloud infrastructure independently, configuring Nginx as a reverse proxy and Certbot for SSL management.",
+        "Implemented Prometheus-based monitoring and used Ansible for basic automation and environment setup.",
+        "Earned 25+ Google Cloud Skill Badges and led 12 participants to successfully complete Cloud Study Jam 2025.",
+        "Improved team execution using Jira and applied Docker containerization fundamentals to support efficient technical planning."
+      ]
+    },
+    {
+      "organization": "Google Developer Groups OnCampus ACE",
+      "imageUrl": "/GDGC-icon.png",
+      "location": "Malad West, Mumbai",
+      "role": "Web Team Member",
+      "startDate": "Aug 2025",
+      "endDate": "Sep 2025",
+      "highlights": [
+        "Led development of the GDG Organization Website with a 10-member team, contributing to core pages and achieving a verified 30% improvement in site design.",
+        "Built the Pixel Designathon Website using React, HTML, and Tailwind CSS, supporting 100+ peak registrations during live onboarding.",
+        "Integrated React Hook Form and advanced UI libraries to handle complex form validation and user flows efficiently.",
+        "Developed a Recipe Generator App consuming the CalorieNinja API via Axios, achieving an average ~200ms API response latency."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Full Stack Authentication Service",
+      "duration": "Oct 2025 - Dec 2025",
+      "techStack": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "JWT",
+        "Bcrypt",
+        "Tailwind CSS"
+      ],
+      "description": [
+        "Designed a MERN-based authentication system with JWT authorization and secure password hashing.",
+        "Implemented OTP-based recovery flows and email verification using Nodemailer with Google SMTP.",
+        "Built a React client using React Hook Form and Axios with full auth lifecycle integration."
+      ],
+      "repository": "GitHub"
+    },
+    {
+      "title": "Hackathon Ticket System",
+      "duration": "Nov 2024 – Dec 2025",
+      "techStack": [
+        "React",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React Hook Form",
+        "Lucide React"
+      ],
+      "description": [
+        "Developed a hackathon registration system with validated multi-user forms and sequential ticket ID generation.",
+        "Implemented client-side persistence using Local Storage.",
+        "Built an Admin Dashboard with real-time CRUD operations, live metrics, and search functionality."
+      ],
+      "repository": "GitHub"
+    }
+  ],
+  "skills": {
+    "languages": ["JavaScript", "Python"],
+    "frontend": ["React.js", "Redux", "Tailwind CSS", "shadcn UI"],
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "Flask",
+      "REST APIs",
+      "JWT Authentication"
+    ],
+    "databases": ["MongoDB", "PostgreSQL"],
+    "cloudDevOps": [
+      "Google Cloud Platform",
+      "Cloud Run",
+      "Load Balancing",
+      "Docker",
+      "Ansible",
+      "Nginx",
+      "Prometheus"
+    ],
+    "tools": ["Git", "GitHub", "Postman", "Jira", "n8n"]
+  },
+  "achievements": [
+    "Team Lead, HackRobo 1.0 — IoT Search & Rescue Bot; secured 9th position out of 37 teams.",
+    "AIR 4,967 - AINCAT 2025 (2.1L+ participants).",
+    "Naukri Campus Young Turks 2025 (Certified).",
+    "AI Meets Signal Processing (MATLAB PDP).",
+    "CSI Bootcamp — Machine Learning, Deep Learning, DSP.",
+    "Drone Expo 2025 — Defense drones, AI-software integration, surveillance, rescue, smart farming."
+  ],
+  "education": {
+    "institution": "Atharva College of Engineering",
+    "location": "Malad West, Mumbai, India",
+    "degree": "B.E. in Electronics and Telecommunication Engineering",
+    "graduationDate": "May 2027"
+  }
+}

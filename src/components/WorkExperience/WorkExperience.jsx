@@ -4,36 +4,40 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
+import data from "@/Data/Data.json";
 
 export default function WorkExperience() {
+
+  const workExperiences = data.workExperience;
+
   return (
     <section className="max-w-4xl mx-auto">
       <Accordion type="single" collapsible className="w-full">
         
         {/* ================= UPSURGE ================= */}
-        <AccordionItem value="upsurge">
+        <AccordionItem value="GDGC Cloud">
           <AccordionTrigger>
             <div className="flex w-full items-start gap-4  ">
               
               {/* Logo */}
-              <div className="h-10 w-10 rounded-3xl bg-zinc-500 flex items-center justify-center text-white">
-                <img width={30} src="/GDGC-Logo-bg.png" alt="" />
+              <div className="h-10 w-10 rounded-3xl border flex items-center justify-center">
+                <img width={30} src={workExperiences[0].imageUrl} alt="GDGC Logo" />
               </div>
 
               {/* Role + Company */}
               <div className="flex-1">
                 <h3 className="font-semibold text-base ">
-                  Google Developers Group OnCampus
+                  {workExperiences[0].organization}
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Core Team Member & Cloud Team Member
+                  {workExperiences[0].role}
                 </p>
               </div>
 
               {/* Date + Location */}
               <div className="hidden sm:block text-right text-sm text-muted-foreground">
-                <p>Sep 2025 - Present</p>
-                <p>Malad West, Mumbai</p>
+                <p>{workExperiences[0].startDate} - {workExperiences[0].endDate}</p>
+                <p>{workExperiences[0].location}</p>
               </div>
 
             </div>
@@ -42,7 +46,7 @@ export default function WorkExperience() {
           <AccordionContent>
             {/* Technologies */}
             <div className="flex flex-wrap gap-2 mb-4">
-              {["NestJS", "Postman", "TypeScript", "Express"].map((tech) => (
+              {workExperiences[0].techStack.map((tech) => (
                 <span
                   key={tech}
                   className="rounded-full border px-3 py-1 text-xs font-medium"
@@ -55,51 +59,48 @@ export default function WorkExperience() {
             {/* Bullet points */}
             <ul className="list-disc space-y-2 pl-5 text-muted-foreground">
               <li>
-                Backend development for <b>Bhindi.io</b>, focusing on core
-                infrastructure and agent development.
+                      {workExperiences[0].work[0]}
               </li>
               <li>
-                Engineered and deployed high-performance agents improving user
-                experience.
+                {workExperiences[0].work[1]}
               </li>
               <li>
-                Tested agent functionality, authentication, automation, and
-                system stability.
+                {workExperiences[0].work[2]}
               </li>
               <li>
-                Streamlined workflows and maintained detailed technical
-                documentation.
+                {workExperiences[0].work[3]}
               </li>
             </ul>
           </AccordionContent>
         </AccordionItem>
 
         {/* ================= PREPEASY ================= */}
-        <AccordionItem value="prepeasy">
+        <AccordionItem value="GDGC web">
           <AccordionTrigger>
             <div className="flex w-full items-start gap-4">
-              <div className="h-12 w-12 rounded-xl bg-black flex items-center justify-center text-white">
-                P
+              <div className="h-10 w-10 rounded-3xl border flex items-center justify-center">
+                <img width={30} src={workExperiences[1].imageUrl} alt="GDGC Logo" />
               </div>
 
               <div className="flex-1">
-                <h3 className="font-semibold">Prepeasy</h3>
+                <h3 className="font-semibold">{workExperiences[1].organization}</h3>
                 <p className="text-sm text-muted-foreground">
-                  Founding Engineer
+                  {workExperiences[1].role}
                 </p>
               </div>
 
               <div className="hidden sm:block text-right text-sm text-muted-foreground">
-                <p>April 2025 - June 2025</p>
-                <p>Remote (India)</p>
+                <p>{workExperiences[1].startDate} - {workExperiences[1].endDate}</p>
+                <p>{workExperiences[1].location}</p>
               </div>
             </div>
           </AccordionTrigger>
 
           <AccordionContent>
             <ul className="list-disc space-y-2 pl-5 text-muted-foreground">
-              <li>Built MVP features and core product architecture.</li>
-              <li>Worked closely with founders on technical decisions.</li>
+              {workExperiences[1].highlights.map((highlight, index) => (
+                <li key={index}>{highlight}</li>
+              ))}
             </ul>
           </AccordionContent>
         </AccordionItem>

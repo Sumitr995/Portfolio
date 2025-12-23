@@ -4,13 +4,10 @@ import HomeLinks from "../components/mycompo/HomeCompo/HomeLinks";
 import HomeButtons from '@/components/mycompo/HomeCompo/HomeButtons'
 import React from 'react'
 import { Button } from '@/components/ui/button';
-import Data from '@/Data/Data.json'
 import { Accordion } from '@/components/ui/accordion';
 import WorkExperience from '@/components/WorkExperience/WorkExperience';
 
 const Home = () => {
-
-  console.log(Data);
 
 
   return (
