@@ -19,11 +19,13 @@ const Home = () => {
         <HomeLinks />
 
       </div>
-      <div className='h-[80vh] w-1/2 ml-[27vw]  '>
+      <div className=' w-1/2 ml-[27vw]  '>
       <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300'>Featured</div>
-      <div className='text-zinc-500 dark:text-zinc-300 font-bold text-xl '>Experience</div>
+      <div className='text-zinc-500 dark:text-zinc-300 font-bold text-2xl '>Experience</div>
        <WorkExperience/>
-      
+      <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300 mt-5 '>Featured</div>
+      <div className='text-zinc-500 dark:text-zinc-300 font-bold text-2xl'>Projects</div>
+
       </div>
     </div>
 

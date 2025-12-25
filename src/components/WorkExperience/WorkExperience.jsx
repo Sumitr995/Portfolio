@@ -14,7 +14,7 @@ export default function WorkExperience() {
     <section className="max-w-4xl mx-auto">
       <Accordion type="single" collapsible className="w-full">
         
-        {/* ================= UPSURGE ================= */}
+        {/* ================= GDGC CLOUD ================= */}  
         <AccordionItem value="GDGC Cloud">
           <AccordionTrigger>
             <div className="flex w-full items-start gap-4  ">
@@ -58,23 +58,13 @@ export default function WorkExperience() {
 
             {/* Bullet points */}
             <ul className="list-disc space-y-2 pl-5 text-muted-foreground">
-              <li>
-                      {workExperiences[0].work[0]}
-              </li>
-              <li>
-                {workExperiences[0].work[1]}
-              </li>
-              <li>
-                {workExperiences[0].work[2]}
-              </li>
-              <li>
-                {workExperiences[0].work[3]}
-              </li>
+              {workExperiences[0].work.map((highlight, index) => (
+                <li key={index}>{highlight}</li>
+              ))}
             </ul>
           </AccordionContent>
         </AccordionItem>
-
-        {/* ================= PREPEASY ================= */}
+        {/* ================= GDGC WEB ================= */}
         <AccordionItem value="GDGC web">
           <AccordionTrigger>
             <div className="flex w-full items-start gap-4">
@@ -97,6 +87,20 @@ export default function WorkExperience() {
           </AccordionTrigger>
 
           <AccordionContent>
+
+            {/* TechStack */}
+            <div className="flex flex-wrap gap-2 mb-4">
+              {workExperiences[1].techStack.map((tech) => (
+                <span
+                  key={tech}
+                  className="rounded-full border px-3 py-1 text-xs font-medium"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            {/* Bullet points */}
             <ul className="list-disc space-y-2 pl-5 text-muted-foreground">
               {workExperiences[1].highlights.map((highlight, index) => (
                 <li key={index}>{highlight}</li>

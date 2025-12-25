@@ -21,7 +21,17 @@
       "role": "Core Team & Cloud Team Member",
       "startDate": "Sep 2025",
       "endDate": "Present",
-      "techStack": ["GCP", "Nginx", "Prometheus", "Ansible", "Flask"],
+      "techStack": [
+        "GCP",
+        "Nginx",
+        "Prometheus",
+        "Ansible",
+        "Flask",
+        "Docker",
+        "Jira",
+        "Cloud Run",
+        "Load Balancer"
+      ],
       "work": [
         "Deployed a Flask backend on cloud infrastructure independently, configuring Nginx as a reverse proxy and Certbot for SSL management.",
         "Implemented Prometheus-based monitoring and used Ansible for basic automation and environment setup.",
@@ -36,6 +46,18 @@
       "role": "Web Team Member",
       "startDate": "Aug 2025",
       "endDate": "Sep 2025",
+      "techStack": [
+        "React",
+        "Node.js",
+        "Express.js",
+        "Tailwind CSS",
+        "MongoDB",
+        "PostgreSQL",
+        "React Hook Form",
+        "Axios",
+        "JWT",
+        "Auth"
+      ],
       "highlights": [
         "Led development of the GDG Organization Website with a 10-member team, contributing to core pages and achieving a verified 30% improvement in site design.",
         "Built the Pixel Designathon Website using React, HTML, and Tailwind CSS, supporting 100+ peak registrations during live onboarding.",
@@ -66,7 +88,7 @@
     },
     {
       "title": "Hackathon Ticket System",
-      "duration": "Nov 2024 – Dec 2025",
+      "duration": "Nov 2024 -w Dec 2025",
       "techStack": [
         "React",
         "HTML",

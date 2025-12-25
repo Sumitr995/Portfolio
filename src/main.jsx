@@ -7,10 +7,8 @@ import { AppContext } from './context/context';
 
 createRoot(document.getElementById('root')).render(
   <AppContext.Provider value={{}}>
-    <StrictMode>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </StrictMode>,
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </AppContext.Provider>
 )
