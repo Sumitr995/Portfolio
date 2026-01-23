@@ -141,5 +141,11 @@
     "location": "Malad West, Mumbai, India",
     "degree": "B.E. in Electronics and Telecommunication Engineering",
     "graduationDate": "May 2027"
+  },
+  "languages": {
+    "English": "Professional Proficiency",
+    "Hindi": "Native Proficiency",
+    "Marathi": "Native Proficiency"
   }
+  
 }

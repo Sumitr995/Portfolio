@@ -4,6 +4,7 @@ import HomeLinks from "../components/mycompo/HomeCompo/HomeLinks";
 import HomeButtons from '@/components/mycompo/HomeCompo/HomeButtons'
 import React from 'react'
 import WorkExperience from '@/components/WorkExperience/WorkExperience';
+import ProjectCard from '@/components/mycompo/HomeCompo/ProjectCard';
 
 
 const Home = () => {
@@ -17,7 +18,6 @@ const Home = () => {
           <HomeHeading />
           <HomeButtons />
           <HomeLinks />
-
         </div>
         <div className=' w-1/2 '>
           <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300'>Featured</div>
@@ -25,8 +25,10 @@ const Home = () => {
           <WorkExperience />
           <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300 mt-5 '>Featured</div>
           <div className='text-zinc-500 dark:text-zinc-300 font-bold text-2xl'>Projects</div>
-          
         </div>
+          <div className='w-1/2'>
+            <ProjectCard />
+          </div>
       </div>
     </div>
 
@@ -34,3 +36,4 @@ const Home = () => {
 }
 
 export default Home
+
