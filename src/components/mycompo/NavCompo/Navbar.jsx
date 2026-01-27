@@ -1,18 +1,16 @@
 import React from 'react'
-import Navlists from './Navlists';
-import NavImage from './NavImage';
+import Navlists from './Navlists'
+import NavImage from './NavImage'
 
 const Navbar = () => {
-    
-    return (
-        <div className='w-full h-[10vh] flex items-center justify-center  relative z-20'>
-            <div className=' w-[52%] flex items-center justify-between fixed top-0 dark:bg-transparent bg-white '>
-                <NavImage/>
-                <Navlists/>
-            </div>
-        </div>
-            
-    )
-};
+  return (
+    <div className="fixed top-0 left-0 w-full z-50 flex justify-center backdrop-blur-md bg-white/70 dark:bg-black/40">
+      <div className="w-[52%] h-[10vh] flex items-center justify-between">
+        <NavImage />
+        <Navlists />
+      </div>
+    </div>
+  )
+}
 
 export default Navbar

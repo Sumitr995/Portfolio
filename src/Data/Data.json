@@ -21,17 +21,17 @@
       "role": "Core Team & Cloud Team Member",
       "startDate": "Sep 2025",
       "endDate": "Present",
-      "techStack": [
-        "GCP",
-        "Nginx",
-        "Prometheus",
-        "Ansible",
-        "Flask",
-        "Docker",
-        "Jira",
-        "Cloud Run",
-        "Load Balancer"
-      ],
+      "techStack": {
+        "GCP": "/gcp-icon.png",
+        "Nginx": "/nginx-icon.png",
+        "Prometheus": "/prometheus-icon.png",
+        "Ansible": "/ansible-icon.png",
+        "Flask": "/flask-icon.png",
+        "Docker": "/docker-icon.png",
+        "Jira": "/jira-icon.png",
+        "Cloud Run": "/cloud-run-icon.png",
+        "Load Balancer": "/load-balancer-icon.png"
+      },
       "work": [
         "Deployed a Flask backend on cloud infrastructure independently, configuring Nginx as a reverse proxy and Certbot for SSL management.",
         "Implemented Prometheus-based monitoring and used Ansible for basic automation and environment setup.",
@@ -46,19 +46,19 @@
       "role": "Web Team Member",
       "startDate": "Aug 2025",
       "endDate": "Sep 2025",
-      "techStack": [
-        "React",
-        "Node.js",
-        "Express.js",
-        "Tailwind CSS",
-        "MongoDB",
-        "PostgreSQL",
-        "React Hook Form",
-        "Axios",
-        "JWT",
-        "Auth",
-        "Restful APIs"
-      ],
+      "techStack": {
+        "React": "/react-icon.png",
+        "Node.js": "/nodejs-icon.png",
+        "Express.js": "/expressjs-icon.png",
+        "Tailwind CSS": "/tailwind-icon.png",
+        "MongoDB": "/mongodb-icon.png",
+        "PostgreSQL": "/postgresql-icon.png",
+        "React Hook Form": "/react-hook-form-icon.png",
+        "Axios": "/axios-icon.png",
+        "JWT": "/jwt-icon.png",
+        "Auth": "/auth-icon.png",
+        "Restful APIs": "/api-icon.png"
+      },
       "highlights": [
         "Led development of the GDG Organization Website with a 10-member team, contributing to core pages and achieving a verified 30% improvement in site design.",
         "Built the Pixel Designathon Website using React, HTML, and Tailwind CSS, supporting 100+ peak registrations during live onboarding.",
@@ -71,62 +71,81 @@
     {
       "title": "Full Stack Authentication Service",
       "duration": "Oct 2025 - Dec 2025",
-      "techStack": [
-        "React",
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "JWT",
-        "Bcrypt",
-        "Tailwind CSS"
-      ],
+      "imageUrl": "",
+      "techStack": {
+        "React": "/react-icon.png",
+        "Node.js": "/nodejs-icon.png",
+        "Express.js": "/expressjs-icon.png",
+        "MongoDB": "/mongodb-icon.png",
+        "JWT": "/jwt-icon.png",
+        "React Hook Form": "/react-hook-form-icon.png",
+        "Axios": "/axios-icon.png"
+      },
       "description": [
-        "Designed a MERN-based authentication system with JWT authorization and secure password hashing.",
-        "Implemented OTP-based recovery flows and email verification using Nodemailer with Google SMTP.",
-        "Built a React client using React Hook Form and Axios with full auth lifecycle integration."
+        "Built a secure MERN authentication system using JWT and OTP-based email verification, and integrated a React client with React Hook Form and Axios for the complete auth flow."
       ],
-      "repository": "GitHub"
+      "Github-Link": "https://github.com/Sumitr995/Auth-Service-App",
+      "Live-Link": "NIL"
     },
     {
       "title": "Hackathon Ticket System",
-      "duration": "Nov 2024 -w Dec 2025",
-      "techStack": [
-        "React",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React Hook Form",
-        "Lucide React"
-      ],
+      "duration": "Nov 2024 - Dec 2025",
+      "imageUrl": "",
+      "techStack": {
+        "React": "/react-icon.png",
+        "HTML": "/html-icon.png",
+        "CSS": "/css-icon.png",
+        "JavaScript": "/javascript-icon.png",
+        "React Hook Form": "/react-hook-form-icon.png",
+        "Lucide React": "/lucide-react-icon.png"
+      },
       "description": [
-        "Developed a hackathon registration system with validated multi-user forms and sequential ticket ID generation.",
-        "Implemented client-side persistence using Local Storage.",
-        "Built an Admin Dashboard with real-time CRUD operations, live metrics, and search functionality."
+        "Built a hackathon registration system with validated forms, auto-generated ticket IDs, local storage persistence, and a real-time admin dashboard."
       ],
-      "repository": "GitHub"
+      "Github-Link": "https://github.com/Sumitr995/Ticket-System",
+      "Live-Link": "https://ticketsystem-sumitr995.netlify.app/"
     }
   ],
   "skills": {
-    "languages": ["JavaScript", "Python"],
-    "frontend": ["React.js", "Redux", "Tailwind CSS", "shadcn UI"],
-    "backend": [
-      "Node.js",
-      "Express.js",
-      "Flask",
-      "REST APIs",
-      "JWT Authentication"
-    ],
-    "databases": ["MongoDB", "PostgreSQL"],
-    "cloudDevOps": [
-      "Google Cloud Platform",
-      "Cloud Run",
-      "Load Balancing",
-      "Docker",
-      "Ansible",
-      "Nginx",
-      "Prometheus"
-    ],
-    "tools": ["Git", "GitHub", "Postman", "Jira", "n8n"]
+    "languages": {
+      "javaScript": "/javascript-icon.png",
+      "python": "/python-icon.png",
+      "cpp": "/cpp-icon.png",
+      "c-lang": "/c-icon.png"
+    },
+    "frontend": {
+      "React.js": "/react-icon.png",
+      "Redux": "/redux-icon.png",
+      "Tailwind CSS": "/tailwind-icon.png",
+      "shadcn UI": "/shadcn-icon.png"
+    },
+    "backend": {
+      "Node.js": "/nodejs-icon.png",
+      "Express.js": "/expressjs-icon.png",
+      "Flask": "/flask-icon.png",
+      "REST APIs": "/api-icon.png",
+      "JWT Authentication": "/jwt-icon.png"
+    },
+    "databases": {
+      "MongoDB": "/mongodb-icon.png",
+      "PostgreSQL": "/postgresql-icon.png"
+    },
+    "cloudDevOps": {
+      "Google Cloud Platform": "/gcp-icon.png",
+      "Cloud Run": "/cloud-run-icon.png",
+      "Load Balancing": "/load-balancing-icon.png",
+      "Docker": "/docker-icon.png",
+      "Ansible": "/ansible-icon.png",
+      "Nginx": "/nginx-icon.png",
+      "Prometheus": "/prometheus-icon.png"
+    },
+    "tools": {
+      "Git": "/git-icon.png",
+      "GitHub": "/github-icon.png",
+      "Postman": "/postman-icon.png",
+      "Jira": "/jira-icon.png",
+      "n8n": "/n8n-icon.png"
+    }
   },
   "achievements": [
     "Team Lead, HackRobo 1.0 — IoT Search & Rescue Bot; secured 9th position out of 37 teams.",
@@ -147,5 +166,4 @@
     "Hindi": "Native Proficiency",
     "Marathi": "Native Proficiency"
   }
-  
 }
