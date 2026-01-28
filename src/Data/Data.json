@@ -22,15 +22,15 @@
       "startDate": "Sep 2025",
       "endDate": "Present",
       "techStack": [
-        { "name": "GCP", "icon": "/gcp-icon.png" },
-        { "name": "Nginx", "icon": "/nginx-icon.png" },
-        { "name": "Prometheus", "icon": "/prometheus-icon.png" },
-        { "name": "Ansible", "icon": "/ansible-icon.png" },
-        { "name": "Flask", "icon": "/flask-icon.png" },
-        { "name": "Docker", "icon": "/docker-icon.png" },
-        { "name": "Jira", "icon": "/jira-icon.png" },
-        { "name": "Cloud Run", "icon": "/cloud-run-icon.png" },
-        { "name": "Load Balancer", "icon": "/load-balancer-icon.png" }
+        { "name": "GCP", "icon": "/techstack/gcp-icon.png" },
+        { "name": "Nginx", "icon": "/techstack/nginx-icon.png" },
+        { "name": "Prometheus", "icon": "/techstack/prometheus-icon.png" },
+        { "name": "Ansible", "icon": "/techstack/ansible-icon.png" },
+        { "name": "Flask", "icon": "/techstack/flask-icon.png" },
+        { "name": "Docker", "icon": "/techstack/docker-icon.png" },
+        { "name": "Jira", "icon": "/techstack/jira-icon.png" },
+        { "name": "Cloud Run", "icon": "/techstack/cloud-run-icon.png" },
+        { "name": "Load Balancer", "icon": "/techstack/load-balancer-icon.png" }
       ],
       "work": [
         "Deployed a Flask backend on cloud infrastructure independently, configuring Nginx as a reverse proxy and Certbot for SSL management.",
@@ -47,17 +47,17 @@
       "startDate": "Aug 2025",
       "endDate": "Sep 2025",
       "techStack": [
-        { "name": "React", "icon": "/react-icon.png" },
-        { "name": "Node.js", "icon": "/nodejs-icon.png" },
-        { "name": "Express.js", "icon": "/expressjs-icon.png" },
-        { "name": "Tailwind CSS", "icon": "/tailwind-icon.png" },
-        { "name": "MongoDB", "icon": "/mongodb-icon.png" },
-        { "name": "PostgreSQL", "icon": "/postgresql-icon.png" },
-        { "name": "React Hook Form", "icon": "/react-hook-form-icon.png" },
-        { "name": "Axios", "icon": "/axios-icon.png" },
-        { "name": "JWT", "icon": "/jwt-icon.png" },
-        { "name": "Auth", "icon": "/auth-icon.png" },
-        { "name": "Restful APIs", "icon": "/api-icon.png" }
+        { "name": "React", "icon": "/techstack/react-icon.png" },
+        { "name": "Node.js", "icon": "/techstack/node-icon.png" },
+        { "name": "Express.js", "icon": "/techstack/express-icon.png" },
+        { "name": "Tailwind CSS", "icon": "/techstack/tailwindcss-icon.png" },
+        { "name": "MongoDB", "icon": "/techstack/mongodb-icon.png" },
+        { "name": "PostgreSQL", "icon": "/techstack/postgres-icon.png" },
+        { "name": "React Hook Form", "icon": "/techstack/react-hook-form-icon.png" },
+        { "name": "Axios", "icon": "/techstack/axios-icon.png" },
+        { "name": "JWT", "icon": "/techstack/jwt-icon.png" },
+        { "name": "Auth", "icon": "" },
+        { "name": "Restful APIs", "icon": "/techstack/api-icon.png" }
       ],
       "highlights": [
         "Led development of the GDG Organization Website with a 10-member team, contributing to core pages and achieving a verified 30% improvement in site design.",
@@ -73,13 +73,13 @@
       "duration": "Oct 2025 - Dec 2025",
       "imageUrl": "",
       "techStack": [
-        { "name": "React", "icon": "/react-icon.png" },
-        { "name": "Node.js", "icon": "/nodejs-icon.png" },
-        { "name": "Express.js", "icon": "/expressjs-icon.png" },
-        { "name": "MongoDB", "icon": "/mongodb-icon.png" },
-        { "name": "JWT", "icon": "/jwt-icon.png" },
-        { "name": "React Hook Form", "icon": "/react-hook-form-icon.png" },
-        { "name": "Axios", "icon": "/axios-icon.png" }
+        { "name": "React", "icon": "/techstack/react-icon.png" },
+        { "name": "Node.js", "icon": "/techstack/node-icon.png" },
+        { "name": "Express.js", "icon": "/techstack/express-icon.png" },
+        { "name": "MongoDB", "icon": "/techstack/mongodb-icon.png" },
+        { "name": "JWT", "icon": "/techstack/jwt-icon.png" },
+        { "name": "React Hook Form", "icon": "/techstack/react-hook-form-icon.png" },
+        { "name": "Axios", "icon": "/techstack/axios-icon.png" }
       ],
       "description": [
         "Built a secure MERN authentication system using JWT and OTP-based email verification, and integrated a React client with React Hook Form and Axios for the complete auth flow."
@@ -92,12 +92,12 @@
       "duration": "Nov 2024 - Dec 2025",
       "imageUrl": "",
       "techStack": [
-        { "name": "React", "icon": "/react-icon.png" },
-        { "name": "HTML", "icon": "/html-icon.png" },
-        { "name": "CSS", "icon": "/css-icon.png" },
-        { "name": "JavaScript", "icon": "/javascript-icon.png" },
-        { "name": "React Hook Form", "icon": "/react-hook-form-icon.png" },
-        { "name": "Lucide React", "icon": "/lucide-react-icon.png" }
+        { "name": "React", "icon": "/techstack/react-icon.png" },
+        { "name": "HTML", "icon": "/techstack/html-icon.png" },
+        { "name": "CSS", "icon": "/techstack/css-icon.png" },
+        { "name": "JavaScript", "icon": "/techstack/javascript-icon.png" },
+        { "name": "React Hook Form", "icon": "/techstack/react-hook-form-icon.png" },
+        { "name": "Lucide React", "icon": "/techstack/lucide-react-icon.png" }
       ],
       "description": [
         "Built a hackathon registration system with validated forms, auto-generated ticket IDs, local storage persistence, and a real-time admin dashboard."
@@ -110,12 +110,12 @@
       "duration": "Nov 2024 - Dec 2025",
       "imageUrl": "",
       "techStack": [
-        { "name": "React", "icon": "/react-icon.png" },
-        { "name": "HTML", "icon": "/html-icon.png" },
-        { "name": "CSS", "icon": "/css-icon.png" },
-        { "name": "JavaScript", "icon": "/javascript-icon.png" },
-        { "name": "React Hook Form", "icon": "/react-hook-form-icon.png" },
-        { "name": "Lucide React", "icon": "/lucide-react-icon.png" }
+        { "name": "React", "icon": "/techstack/react-icon.png" },
+        { "name": "HTML", "icon": "/techstack/html-icon.png" },
+        { "name": "CSS", "icon": "/techstack/css-icon.png" },
+        { "name": "JavaScript", "icon": "/techstack/javascript-icon.png" },
+        { "name": "React Hook Form", "icon": "/techstack/react-hook-form-icon.png" },
+        { "name": "Lucide React", "icon": "/techstack/lucide-react-icon.png" }
       ],
       "description": [
         "Built a hackathon registration system with validated forms, auto-generated ticket IDs, local storage persistence, and a real-time admin dashboard."
@@ -128,12 +128,12 @@
       "duration": "Nov 2024 - Dec 2025",
       "imageUrl": "",
       "techStack": [
-        { "name": "React", "icon": "/react-icon.png" },
-        { "name": "HTML", "icon": "/html-icon.png" },
-        { "name": "CSS", "icon": "/css-icon.png" },
-        { "name": "JavaScript", "icon": "/javascript-icon.png" },
-        { "name": "React Hook Form", "icon": "/react-hook-form-icon.png" },
-        { "name": "Lucide React", "icon": "/lucide-react-icon.png" }
+        { "name": "React", "icon": "/techstack/react-icon.png" },
+        { "name": "HTML", "icon": "/techstack/html-icon.png" },
+        { "name": "CSS", "icon": "/techstack/css-icon.png" },
+        { "name": "JavaScript", "icon": "/techstack/javascript-icon.png" },
+        { "name": "React Hook Form", "icon": "/techstack/react-hook-form-icon.png" },
+        { "name": "Lucide React", "icon": "/techstack/lucide-react-icon.png" }
       ],
       "description": [
         "Built a hackathon registration system with validated forms, auto-generated ticket IDs, local storage persistence, and a real-time admin dashboard."
@@ -144,43 +144,43 @@
   ],
   "skills": {
     "languages": [
-      { "name": "JavaScript", "icon": "/javascript-icon.png" },
-      { "name": "Python", "icon": "/python-icon.png" },
-      { "name": "C++", "icon": "/cpp-icon.png" },
-      { "name": "C", "icon": "/c-icon.png" }
+      { "name": "JavaScript", "icon": "/techstack/javascript-icon.png" },
+      { "name": "Python", "icon": "/techstack/python-icon.png" },
+      { "name": "C++", "icon": "/techstack/cpp-icon.png" },
+      { "name": "C", "icon": "/techstack/c-icon.png" }
     ],
     "frontend": [
-      { "name": "React.js", "icon": "/react-icon.png" },
-      { "name": "Redux", "icon": "/redux-icon.png" },
-      { "name": "Tailwind CSS", "icon": "/tailwind-icon.png" },
-      { "name": "shadcn UI", "icon": "/shadcn-icon.png" } 
+      { "name": "React.js", "icon": "/techstack/react-icon.png" },
+      { "name": "Redux", "icon": "/techstack/redux-icon.png" },
+      { "name": "Tailwind CSS", "icon": "/techstack/tailwind-icon.png" },
+      { "name": "shadcn UI", "icon": "/techstack/shadcn-icon.png" } 
     ],
     "backend": [
-      { "name": "Node.js", "icon": "/nodejs-icon.png" },
-      { "name": "Express.js", "icon": "/expressjs-icon.png" },
-      { "name": "Flask", "icon": "/flask-icon.png" },
-      { "name": "REST APIs", "icon": "/api-icon.png" },
-      { "name": "JWT Authentication", "icon": "/jwt-icon.png" }
+      { "name": "Node.js", "icon": "/techstack/nodejs-icon.png" },
+      { "name": "Express.js", "icon": "/techstack/expressjs-icon.png" },
+      { "name": "Flask", "icon": "/techstack/flask-icon.png" },
+      { "name": "REST APIs", "icon": "/techstack/api-icon.png" },
+      { "name": "JWT Authentication", "icon": "/techstack/jwt-icon.png" }
     ],
     "databases": [
-      { "name": "MongoDB", "icon": "/mongodb-icon.png" },
-      { "name": "PostgreSQL", "icon": "/postgresql-icon.png" }  
+      { "name": "MongoDB", "icon": "/techstack/mongodb-icon.png" },
+      { "name": "PostgreSQL", "icon": "/techstack/postgresql-icon.png" }  
     ],
     "cloudDevOps": [
-      { "name": "Google Cloud Platform", "icon": "/gcp-icon.png" },
-      { "name": "Cloud Run", "icon": "/cloud-run-icon.png" },
-      { "name": "Load Balancing", "icon": "/load-balancing-icon.png" },
-      { "name": "Docker", "icon": "/docker-icon.png" },
-      { "name": "Ansible", "icon": "/ansible-icon.png" },
-      { "name": "Nginx", "icon": "/nginx-icon.png" },
-      { "name": "Prometheus", "icon": "/prometheus-icon.png" }
+      { "name": "Google Cloud Platform", "icon": "/techstack/gcp-icon.png" },
+      { "name": "Cloud Run", "icon": "/techstack/cloud-run-icon.png" },
+      { "name": "Load Balancing", "icon": "/techstack/load-balancing-icon.png" },
+      { "name": "Docker", "icon": "/techstack/docker-icon.png" },
+      { "name": "Ansible", "icon": "/techstack/ansible-icon.png" },
+      { "name": "Nginx", "icon": "/techstack/nginx-icon.png" },
+      { "name": "Prometheus", "icon": "/techstack/prometheus-icon.png" }
     ],
     "tools": [
-      { "name": "Git", "icon": "/git-icon.png" },
-      { "name": "GitHub", "icon": "/github-icon.png" },
-      { "name": "Postman", "icon": "/postman-icon.png" },
-      { "name": "Jira", "icon": "/jira-icon.png" },
-      { "name": "n8n", "icon": "/n8n-icon.png" }
+      { "name": "Git", "icon": "/techstack/git-icon.png" },
+      { "name": "GitHub", "icon": "/techstack/github-icon.png" },
+      { "name": "Postman", "icon": "/techstack/postman-icon.png" },
+      { "name": "Jira", "icon": "/techstack/jira-icon.png" },
+      { "name": "n8n", "icon": "/techstack/n8n-icon.png" }
     ]
   },
   "achievements": [
