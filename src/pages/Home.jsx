@@ -6,6 +6,7 @@ import React from 'react'
 import WorkExperience from '@/components/WorkExperience/WorkExperience';
 import ProjectCard from '@/components/mycompo/HomeCompo/ProjectCard';
 import data from "@/Data/Data.json"
+import { Button } from "@/components/ui/button"
 
 
 const Home = () => {
@@ -29,11 +30,14 @@ const Home = () => {
         </div>
         <div className='w-1/2'>
           <div className=' w-full flex flex-wrap gap-2 justify-center mt-2'>
-            {<div className="w-full flex flex-wrap gap-6 justify-center">
+            {<div className="w-full flex flex-wrap gap-2 justify-center">
               {projects.map((_, i) => (
-                <ProjectCard key={i} data={data.projects[i]} />
+                <ProjectCard key={i} data={data.projects[i]} projects={projects} />
               ))}
             </div>}
+          </div>
+          <div className='w-full flex items-center justify-center'>
+            <Button className={"m-3"} variant="outline">Show More</Button>
           </div>
         </div>
       </div>

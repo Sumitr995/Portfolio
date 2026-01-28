@@ -9,7 +9,7 @@ import data from "@/Data/Data.json";
 export default function WorkExperience() {
 
   const workExperiences = data.workExperience;
-
+  console.log(workExperiences[0].techStack);
   return (
     <section className="max-w-4xl mx-auto">
       <Accordion type="single" collapsible className="w-full">
@@ -46,7 +46,7 @@ export default function WorkExperience() {
           <AccordionContent>
             {/* Technologies */}
             <div className="flex flex-wrap gap-2 mb-4">
-              {workExperiences[0].techStack.map((tech) => (
+              {Object.entries(workExperiences[0].techStack).map(([tech, icon]) => (
                 <span
                   key={tech}
                   className="rounded-full border px-3 py-1 text-xs font-medium"
@@ -58,7 +58,7 @@ export default function WorkExperience() {
 
             {/* Bullet points */}
             <ul className="list-disc space-y-2 pl-5 text-muted-foreground">
-              {workExperiences[0].work.map((highlight, index) => (
+              {Object.entries(workExperiences[0].work).map((highlight, index) => (
                 <li key={index}>{highlight}</li>
               ))}
             </ul>
@@ -90,11 +90,12 @@ export default function WorkExperience() {
 
             {/* TechStack */}
             <div className="flex flex-wrap gap-2 mb-4">
-              {workExperiences[1].techStack.map((tech) => (
+              {Object.entries(workExperiences[1].techStack).map(([tech, icon]) => (
                 <span
                   key={tech}
                   className="rounded-full border px-3 py-1 text-xs font-medium"
                 >
+                  <img src={icon} alt={tech} className="w-4 h-4" />
                   {tech}
                 </span>
               ))}
@@ -102,7 +103,7 @@ export default function WorkExperience() {
 
             {/* Bullet points */}
             <ul className="list-disc space-y-2 pl-5 text-muted-foreground">
-              {workExperiences[1].highlights.map((highlight, index) => (
+              {Object.entries(workExperiences[1].highlights).map((highlight, index) => (
                 <li key={index}>{highlight}</li>
               ))}
             </ul>

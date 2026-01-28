@@ -1,6 +1,7 @@
 import { Globe, Github } from "lucide-react";
 import { ArrowRight } from 'lucide-react';
-export default function ProjectCard() {
+export default function ProjectCard({ }) {
+
   return (
     <div className="relative w-80 rounded-2xl overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-xl">
       

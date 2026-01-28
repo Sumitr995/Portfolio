@@ -21,17 +21,17 @@
       "role": "Core Team & Cloud Team Member",
       "startDate": "Sep 2025",
       "endDate": "Present",
-      "techStack": {
-        "GCP": "/gcp-icon.png",
-        "Nginx": "/nginx-icon.png",
-        "Prometheus": "/prometheus-icon.png",
-        "Ansible": "/ansible-icon.png",
-        "Flask": "/flask-icon.png",
-        "Docker": "/docker-icon.png",
-        "Jira": "/jira-icon.png",
-        "Cloud Run": "/cloud-run-icon.png",
-        "Load Balancer": "/load-balancer-icon.png"
-      },
+      "techStack": [
+        { "name": "GCP", "icon": "/gcp-icon.png" },
+        { "name": "Nginx", "icon": "/nginx-icon.png" },
+        { "name": "Prometheus", "icon": "/prometheus-icon.png" },
+        { "name": "Ansible", "icon": "/ansible-icon.png" },
+        { "name": "Flask", "icon": "/flask-icon.png" },
+        { "name": "Docker", "icon": "/docker-icon.png" },
+        { "name": "Jira", "icon": "/jira-icon.png" },
+        { "name": "Cloud Run", "icon": "/cloud-run-icon.png" },
+        { "name": "Load Balancer", "icon": "/load-balancer-icon.png" }
+      ],
       "work": [
         "Deployed a Flask backend on cloud infrastructure independently, configuring Nginx as a reverse proxy and Certbot for SSL management.",
         "Implemented Prometheus-based monitoring and used Ansible for basic automation and environment setup.",
@@ -46,19 +46,19 @@
       "role": "Web Team Member",
       "startDate": "Aug 2025",
       "endDate": "Sep 2025",
-      "techStack": {
-        "React": "/react-icon.png",
-        "Node.js": "/nodejs-icon.png",
-        "Express.js": "/expressjs-icon.png",
-        "Tailwind CSS": "/tailwind-icon.png",
-        "MongoDB": "/mongodb-icon.png",
-        "PostgreSQL": "/postgresql-icon.png",
-        "React Hook Form": "/react-hook-form-icon.png",
-        "Axios": "/axios-icon.png",
-        "JWT": "/jwt-icon.png",
-        "Auth": "/auth-icon.png",
-        "Restful APIs": "/api-icon.png"
-      },
+      "techStack": [
+        { "name": "React", "icon": "/react-icon.png" },
+        { "name": "Node.js", "icon": "/nodejs-icon.png" },
+        { "name": "Express.js", "icon": "/expressjs-icon.png" },
+        { "name": "Tailwind CSS", "icon": "/tailwind-icon.png" },
+        { "name": "MongoDB", "icon": "/mongodb-icon.png" },
+        { "name": "PostgreSQL", "icon": "/postgresql-icon.png" },
+        { "name": "React Hook Form", "icon": "/react-hook-form-icon.png" },
+        { "name": "Axios", "icon": "/axios-icon.png" },
+        { "name": "JWT", "icon": "/jwt-icon.png" },
+        { "name": "Auth", "icon": "/auth-icon.png" },
+        { "name": "Restful APIs", "icon": "/api-icon.png" }
+      ],
       "highlights": [
         "Led development of the GDG Organization Website with a 10-member team, contributing to core pages and achieving a verified 30% improvement in site design.",
         "Built the Pixel Designathon Website using React, HTML, and Tailwind CSS, supporting 100+ peak registrations during live onboarding.",
@@ -72,15 +72,15 @@
       "title": "Full Stack Authentication Service",
       "duration": "Oct 2025 - Dec 2025",
       "imageUrl": "",
-      "techStack": {
-        "React": "/react-icon.png",
-        "Node.js": "/nodejs-icon.png",
-        "Express.js": "/expressjs-icon.png",
-        "MongoDB": "/mongodb-icon.png",
-        "JWT": "/jwt-icon.png",
-        "React Hook Form": "/react-hook-form-icon.png",
-        "Axios": "/axios-icon.png"
-      },
+      "techStack": [
+        { "name": "React", "icon": "/react-icon.png" },
+        { "name": "Node.js", "icon": "/nodejs-icon.png" },
+        { "name": "Express.js", "icon": "/expressjs-icon.png" },
+        { "name": "MongoDB", "icon": "/mongodb-icon.png" },
+        { "name": "JWT", "icon": "/jwt-icon.png" },
+        { "name": "React Hook Form", "icon": "/react-hook-form-icon.png" },
+        { "name": "Axios", "icon": "/axios-icon.png" }
+      ],
       "description": [
         "Built a secure MERN authentication system using JWT and OTP-based email verification, and integrated a React client with React Hook Form and Axios for the complete auth flow."
       ],
@@ -91,14 +91,50 @@
       "title": "Hackathon Ticket System",
       "duration": "Nov 2024 - Dec 2025",
       "imageUrl": "",
-      "techStack": {
-        "React": "/react-icon.png",
-        "HTML": "/html-icon.png",
-        "CSS": "/css-icon.png",
-        "JavaScript": "/javascript-icon.png",
-        "React Hook Form": "/react-hook-form-icon.png",
-        "Lucide React": "/lucide-react-icon.png"
-      },
+      "techStack": [
+        { "name": "React", "icon": "/react-icon.png" },
+        { "name": "HTML", "icon": "/html-icon.png" },
+        { "name": "CSS", "icon": "/css-icon.png" },
+        { "name": "JavaScript", "icon": "/javascript-icon.png" },
+        { "name": "React Hook Form", "icon": "/react-hook-form-icon.png" },
+        { "name": "Lucide React", "icon": "/lucide-react-icon.png" }
+      ],
+      "description": [
+        "Built a hackathon registration system with validated forms, auto-generated ticket IDs, local storage persistence, and a real-time admin dashboard."
+      ],
+      "Github-Link": "https://github.com/Sumitr995/Ticket-System",
+      "Live-Link": "https://ticketsystem-sumitr995.netlify.app/"
+    },
+    {
+      "title": "Hackathon Ticket System",
+      "duration": "Nov 2024 - Dec 2025",
+      "imageUrl": "",
+      "techStack": [
+        { "name": "React", "icon": "/react-icon.png" },
+        { "name": "HTML", "icon": "/html-icon.png" },
+        { "name": "CSS", "icon": "/css-icon.png" },
+        { "name": "JavaScript", "icon": "/javascript-icon.png" },
+        { "name": "React Hook Form", "icon": "/react-hook-form-icon.png" },
+        { "name": "Lucide React", "icon": "/lucide-react-icon.png" }
+      ],
+      "description": [
+        "Built a hackathon registration system with validated forms, auto-generated ticket IDs, local storage persistence, and a real-time admin dashboard."
+      ],
+      "Github-Link": "https://github.com/Sumitr995/Ticket-System",
+      "Live-Link": "https://ticketsystem-sumitr995.netlify.app/"
+    },
+    {
+      "title": "Hackathon Ticket System",
+      "duration": "Nov 2024 - Dec 2025",
+      "imageUrl": "",
+      "techStack": [
+        { "name": "React", "icon": "/react-icon.png" },
+        { "name": "HTML", "icon": "/html-icon.png" },
+        { "name": "CSS", "icon": "/css-icon.png" },
+        { "name": "JavaScript", "icon": "/javascript-icon.png" },
+        { "name": "React Hook Form", "icon": "/react-hook-form-icon.png" },
+        { "name": "Lucide React", "icon": "/lucide-react-icon.png" }
+      ],
       "description": [
         "Built a hackathon registration system with validated forms, auto-generated ticket IDs, local storage persistence, and a real-time admin dashboard."
       ],
@@ -107,45 +143,45 @@
     }
   ],
   "skills": {
-    "languages": {
-      "javaScript": "/javascript-icon.png",
-      "python": "/python-icon.png",
-      "cpp": "/cpp-icon.png",
-      "c-lang": "/c-icon.png"
-    },
-    "frontend": {
-      "React.js": "/react-icon.png",
-      "Redux": "/redux-icon.png",
-      "Tailwind CSS": "/tailwind-icon.png",
-      "shadcn UI": "/shadcn-icon.png"
-    },
-    "backend": {
-      "Node.js": "/nodejs-icon.png",
-      "Express.js": "/expressjs-icon.png",
-      "Flask": "/flask-icon.png",
-      "REST APIs": "/api-icon.png",
-      "JWT Authentication": "/jwt-icon.png"
-    },
-    "databases": {
-      "MongoDB": "/mongodb-icon.png",
-      "PostgreSQL": "/postgresql-icon.png"
-    },
-    "cloudDevOps": {
-      "Google Cloud Platform": "/gcp-icon.png",
-      "Cloud Run": "/cloud-run-icon.png",
-      "Load Balancing": "/load-balancing-icon.png",
-      "Docker": "/docker-icon.png",
-      "Ansible": "/ansible-icon.png",
-      "Nginx": "/nginx-icon.png",
-      "Prometheus": "/prometheus-icon.png"
-    },
-    "tools": {
-      "Git": "/git-icon.png",
-      "GitHub": "/github-icon.png",
-      "Postman": "/postman-icon.png",
-      "Jira": "/jira-icon.png",
-      "n8n": "/n8n-icon.png"
-    }
+    "languages": [
+      { "name": "JavaScript", "icon": "/javascript-icon.png" },
+      { "name": "Python", "icon": "/python-icon.png" },
+      { "name": "C++", "icon": "/cpp-icon.png" },
+      { "name": "C", "icon": "/c-icon.png" }
+    ],
+    "frontend": [
+      { "name": "React.js", "icon": "/react-icon.png" },
+      { "name": "Redux", "icon": "/redux-icon.png" },
+      { "name": "Tailwind CSS", "icon": "/tailwind-icon.png" },
+      { "name": "shadcn UI", "icon": "/shadcn-icon.png" } 
+    ],
+    "backend": [
+      { "name": "Node.js", "icon": "/nodejs-icon.png" },
+      { "name": "Express.js", "icon": "/expressjs-icon.png" },
+      { "name": "Flask", "icon": "/flask-icon.png" },
+      { "name": "REST APIs", "icon": "/api-icon.png" },
+      { "name": "JWT Authentication", "icon": "/jwt-icon.png" }
+    ],
+    "databases": [
+      { "name": "MongoDB", "icon": "/mongodb-icon.png" },
+      { "name": "PostgreSQL", "icon": "/postgresql-icon.png" }  
+    ],
+    "cloudDevOps": [
+      { "name": "Google Cloud Platform", "icon": "/gcp-icon.png" },
+      { "name": "Cloud Run", "icon": "/cloud-run-icon.png" },
+      { "name": "Load Balancing", "icon": "/load-balancing-icon.png" },
+      { "name": "Docker", "icon": "/docker-icon.png" },
+      { "name": "Ansible", "icon": "/ansible-icon.png" },
+      { "name": "Nginx", "icon": "/nginx-icon.png" },
+      { "name": "Prometheus", "icon": "/prometheus-icon.png" }
+    ],
+    "tools": [
+      { "name": "Git", "icon": "/git-icon.png" },
+      { "name": "GitHub", "icon": "/github-icon.png" },
+      { "name": "Postman", "icon": "/postman-icon.png" },
+      { "name": "Jira", "icon": "/jira-icon.png" },
+      { "name": "n8n", "icon": "/n8n-icon.png" }
+    ]
   },
   "achievements": [
     "Team Lead, HackRobo 1.0 — IoT Search & Rescue Bot; secured 9th position out of 37 teams.",
