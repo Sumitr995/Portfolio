@@ -32,7 +32,7 @@ const Home = () => {
           <div className=' w-full flex flex-wrap gap-2 justify-center mt-2'>
             {<div className="w-full flex flex-wrap gap-2 justify-center">
               {projects.map((_, i) => (
-                <ProjectCard key={i} data={data.projects[i]} projects={projects} />
+                <ProjectCard key={i} data={data.projects[i]} />
               ))}
             </div>}
           </div>

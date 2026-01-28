@@ -13,12 +13,12 @@ export default function WorkExperience() {
   return (
     <section className="max-w-4xl mx-auto">
       <Accordion type="single" collapsible className="w-full">
-        
-        {/* ================= GDGC CLOUD ================= */}  
+
+        {/* ================= GDGC CLOUD ================= */}
         <AccordionItem value="GDGC Cloud">
           <AccordionTrigger>
             <div className="flex w-full items-start gap-4  ">
-              
+
               {/* Logo */}
               <div className="h-10 w-10 rounded-3xl border flex items-center justify-center">
                 <img width={30} src={workExperiences[0].imageUrl} alt="GDGC Logo" />
@@ -46,19 +46,25 @@ export default function WorkExperience() {
           <AccordionContent>
             {/* Technologies */}
             <div className="flex flex-wrap gap-2 mb-4">
-              {Object.entries(workExperiences[0].techStack).map(([tech, icon]) => (
+              {workExperiences[0].techStack.map((tech) => (
                 <span
-                  key={tech}
-                  className="rounded-full border px-3 py-1 text-xs font-medium"
+                  key={tech.name}
+                  className="flex items-center gap-1 rounded-full border px-3 py-1 text-xs font-medium"
                 >
-                  {tech}
+                  <img
+                    src={tech.icon}
+                    alt={tech.name}
+                    className="w-4 h-4 object-contain"
+                  />
+                  {tech.name}
                 </span>
               ))}
             </div>
 
+
             {/* Bullet points */}
             <ul className="list-disc space-y-2 pl-5 text-muted-foreground">
-              {Object.entries(workExperiences[0].work).map((highlight, index) => (
+              {workExperiences[0].work.map((highlight, index) => (
                 <li key={index}>{highlight}</li>
               ))}
             </ul>
@@ -90,20 +96,23 @@ export default function WorkExperience() {
 
             {/* TechStack */}
             <div className="flex flex-wrap gap-2 mb-4">
-              {Object.entries(workExperiences[1].techStack).map(([tech, icon]) => (
+              {workExperiences[1].techStack.map((tech) => (
                 <span
-                  key={tech}
-                  className="rounded-full border px-3 py-1 text-xs font-medium"
+                  key={tech.name}
+                  className="flex items-center gap-1 rounded-full border px-3 py-1 text-xs font-medium"
                 >
-                  <img src={icon} alt={tech} className="w-4 h-4" />
-                  {tech}
+                  <img
+                    src={tech.icon}
+                    alt={tech.name}
+                    className="w-4 h-4 object-contain"
+                  />
+                  {tech.name}
                 </span>
               ))}
             </div>
-
             {/* Bullet points */}
             <ul className="list-disc space-y-2 pl-5 text-muted-foreground">
-              {Object.entries(workExperiences[1].highlights).map((highlight, index) => (
+              {workExperiences[1].highlights.map((highlight, index) => (
                 <li key={index}>{highlight}</li>
               ))}
             </ul>
