@@ -10,7 +10,9 @@ export default function WorkExperience() {
 
   const workExperiences = data.workExperience;
   console.log(workExperiences[0].techStack);
-  return (
+  return (<>
+    <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300'>Featured</div>
+    <div className='text-zinc-500 dark:text-zinc-300 font-bold text-2xl '>Experience</div>
     <section className="max-w-4xl mx-auto">
       <Accordion type="single" collapsible className="w-full">
 
@@ -121,5 +123,6 @@ export default function WorkExperience() {
 
       </Accordion>
     </section>
+  </>
   );
 }
