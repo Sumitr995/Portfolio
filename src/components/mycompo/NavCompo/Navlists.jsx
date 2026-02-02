@@ -8,7 +8,7 @@ import { AnimatedThemeToggler } from '../../ui/animated-theme-toggler';
 const Navlists = () => {
     const navigate = useNavigate()
     return (
-        <div className=' items-center px-2.5 border border-zinc-500 rounded-4xl my-2.5 '>
+        <div className=' items-center hidden sm:block px-2.5 border border-zinc-500 rounded-4xl my-2.5 '>
             <Tabs defaultValue="tab-1">
                 <TabsList variant='underline'>
                     <TabsTab onClick={() => navigate('/')} value="tab-1">Portfolio</TabsTab>

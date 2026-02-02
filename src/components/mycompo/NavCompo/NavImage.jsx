@@ -3,10 +3,12 @@ import React from 'react'
 const NavImage = () => {
     return (
         <div
-            className="w-13 h-13 rounded-xl  lg:flex hidden bg-amber-100
-            bg-[url('/Profile-pic.png')] border-2 border-black
-            bg-cover bg-center bg-no-repeat
-          dark:border-zinc-500 hover:scale-95"
+            className="
+             w-12 h-12 rounded-xl 
+            bg-[url('/Profile-pic.png')] bg-cover
+            bg-center border dark:border-zinc-500
+            transition-transform hover:scale-95 
+            bg-amber-100 shrink-0"
         ></div>
     )
 }
