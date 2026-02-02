@@ -5,7 +5,7 @@ import About from "./pages/About";
 import Project from "./pages/Project";
 import Certificate from "./pages/Certificate";
 import Contact from "./pages/Contact";
-import Oneko from "@/components/mycompo/Oneko";
+import Oneko from "@/components/mycompo/Oneko/Oneko";
 import { BlurFade } from "@/components/ui/blur-fade";
 import AppRoutes from "./AppRoutes";
 
