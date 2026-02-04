@@ -16,7 +16,7 @@ const NavIcon = () => {
           <Menu size={24} />
         </button>
       </SheetTrigger>
-        
+     
       <SheetContent side="right" className="w-3/4 max-w-xs">
         <div className="flex flex-col h-full">
           <nav className="flex flex-col gap-2 mt-8">
@@ -28,6 +28,7 @@ const NavIcon = () => {
           </nav>
           <div className="mt-auto flex items-center gap-2 border-t border-black/5 dark:border-white/5 pt-4">
             <span className="text-sm m-5 text-zinc-500 dark:text-zinc-400">Theme</span>
+            <span className="text-sm text-zinc-500 dark:text-zinc-400">Theme</span>
             <AnimatedThemeToggler duration={1000} className={"px-2.5 cursor-pointer"} />
           </div>
         </div>
