@@ -9,7 +9,7 @@ const Navlists = () => {
     const navigate = useNavigate()
     return (
         <div className='items-center hidden md:flex px-2.5 border border-zinc-500/70 rounded-4xl my-2.5 bg-white/70 dark:bg-zinc-950/30'>
-           <Tabs defaultValue="tab-1">
+            <Tabs defaultValue="tab-1">
                 <TabsList variant='underline'>
                     <TabsTab onClick={() => navigate('/')} value="tab-1">Portfolio</TabsTab>
                     <TabsTab onClick={() => navigate('/about')} value="tab-2">About</TabsTab>
