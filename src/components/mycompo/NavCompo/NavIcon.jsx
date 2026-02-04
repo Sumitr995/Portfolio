@@ -12,11 +12,11 @@ const NavIcon = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
+
         <button className="sm:hidden p-2  rounded-lg border border-transparent hover:border-black/10 dark:hover:border-white/10" aria-label="Open navigation menu">
           <Menu size={24} />
         </button>
       </SheetTrigger>
-     
       <SheetContent side="right" className="w-3/4 max-w-xs">
         <div className="flex flex-col h-full">
           <nav className="flex flex-col gap-2 mt-8">

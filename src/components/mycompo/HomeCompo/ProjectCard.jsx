@@ -2,7 +2,7 @@ import { Globe, Github, ArrowRight } from "lucide-react";
 
 export default function ProjectCard({ data }) {
   return (
-    <div className="relative w-80 rounded-2xl overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-xl">
+    <div className="relative w-full sm:w-80 rounded-2xl overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-xl">
 
       {/* Preview */}
       <div className="relative h-48 bg-linear-to-br from-pink-500 to-purple-700" />
