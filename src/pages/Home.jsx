@@ -16,36 +16,36 @@ const Home = () => {
 
   const projects = data.projects;
   return (
-    <div className='flex flex-col '>
-      <div className=' w-full h-20vh flex items-center justify-center flex-col' >
-        <div className='w-1/2'>
-          <HomeProfile />
-          <HomeHeading />
-          <HomeButtons />
-          <HomeLinks />
-        </div>
-        <div className=' w-1/2 '>
-          <WorkExperience />
-        </div>
-        <div className='w-1/2'>
-          <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300 mt-5 '>Featured</div>
-          <div className='text-zinc-500 dark:text-zinc-300 font-bold text-2xl'>Projects</div>
-          <div className=' w-full flex flex-wrap gap-2 justify-center mt-2'>
-            {<div className="w-full flex flex-wrap gap-2 justify-center">
-              {projects.map((_, i) => (
-                <ProjectCard key={i} data={data.projects[i]} />
-              ))}
-            </div>}
+    <div className='flex flex-col'>
+      <section className='w-full flex flex-col items-center gap-10 px-4 pt-24 pb-12 sm:px-6 lg:px-8'>
+        <div className='w-full max-w-5xl flex flex-col gap-10 lg:grid lg:grid-cols-[1.1fr_0.9fr] lg:items-start'>
+          <div className='flex flex-col gap-6'>
+            <HomeProfile />
+            <HomeHeading />
+            <HomeButtons />
+            <HomeLinks />
           </div>
-          <div className='w-full flex items-center justify-center'>
-            <Button  className={"m-3"} variant="outline" onClick={() => navigate('/projects')}>Show More</Button>
+          <div className='w-full'>
+            <WorkExperience />
           </div>
         </div>
-      </div>
+      </section>
+      <section className='w-full flex justify-center px-4 pb-16 sm:px-6 lg:px-8'>
+        <div className='w-full max-w-5xl'>
+          <div className='text-sm font-semibold text-zinc-400 dark:text-zinc-500'>Featured</div>
+          <div className='text-zinc-700 dark:text-zinc-200 font-bold text-2xl sm:text-3xl'>Projects</div>
+          <div className='w-full flex flex-wrap gap-4 justify-center mt-4 sm:justify-start'>
+            {projects.map((_, i) => (
+              <ProjectCard key={i} data={data.projects[i]} />
+            ))}
+          </div>
+          <div className='w-full flex items-center justify-center sm:justify-start'>
+            <Button className={"mt-6"} variant="outline" onClick={() => navigate('/projects')}>Show More</Button>
+          </div>
+        </div>
+      </section>
     </div>
-
   )
 }
 
 export default Home
-
