@@ -16,7 +16,6 @@ const NavIcon = () => {
           <Menu size={24} />
         </button>
       </SheetTrigger>
-
       <SheetContent side="right" className="w-3/4 max-w-xs">
         <div className="flex flex-col h-full">
           <nav className="flex flex-col gap-2 mt-8">

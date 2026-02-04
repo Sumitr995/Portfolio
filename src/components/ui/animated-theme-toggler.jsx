@@ -39,7 +39,6 @@ export const AnimatedThemeToggler = ({
         localStorage.setItem("theme", newTheme ? "dark" : "light")
       })
     }).ready
-
     const x = window.innerWidth
     const y = 0
 
