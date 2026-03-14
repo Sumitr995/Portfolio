@@ -8,6 +8,7 @@ import ProjectCard from '@/components/mycompo/HomeCompo/ProjectCard';
 import data from "@/Data/Data.json"
 import { useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button"
+import Footer from '@/components/mycompo/Footer/Footer';
 
 
 const Home = () => {
@@ -42,6 +43,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
 
   )
