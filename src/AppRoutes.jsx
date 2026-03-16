@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Project from "./pages/Project";
 import Certificate from "./pages/Certificate";
 import Contact from "./pages/Contact";
+import Resume from './components/mycompo/Resume/Resume';
 const AppRoutes = () => {
     return (
         <div className="w-screen pt-[10vh]">
@@ -14,6 +15,7 @@ const AppRoutes = () => {
                 <Route path='/projects' element={<Project />} />
                 <Route path='/certificates' element={<Certificate />} />
                 <Route path='/contact' element={<Contact />} />
+                <Route path='/resume' element={<Resume />} />
             </Routes>
         </div>
     )

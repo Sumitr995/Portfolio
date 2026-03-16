@@ -9,16 +9,16 @@ const FooterContent = () => {
         { name: "About", link: "/about" },
         { name: "Projects", link: "/projects" },
         { name: "Contact", link: "/contact" },
-        { name: "Contact", link: "/contact" },
+        { name: "Resume", link: "/resume" },
         { name: "Contact", link: "/contact" },
         { name: "Contact", link: "/contact" },
       ]
 
     return (
         <div className="m-2">
-            <div className="text-sm text-zinc-500 font-bold mb-1">NAVIGATE</div>
+            <div className="text-sm text-zinc-500 font-bold mb-2">NAVIGATE</div>
 
-            <div className="flex flex-wrap items-center h-[5vh] w-[70%] gap-3 text-sm text-zinc-500">
+            <div className="flex flex-wrap items-center h-10 w-[80%] gap-x-3 text-sm text-zinc-500">
                 {content.map((item, index) => (
                     <Link
                         key={index}
