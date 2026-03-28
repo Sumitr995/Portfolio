@@ -41,7 +41,7 @@ export default function ProjectCard({ data }) {
         </div>
       </div>
 
-      {/* 🔥 Content */}
+      {/* Content */}
       <div className="px-5 pt-5 pb-5 space-y-4">
 
         {/* Title */}
@@ -49,14 +49,14 @@ export default function ProjectCard({ data }) {
           {data.title}
         </h3>
 
-        {/* Description (FIXED for your data) */}
+        {/* Description */}
         <p className="text-xs text-zinc-600 dark:text-white/60 line-clamp-2">
           {data.description[0]}
         </p>
 
         <div className="border-t border-zinc-200 dark:border-zinc-700" />
 
-        {/* Tech Stack (AI style overlap) */}
+        {/* Tech Stack */}
         <div className="flex justify-between items-center">
 
           <div className="flex items-center">
