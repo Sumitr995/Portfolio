@@ -6,18 +6,18 @@ const Footer = () => {
 
 
   return (
-    <div className='h-[40vh] w-full dark:bg-zinc-900 border flex items-center justify-center bg-zinc-100 '>
-      <div className='w-1/2  h-full  '>
-        <div className='h-[60%] w-[95%] m-auto mt-8 flex'>
+    <div className='w-full dark:bg-zinc-900 border flex items-center justify-center bg-zinc-100 py-8 md:py-0 md:h-[40vh]'>
+      <div className='w-full px-4 md:px-0 md:w-1/2 md:h-full'>
+        <div className='w-full md:h-[60%] md:w-[95%] m-auto md:mt-8 flex flex-col gap-6 md:gap-0 md:flex-row'>
           <FooterContent />
-          <div className='h-[20vh] flex flex-col gap-0   justify-start w-[40%]'>
+          <div className='h-auto md:h-[20vh] flex flex-col gap-0 justify-start w-full md:w-[40%]'>
             <FooterConnect />
           </div>
         </div>
-        <div className='h-[20%] w-[95%] m-auto mb-8 dark:border-zinc-800  border-t-2'>
-          <div className='flex items-center justify-between h-full'>
-            <p className='text-sm text-zinc-500 mt-2 text-center'>© 2025 Sumit Rathod. All rights reserved.</p>
-            <p className='text-sm text-zinc-500 mt-2 text-center'>Designed and Built with ❤️ by <span className='hover:underline cursor-pointer hover:text-zinc-700'><a href="https://github.com/Sumitr995" target="_blank" rel="noopener noreferrer">Sumitr995</a></span></p>
+        <div className='w-full md:w-[95%] m-auto mt-6 md:mt-0 md:mb-8 dark:border-zinc-800 border-t-2'>
+          <div className='flex flex-col gap-2 md:gap-0 md:flex-row md:items-center md:justify-between py-4 md:py-0 md:h-full'>
+            <p className='text-[10px] text-zinc-500 text-center  md:text-left'>© 2025 Sumit Rathod. All rights reserved.</p>
+            <p className='text-sm text-zinc-500 text-center md:text-right'>Designed and Built with ❤️ by <span className='hover:underline cursor-pointer hover:text-zinc-700 dark:hover:text-zinc-300'><a href="https://github.com/Sumitr995" target="_blank" rel="noopener noreferrer">Sumitr995</a></span></p>
           </div>
         </div>
       </div>

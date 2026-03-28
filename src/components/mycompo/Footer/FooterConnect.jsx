@@ -32,12 +32,13 @@ const FooterConnect = () => {
                 CONNECT
             </h2>
 
-            <div className="grid grid-cols-4 gap-4 w-fit">
+            <div className="grid grid-cols-4 gap-3 sm:gap-4 w-fit">
                 {Connect.map((icon, index) => (
                     <a
                         key={index}
                         href={icon.link}
                         target='_blank'
+                        rel="noopener noreferrer"
                         className="w-8 h-8 flex items-center justify-center
                        border border-zinc-600 hover:border-zinc-700 hover:bg-zinc-300 rounded-sm
                        dark:hover:border-zinc-500 cursor-pointer dark:hover:bg-zinc-600

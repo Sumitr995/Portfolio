@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const HomeButtons = () => {
     return (
-        <div className='h-20 w-full  flex items-center gap-5'>
+        <div className='h-auto md:h-10 my-7 sm:my-4 w-full flex flex-row flex-wrap items-center gap-3 sm:gap-5'>
             <Link to="/resume">
                 <Button className="cursor-pointer" variant="outline">
                     Resume/CV
