@@ -1,8 +1,22 @@
 import { Globe, Github, ArrowRight } from "lucide-react";
 
 export default function ProjectCard({ data }) {
+  const status =
+    data?.status ??
+    (data?.["Live-Link"] && data["Live-Link"] !== "NIL"
+      ? "Active"
+      : "Under Development");
+
+  const statusDotClass = (() => {
+    const normalized = String(status).toLowerCase();
+    if (normalized.includes("active")) return "bg-green-400 animate-pulse";
+    if (normalized.includes("develop")) return "bg-yellow-400";
+    if (normalized.includes("inactive") || normalized.includes("down")) return "bg-red-400";
+    return "bg-zinc-300";
+  })();
+
   return (
-    <div className="group relative w-full max-w-[25rem] md:max-w-[20rem] rounded-3xl overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-sm hover:shadow-md transition-all duration-300">
+    <div className="group relative w-full max-w-100 md:max-w-80 rounded-3xl overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-sm hover:shadow-md transition-all duration-300">
 
       {/* Thumbnail */}
       <div className="relative h-40 sm:h-44 overflow-hidden ">
@@ -36,8 +50,8 @@ export default function ProjectCard({ data }) {
 
         {/* Status */}
         <div className="absolute bottom-4 left-5 flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-3 py-1 z-10">
-          <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-          <span className="text-[10px] text-white/80">Active</span>
+          <span className={`w-1.5 h-1.5 rounded-full ${statusDotClass}`} />
+          <span className="text-[10px] text-white/80">{status}</span>
         </div>
       </div>
 
