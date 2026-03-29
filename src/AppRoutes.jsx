@@ -6,7 +6,7 @@ import Project from "./pages/Project";
 import Certificate from "./pages/Certificate";
 import Contact from "./pages/Contact";
 import Resume from './components/mycompo/Resume/Resume';
-import Work from './pages/work';
+import Work from './pages/Work';
 const AppRoutes = () => {
     return (
         <div className="w-screen pt-[10vh]">
