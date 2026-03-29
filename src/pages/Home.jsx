@@ -28,7 +28,7 @@ const Home = () => {
         <div className='w-full md:w-1/2 px-4 md:px-0'>
           <WorkExperience />
           <div className='w-full flex items-center justify-center'>
-            <Button className={"m-3"} variant="outline" onClick={() => navigate('/projects')}>Show More</Button>
+            <Button className={"m-3"} variant="outline" onClick={() => navigate('/work')}>Show More</Button>
           </div>
         </div>
         <div className='w-full md:w-1/2 px-4 md:px-0'>
