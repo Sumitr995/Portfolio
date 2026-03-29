@@ -1,7 +1,20 @@
+import React, { useState } from 'react'
+
 const TechStack = ({ technologies }) => {
+  const [activeTech, setActiveTech] = useState(null)
+
+  const handleTechClick = (techName) => {
+    if (typeof window !== 'undefined') {
+      const canHover = window.matchMedia?.('(hover: hover)').matches
+      if (canHover) return
+    }
+
+    setActiveTech((prev) => (prev === techName ? null : techName))
+  }
+
   return (
     <div className="mb-6">
-      <p className="text-xs font-semibold text-zinc-300 mb-2">
+      <p className="text-xs font-semibold text-zinc-700 dark:text-zinc-300 mb-2">
         Technologies & Tools
       </p>
 
@@ -9,38 +22,44 @@ const TechStack = ({ technologies }) => {
         {technologies.map((tech) => (
           <div
             key={tech.name}
+            onClick={() => handleTechClick(tech.name)}
             className="
               group flex items-center
-              h-10
+              h-7 md:h-8
               px-2
               rounded-lg
               border border-dashed border-zinc-700
-              bg-zinc-900
+              dark:bg-zinc-900
+              bg-zinc-200
               transition-all duration-300 ease-in-out
-              hover:bg-zinc-800
-              hover:border-zinc-500
-              cursor-default
+              dark:hover:bg-zinc-800
+                dark:hover:border-zinc-500
+              hover:bg-zinc-300
+                hover:border-zinc-900
+              cursor-pointer
             "
           >
             {/* ICON */}
             <img
               src={tech.icon}
               alt={tech.name}
-              className="w-5 h-5 flex-shrink-0"
+              className="w-4 h-4 shrink-0 md:w-5 md:h-5"
             />
 
-            {/* TEXT (hidden → visible on hover) */}
+            {/* TEXT */}
             <span
-              className="
+              className={`
                 ml-0
                 max-w-0
                 overflow-hidden
                 whitespace-nowrap
-                text-xs text-zinc-300
+                text-xs dark:text-zinc-300
+                text-zinc-700
                 transition-all duration-300 ease-in-out
                 group-hover:ml-2
                 group-hover:max-w-25
-              "
+                ${activeTech === tech.name ? 'ml-2 max-w-25' : ''}
+              `}
             >
               {tech.name}
             </span>

@@ -12,7 +12,7 @@ const Navlists = () => {
             <Tabs defaultValue="tab-1">
                 <TabsList variant='underline'>
                     <TabsTab onClick={() => navigate('/')} value="tab-1">Portfolio</TabsTab>
-                    <TabsTab onClick={() => navigate('/about')} value="tab-2">About</TabsTab>
+                    <TabsTab onClick={() => navigate('/work')} value="tab-2">Work</TabsTab>
                     <TabsTab onClick={() => navigate('/projects')} value="tab-3">Projects</TabsTab>
                     <TabsTab onClick={() => navigate('/certificates')} value="tab-4">Certificate</TabsTab>
                     <TabsTab onClick={() => navigate('/contact')} value="tab-5">Contact</TabsTab>
