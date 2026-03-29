@@ -2,7 +2,7 @@ import { Globe, Github, ArrowRight } from "lucide-react";
 
 export default function ProjectCard({ data }) {
   return (
-    <div className="group relative w-full max-w-25rem sm:max-w-22rem rounded-3xl overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-sm hover:shadow-md transition-all duration-300">
+    <div className="group relative w-full max-w-[25rem] md:max-w-[20rem] rounded-3xl overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-sm hover:shadow-md transition-all duration-300">
 
       {/* Thumbnail */}
       <div className="relative h-40 sm:h-44 overflow-hidden ">

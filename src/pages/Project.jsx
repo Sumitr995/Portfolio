@@ -1,4 +1,5 @@
 import Footer from '@/components/mycompo/Footer/Footer'
+import UnderDevelopment from '@/components/other/underDevelopment'
 import React from 'react'
 
 const Project = () => {
@@ -8,6 +9,7 @@ const Project = () => {
           Project
         </div>
         <Footer/>
+        <UnderDevelopment/>
     </div>
   )
 }

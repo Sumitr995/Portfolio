@@ -1,5 +1,6 @@
 import Footer from '@/components/mycompo/Footer/Footer'
 import React from 'react'
+import UnderDevelopment from '@/components/other/underDevelopment'
 
 const Contact = () => {
   return (
@@ -8,6 +9,7 @@ const Contact = () => {
           Contact
         </div>
         <Footer/>
+      <UnderDevelopment/>
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import Footer from '@/components/mycompo/Footer/Footer'
+import UnderDevelopment from '@/components/other/underDevelopment'
 import React from 'react'
 
 const Certificate = () => {
@@ -8,6 +9,7 @@ const Certificate = () => {
           Certificate
         </div>
         <Footer/>
+        <UnderDevelopment/>
     </div>
   )
 }

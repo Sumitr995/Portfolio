@@ -6,12 +6,12 @@ const FooterContent = () => {
 
     const content = [
         { name: "Home", link: "/" },
-        { name: "About", link: "/about" },
+        { name: "Work", link: "/work" },
         { name: "Projects", link: "/projects" },
+        { name: "About", link: "/about" },
         { name: "Contact", link: "/contact" },
         { name: "Resume", link: "/resume" },
-        { name: "Contact", link: "/contact" },
-        { name: "Contact", link: "/contact" },
+        { name: "Certificate", link: "/certificates" },
       ]
 
     return (

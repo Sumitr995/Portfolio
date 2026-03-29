@@ -1,13 +1,8 @@
-import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/mycompo/Navbar/Navbar";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Project from "./pages/Project";
-import Certificate from "./pages/Certificate";
-import Contact from "./pages/Contact";
 import Oneko from "@/components/mycompo/Oneko/Oneko";
 import { BlurFade } from "@/components/ui/blur-fade";
 import AppRoutes from "./AppRoutes";
+// import UnderDevelopment from "./components/other/underDevelopment";
 
 export default function App() {
   return (
@@ -19,6 +14,7 @@ export default function App() {
       <BlurFade>
         <AppRoutes />
       </BlurFade>
+      {/* <UnderDevelopment /> */}
     </>
   );
 }
