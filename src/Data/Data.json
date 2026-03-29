@@ -65,6 +65,24 @@
   ],
   "projects": [
     {
+      "title": "GDGC Designathon 2.0 Website",
+      "duration": "Nov 2024 - Dec 2025",
+      "preview": "/thumbnail/GDGC-Designathon.png",
+      "techStack": [
+        { "name": "React", "icon": "/techstack/react-icon.png" },
+        { "name": "HTML", "icon": "/techstack/html-icon.png" },
+        { "name": "CSS", "icon": "/techstack/css-icon.png" },
+        { "name": "JavaScript", "icon": "/techstack/javascript-icon.png" },
+        { "name": "React Hook Form", "icon": "/techstack/react-hook.png" },
+        { "name": "Lucide React", "icon": "/techstack/lucide-react.png" }
+      ],
+      "description": [
+        "Built a hackathon registration system with validated forms, auto-generated ticket IDs, local storage persistence, and a real-time admin dashboard."
+      ],
+      "Github-Link": "https://github.com/Sumitr995/designathon-2.0",
+      "Live-Link": "https://designathon.gdgcace.in/"
+    },
+    {
       "title": "Full Stack Authentication Service",
       "duration": "Oct 2025 - Dec 2025",
       "preview": "/thumbnail/Auth-App.png",
@@ -102,40 +120,21 @@
       "Live-Link": "https://ticketsystem-sumitr995.netlify.app/"
     },
     {
-      "title": "Hackathon Ticket System",
+      "title": "Cold Email Composer",
       "duration": "Nov 2024 - Dec 2025",
-      "preview": "https://www.loom.com/share/1e7c8b9a0f2b4c5e9d6f8a7b3c4d2e5",
+      "preview": "/thumbnail/Cold-Email-Composer.png",
       "techStack": [
-        { "name": "React", "icon": "/techstack/react-icon.png" },
-        { "name": "HTML", "icon": "/techstack/html-icon.png" },
-        { "name": "CSS", "icon": "/techstack/css-icon.png" },
+        { "name": "Express.js", "icon": "/techstack/express-icon.png" },
+        { "name": "Node.js", "icon": "/techstack/node-icon.png" },
+        { "name": "Postman", "icon": "/techstack/postman-icon.png" },
         { "name": "JavaScript", "icon": "/techstack/javascript-icon.png" },
         { "name": "React Hook Form", "icon": "/techstack/react-hook.png" },
         { "name": "Lucide React", "icon": "/techstack/lucide-react.png"  }
       ],
       "description": [
-        "Built a hackathon registration system with validated forms, auto-generated ticket IDs, local storage persistence, and a real-time admin dashboard."
+        "Built a cold email composer with a user-friendly interface, template management, and integration with popular email providers."
       ],
-      "Github-Link": "https://github.com/Sumitr995/Ticket-System",
-      "Live-Link": "https://ticketsystem-sumitr995.netlify.app/"
-    },
-    {
-      "title": "Hackathon Ticket System",
-      "duration": "Nov 2024 - Dec 2025",
-      "preview": "https://www.loom.com/share/1e7c8b9a0f2b4c5e9d6f8a7b3c4d2e5",
-      "techStack": [
-        { "name": "React", "icon": "/techstack/react-icon.png" },
-        { "name": "HTML", "icon": "/techstack/html-icon.png" },
-        { "name": "CSS", "icon": "/techstack/css-icon.png" },
-        { "name": "JavaScript", "icon": "/techstack/javascript-icon.png" },
-        { "name": "React Hook Form", "icon": "/techstack/react-hook.png" },
-        { "name": "Lucide React", "icon": "/techstack/lucide-react.png" }
-      ],
-      "description": [
-        "Built a hackathon registration system with validated forms, auto-generated ticket IDs, local storage persistence, and a real-time admin dashboard."
-      ],
-      "Github-Link": "https://github.com/Sumitr995/Ticket-System",
-      "Live-Link": "https://ticketsystem-sumitr995.netlify.app/"
+      "Github-Link": "https://github.com/Sumitr995/Cold-Email-Composer"
     }
   ],
   "skills": {
