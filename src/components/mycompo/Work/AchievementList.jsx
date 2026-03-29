@@ -1,7 +1,7 @@
 const AchievementList = ({ achievements }) => {
   return (
     <div>
-      <p className="text-xs font-semibold text-zinc-300 mb-2">
+      <p className="text-xs font-semibold text-zinc-700  dark:text-zinc-300 mb-2">
         What I've done
       </p>
 

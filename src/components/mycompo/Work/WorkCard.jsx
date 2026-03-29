@@ -6,12 +6,13 @@ const WorkCard = ({ job }) => {
         <div className="py-5  border-zinc-800">
 
             {/* Header */}
-            <div className="flex justify-between flex-row flex-wrap gap-2">
-                <h2 className="text-lg font-semibold dark:text-zinc-200 text-zinc-700">
+            <div className="flex justify-between flex-row shrink-0 gap-2">
+                <h2 className="text-md md:text-xl  font-semibold dark:text-zinc-200 text-zinc-700">
                     {job.company}
                 </h2>
 
-                <div className="text-right text-xs text-zinc-600">
+
+                <div className="text-right hidden md:block text-md text-zinc-600">
                     <p>{job.period}</p>
                 </div>
             </div>
@@ -28,7 +29,9 @@ const WorkCard = ({ job }) => {
 
             {/* Divider */}
             <div className="border-t dark:border-zinc-800 border-zinc-600  mb-5" />
-
+                <div className="text-right  md:hidden text-sm m-0 p-0  text-zinc-600">
+                    <p>{job.period}</p>
+                </div>
             {/* Tech */}
             <TechStack technologies={job.technologies} />
 
