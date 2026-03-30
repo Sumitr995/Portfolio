@@ -1,5 +1,6 @@
 import React from 'react'
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from './components/other/ScrollToTop';
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Project from "./pages/Project";
@@ -10,6 +11,7 @@ import Work from './pages/Work';
 const AppRoutes = () => {
     return (
         <div className="w-screen pt-[10vh]">
+            <ScrollToTop />
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/about' element={<About />} />
