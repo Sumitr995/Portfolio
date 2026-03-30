@@ -36,7 +36,7 @@ export default function ProjectCard({ data }) {
 
         {/* Top Right Icons */}
         <div className="absolute top-4 right-4 flex gap-2 z-10">
-          {data["Live-Link"] !== "NIL" && (
+          {data?.["Live-Link"] && data["Live-Link"] !== "NIL" && (
             <a href={data["Live-Link"]} target="_blank" rel="noreferrer"
               className="flex items-center justify-center w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm">
               <Globe size={14} />
