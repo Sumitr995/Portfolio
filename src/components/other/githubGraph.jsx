@@ -14,10 +14,10 @@ export default function GitHubGraph({ username, accessToken, className = "" }) {
 
   const LEVEL_FILL_CLASSES = useMemo(
     () => [
-      "fill-zinc-200 dark:fill-zinc-800",
-      "fill-primary/20",
-      "fill-primary/40",
-      "fill-primary/60",
+      "fill-zinc-300 dark:fill-zinc-800",
+      "fill-primary/25",
+      "fill-primary/45",
+      "fill-primary/70",
       "fill-primary",
     ],
     []
@@ -25,12 +25,17 @@ export default function GitHubGraph({ username, accessToken, className = "" }) {
 
   const LEVEL_BG_CLASSES = useMemo(
     () => [
-      "bg-zinc-200 dark:bg-zinc-800",
-      "bg-primary/20",
-      "bg-primary/40",
-      "bg-primary/60",
+      "bg-zinc-300 dark:bg-zinc-800",
+      "bg-primary/25",
+      "bg-primary/45",
+      "bg-primary/70",
       "bg-primary",
     ],
+    []
+  );
+
+  const CELL_STROKE_CLASS = useMemo(
+    () => "stroke-zinc-500/25 dark:stroke-zinc-700/60",
     []
   );
 
@@ -211,7 +216,8 @@ export default function GitHubGraph({ username, accessToken, className = "" }) {
                     width={cellSize}
                     height={cellSize}
                     rx={2}
-                    className={fillClass}
+                    strokeWidth={0.75}
+                    className={`${fillClass} ${CELL_STROKE_CLASS}`}
                   >
                     {showTitle ? (
                       <title>
