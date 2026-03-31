@@ -63,8 +63,6 @@ const projects = [
       { name: "Node.js", icon: "/techstack/node-icon.png" },
       { name: "Postman", icon: "/techstack/postman-icon.png" },
       { name: "JavaScript", icon: "/techstack/javascript-icon.png" },
-      { name: "React Hook Form", icon: "/techstack/react-hook.png" },
-      { name: "Lucide React", icon: "/techstack/lucide-react.png" },
     ],
     description: [
       "Built a cold email composer with a user-friendly interface, template management, and integration with popular email providers.",

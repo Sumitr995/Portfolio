@@ -13,7 +13,7 @@ const Navlists = () => {
         if (pathname === '/') return 'tab-1'
         if (pathname.startsWith('/work')) return 'tab-2'
         if (pathname.startsWith('/projects')) return 'tab-3'
-        if (pathname.startsWith('/certificates')) return 'tab-4'
+        if (pathname.startsWith('/about')) return 'tab-4'
         if (pathname.startsWith('/contact')) return 'tab-5'
         return 'tab-1'
     })()
@@ -25,7 +25,7 @@ const Navlists = () => {
                     <TabsTab onClick={() => navigate('/')} value="tab-1">Portfolio</TabsTab>
                     <TabsTab onClick={() => navigate('/work')} value="tab-2">Work</TabsTab>
                     <TabsTab onClick={() => navigate('/projects')} value="tab-3">Projects</TabsTab>
-                    <TabsTab onClick={() => navigate('/certificates')} value="tab-4">Certificate</TabsTab>
+                    <TabsTab onClick={() => navigate('/about')} value="tab-4">About</TabsTab>
                     <TabsTab onClick={() => navigate('/contact')} value="tab-5">Contact</TabsTab>
                     <AnimatedThemeToggler duration={1000} className={" px-2.5 cursor-pointer "} />
                 </TabsList>

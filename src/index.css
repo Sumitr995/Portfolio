@@ -180,3 +180,157 @@ html, body {
 .animate-fadeIn {
   animation: fadeIn 0.3s ease;
 }
+
+/* PageNotFound (“crazy 404”) helpers */
+.p404-grid {
+  background-image:
+    linear-gradient(
+      to right,
+      hsl(var(--border) / 0.35) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      hsl(var(--border) / 0.35) 1px,
+      transparent 1px
+    );
+  background-size: 44px 44px;
+  mask-image: radial-gradient(circle at center, black 48%, transparent 78%);
+}
+
+.p404-scanlines::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 6px,
+    hsl(var(--foreground) / 0.06) 7px
+  );
+  opacity: 0.9;
+}
+
+.p404-float-slow {
+  animation: p404-float 7s ease-in-out infinite;
+}
+
+.p404-float-fast {
+  animation: p404-float 4.8s ease-in-out infinite;
+}
+
+/* About page marquee */
+@keyframes about-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.about-marquee-track {
+  animation: about-marquee var(--about-marquee-duration, 28s) linear infinite;
+}
+
+.about-marquee-reverse {
+  animation-direction: reverse;
+}
+
+.dark .about-tech-icon[data-from="cdn"] {
+  filter: invert(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-marquee-track {
+    animation: none;
+    transform: translateX(0);
+  }
+}
+
+@keyframes p404-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -18px, 0);
+  }
+}
+
+.p404-glitch {
+  position: relative;
+  display: inline-block;
+}
+
+.p404-glitch-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.75;
+}
+
+.p404-glitch-layer--a {
+  color: hsl(var(--primary));
+  animation: p404-glitch-a 1.6s infinite;
+}
+
+.p404-glitch-layer--b {
+  color: hsl(var(--destructive));
+  animation: p404-glitch-b 2.1s infinite;
+}
+
+@keyframes p404-glitch-a {
+  0% {
+    transform: translate(0, 0);
+    clip-path: inset(0 0 0 0);
+  }
+  12% {
+    transform: translate(-2px, -1px);
+    clip-path: inset(10% 0 65% 0);
+  }
+  26% {
+    transform: translate(2px, 1px);
+    clip-path: inset(40% 0 30% 0);
+  }
+  40% {
+    transform: translate(-3px, 0px);
+    clip-path: inset(75% 0 10% 0);
+  }
+  55% {
+    transform: translate(1px, -2px);
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    transform: translate(0, 0);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes p404-glitch-b {
+  0% {
+    transform: translate(0, 0);
+    clip-path: inset(0 0 0 0);
+  }
+  10% {
+    transform: translate(2px, 1px);
+    clip-path: inset(55% 0 15% 0);
+  }
+  24% {
+    transform: translate(-2px, 0px);
+    clip-path: inset(20% 0 55% 0);
+  }
+  38% {
+    transform: translate(3px, -1px);
+    clip-path: inset(75% 0 5% 0);
+  }
+  52% {
+    transform: translate(-1px, 2px);
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    transform: translate(0, 0);
+    clip-path: inset(0 0 0 0);
+  }
+}
