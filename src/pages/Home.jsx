@@ -11,6 +11,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button"
 import Footer from '@/components/mycompo/Footer/Footer';
 import GitHubGraph from '@/components/other/githubGraph';
+import HomeStack from '@/components/mycompo/Home/HomeStack'
 
 
 const Home = () => {
@@ -72,7 +73,9 @@ const Home = () => {
           </div>
         </div>
 
-
+        <div className='w-full md:w-1/2 px-4 md:px-0 mt-5'>
+          <HomeStack />
+        </div>
 
 
       </div>

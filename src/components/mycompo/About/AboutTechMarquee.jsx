@@ -2,6 +2,19 @@ import React from 'react'
 
 const normalizeItems = (items) => (items ?? []).filter((t) => t?.name || t?.icon)
 
+const LOW_CONTRAST_ICON_NAMES = new Set([
+  'shadcn UI',
+  'Flask',
+  'REST APIs',
+  'Restful APIs',
+  'Express.js',
+])
+
+const contrastClassFor = (name) => {
+  if (!name) return ''
+  return LOW_CONTRAST_ICON_NAMES.has(name) ? 'dark:brightness-0 dark:invert' : ''
+}
+
 const SIMPLEICONS_OVERRIDES = {
   'Next.js': 'nextdotjs',
   'Node.js': 'nodedotjs',
@@ -57,6 +70,7 @@ const MarqueeRow = ({ items, reverse = false, duration = 28 }) => {
         {doubled.map((tech, idx) => {
           const key = `${tech.name ?? tech.icon ?? 'tech'}-${idx}`
           const initialSrc = tech.icon || simpleIconsCdnUrl(tech.name)
+          const contrastClass = contrastClassFor(tech.name)
 
           if (!initialSrc) return null
 
@@ -67,7 +81,7 @@ const MarqueeRow = ({ items, reverse = false, duration = 28 }) => {
               data-name={tech.name ?? ''}
               alt={tech.name ?? 'tech icon'}
               title={tech.name ?? ''}
-              className='about-tech-icon h-7 w-7 opacity-80 transition-opacity duration-200 hover:opacity-100'
+              className={`about-tech-icon h-10 w-10 opacity-100 transition-transform duration-200 hover:scale-110 ${contrastClass}`}
               loading='lazy'
               decoding='async'
               onError={(e) => {

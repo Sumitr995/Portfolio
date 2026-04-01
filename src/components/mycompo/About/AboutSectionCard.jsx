@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutSectionCard = ({ title, eyebrow, children }) => {
   return (
-    <section className='rounded-3xl border border-zinc-200 bg-white p-5 dark:border-zinc-700 dark:bg-zinc-900'>
+    <section className='rounded-3xl bg-transparent p-5'>
       {eyebrow ? (
         <div className='text-xs font-semibold text-zinc-500 dark:text-zinc-400'>{eyebrow}</div>
       ) : null}
