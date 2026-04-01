@@ -10,7 +10,8 @@
     "profiles": {
       "linkedin": "https://www.linkedin.com/in/sumitr995/",
       "github": "https://github.com/Sumitr995",
-      "linktree": "https://linktr.ee/Sumit_995"
+      "linktree": "https://linktr.ee/Sumit_995",
+      "calendly": "https://calendly.com/sumitr995"
     }
   },
   "driveLink": "https://drive.google.com/file/d/1sJXYs4DiU2djeXw86WO_zwCSwvvZbN1_/view",
@@ -73,24 +74,22 @@
     "frontend": [
       { "name": "React.js", "icon": "/techstack/react-icon.png" },
       { "name": "Redux", "icon": "/techstack/redux-icon.png" },
-      { "name": "Tailwind CSS", "icon": "/techstack/tailwind-icon.png" },
+      { "name": "Tailwind CSS", "icon": "/techstack/tailwindcss-icon.png" },
       { "name": "shadcn UI", "icon": "/techstack/shadcn-icon.png" } 
     ],
     "backend": [
-      { "name": "Node.js", "icon": "/techstack/nodejs-icon.png" },
-      { "name": "Express.js", "icon": "/techstack/expressjs-icon.png" },
+      { "name": "Node.js", "icon": "/techstack/node-icon.png" },
+      { "name": "Express.js", "icon": "/techstack/express-icon.png" },
       { "name": "Flask", "icon": "/techstack/flask-icon.png" },
       { "name": "REST APIs", "icon": "/techstack/api-icon.png" },
       { "name": "JWT Authentication", "icon": "/techstack/jwt-icon.png" }
     ],
     "databases": [
       { "name": "MongoDB", "icon": "/techstack/mongodb-icon.png" },
-      { "name": "PostgreSQL", "icon": "/techstack/postgresql-icon.png" }  
+      { "name": "PostgreSQL", "icon": "/techstack/postgres-icon.png" }  
     ],
     "cloudDevOps": [
       { "name": "Google Cloud Platform", "icon": "/techstack/gcp-icon.png" },
-      { "name": "Cloud Run", "icon": "/techstack/cloud-run-icon.png" },
-      { "name": "Load Balancing", "icon": "/techstack/load-balancing-icon.png" },
       { "name": "Docker", "icon": "/techstack/docker-icon.png" },
       { "name": "Ansible", "icon": "/techstack/ansible-icon.png" },
       { "name": "Nginx", "icon": "/techstack/nginx-icon.png" },
@@ -98,7 +97,7 @@
     ],
     "tools": [
       { "name": "Git", "icon": "/techstack/git-icon.png" },
-      { "name": "GitHub", "icon": "/techstack/github-icon.png" },
+      { "name": "GitHub", "icon": "/svgs/github-fill.svg" },
       { "name": "Postman", "icon": "/techstack/postman-icon.png" },
       { "name": "Jira", "icon": "/techstack/jira-icon.png" },
       { "name": "n8n", "icon": "/techstack/n8n-icon.png" }

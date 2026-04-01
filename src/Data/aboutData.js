@@ -138,6 +138,7 @@ const aboutData = {
     { label: 'Email', value: basics?.email ?? '' },
     { label: 'Phone', value: basics?.phone ?? '' },
   ].filter((f) => f.value),
+  
   tech: {
     row1,
     row2: row2.length ? row2 : row1,

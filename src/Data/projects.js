@@ -8,8 +8,8 @@ const projects = [
       { name: "HTML", icon: "/techstack/html-icon.png" },
       { name: "CSS", icon: "/techstack/css-icon.png" },
       { name: "JavaScript", icon: "/techstack/javascript-icon.png" },
-      { name: "React Hook Form", icon: "/techstack/react-hook.png" },
-      { name: "Lucide React", icon: "/techstack/lucide-react.png" },
+      { name: "React Hook Form", icon: "/techstack/react-hook-form.png" },
+      { name: "Lucide React", icon: "/techstack/lucide-icon.png" },
     ],
     description: [
       "Built a hackathon registration system with validated forms, auto-generated ticket IDs, local storage persistence, and a real-time admin dashboard.",
@@ -27,8 +27,8 @@ const projects = [
       { name: "Express.js", icon: "/techstack/express-icon.png" },
       { name: "MongoDB", icon: "/techstack/mongodb-icon.png" },
       { name: "JWT", icon: "/techstack/jwt-icon.png" },
-      { name: "React Hook Form", icon: "/techstack/react-hook.png" },
-      { name: "Lucide React", icon: "/techstack/lucide-react.png" },
+      { name: "React Hook Form", icon: "/techstack/react-hook-form.png" },
+      { name: "Lucide React", icon: "/techstack/lucide-icon.png" },
     ],
     description: [
       "Built a secure MERN authentication system using JWT and OTP-based email verification, and integrated a React client with React Hook Form and Axios for the complete auth flow.",
@@ -45,8 +45,8 @@ const projects = [
       { name: "HTML", icon: "/techstack/html-icon.png" },
       { name: "CSS", icon: "/techstack/css-icon.png" },
       { name: "JavaScript", icon: "/techstack/javascript-icon.png" },
-      { name: "React Hook Form", icon: "/techstack/react-hook.png" },
-      { name: "Lucide React", icon: "/techstack/lucide-react.png" },
+      { name: "React Hook Form", icon: "/techstack/react-hook-form.png" },
+      { name: "Lucide React", icon: "/techstack/lucide-icon.png" },
     ],
     description: [
       "Built a hackathon registration system with validated forms, auto-generated ticket IDs, local storage persistence, and a real-time admin dashboard.",
@@ -63,11 +63,19 @@ const projects = [
       { name: "Node.js", icon: "/techstack/node-icon.png" },
       { name: "Postman", icon: "/techstack/postman-icon.png" },
       { name: "JavaScript", icon: "/techstack/javascript-icon.png" },
+      {name:"RESTful API", icon: "/techstack/api-icon.png"},
+      {name:"Google SMTP", icon: "/svgs/GCP-black.svg"},
     ],
     description: [
       "Built a cold email composer with a user-friendly interface, template management, and integration with popular email providers.",
     ],
     "Github-Link": "https://github.com/Sumitr995/Cold-Email-Composer",
+    details: [
+      "Designed a user-friendly interface for composing cold emails with customizable templates.",
+      "Implemented template management for users to create, edit, and save email templates.", 
+      "Integrated with popular email providers (e.g., Gmail, Outlook) to send emails directly from the application.",
+      "Implemented error handling and validation to ensure successful email delivery.",
+    ],
   },
 ];
 
