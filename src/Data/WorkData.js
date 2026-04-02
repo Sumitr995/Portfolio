@@ -48,27 +48,4 @@ export const workData = [
       "Developed a Recipe Generator App consuming the CalorieNinja API via Axios, achieving an average ~200ms API response latency.",
     ],
   },
-  // {
-  //   company: "Promote",
-  //   role: "Founding Frontend Engineer",
-  //   period: "August 2025 – December 2025",
-  //   location: "United States (Remote)",
-  //   technologies: [
-  //     { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/ffffff" },
-  //     { name: "Tailwind", icon: "https://cdn.simpleicons.org/tailwindcss/38bdf8" },
-  //     { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178c6" },
-  //     { name: "React", icon: "https://cdn.simpleicons.org/react/61dafb" },
-  //     { name: "Figma", icon: "https://cdn.simpleicons.org/figma/f24e1e" },
-  //     { name: "Vercel", icon: "https://cdn.simpleicons.org/vercel/ffffff" },
-  //     { name: "AWS", icon: "https://cdn.simpleicons.org/amazonaws/ff9900" },
-  //     { name: "Postman", icon: "https://cdn.simpleicons.org/postman/ff6c37" },
-  //     { name: "Bun", icon: "https://cdn.simpleicons.org/bun/fbf0df" },
-  //   ],
-  //   achievements: [
-  //     "Architected and developed the complete frontend infrastructure for the platform.",
-  //     "Led codebase refactoring improving maintainability and scalability.",
-  //     "Optimized backend API integrations and error handling.",
-  //     "Improved UX using design systems and performance optimizations.",
-  //   ],
-  // },
 ];

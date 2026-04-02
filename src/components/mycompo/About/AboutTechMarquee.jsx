@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 
 const normalizeItems = (items) => (items ?? []).filter((t) => t?.name || t?.icon)
 
@@ -15,51 +15,48 @@ const contrastClassFor = (name) => {
   return LOW_CONTRAST_ICON_NAMES.has(name) ? 'dark:brightness-0 dark:invert' : ''
 }
 
-const SIMPLEICONS_OVERRIDES = {
-  'Next.js': 'nextdotjs',
-  'Node.js': 'nodedotjs',
-  'React.js': 'react',
-  'Express.js': 'express',
-  'Tailwind CSS': 'tailwindcss',
-  'Google Cloud Platform': 'googlecloud',
-  JWT: 'jsonwebtokens',
-  'JWT Authentication': 'jsonwebtokens',
-  'C++': 'cplusplus',
-  'C#': 'csharp',
-  'shadcn UI': 'shadcnui',
-  'REST APIs': null,
-  'Restful APIs': null,
-  'Load Balancing': null,
-}
-
-const toSimpleIconsSlug = (name) => {
-  if (!name) return null
-  if (Object.prototype.hasOwnProperty.call(SIMPLEICONS_OVERRIDES, name)) {
-    return SIMPLEICONS_OVERRIDES[name]
-  }
-
-  const trimmed = String(name).trim()
-  if (!trimmed) return null
-
-  return trimmed
-    .toLowerCase()
-    .replace(/\+/g, 'plus')
-    .replace(/\./g, 'dot')
-    .replace(/\s+/g, '')
-    .replace(/[^a-z0-9]/g, '')
-}
-
-const simpleIconsCdnUrl = (name) => {
-  const slug = toSimpleIconsSlug(name)
-  if (!slug) return null
-  return `https://cdn.simpleicons.org/${slug}`
-}
+const normalize = (value) => String(value ?? '').trim().toLowerCase()
 
 const MarqueeRow = ({ items, reverse = false, duration = 28 }) => {
   const normalized = normalizeItems(items)
   if (!normalized.length) return null
 
   const doubled = [...normalized, ...normalized]
+
+  const [cdnIconByTech, setCdnIconByTech] = useState({})
+
+  useEffect(() => {
+    let cancelled = false
+
+    const load = async () => {
+      try {
+        // Source of truth lives in /public/techstackCDN/techCDN.js
+        const moduleUrl = new URL('/techstackCDN/techCDN.js', window.location.origin).href
+        const mod = await import(/* @vite-ignore */ moduleUrl)
+        const list = mod?.default ?? []
+
+        const map = {}
+        for (const item of list) {
+          const key = normalize(item?.name)
+          if (!key || !item?.icon) continue
+          map[key] = item.icon
+        }
+
+        if (!cancelled) setCdnIconByTech(map)
+      } catch {
+        // ignore: CDN fallback list is optional
+      }
+    }
+
+    if (typeof window !== 'undefined') load()
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
+  const getCdnFallback = useMemo(() => {
+    return (techName) => cdnIconByTech[normalize(techName)] ?? null
+  }, [cdnIconByTech])
 
   return (
     <div className='overflow-hidden'>
@@ -69,7 +66,7 @@ const MarqueeRow = ({ items, reverse = false, duration = 28 }) => {
       >
         {doubled.map((tech, idx) => {
           const key = `${tech.name ?? tech.icon ?? 'tech'}-${idx}`
-          const initialSrc = tech.icon || simpleIconsCdnUrl(tech.name)
+          const initialSrc = tech.icon || getCdnFallback(tech.name)
           const contrastClass = contrastClassFor(tech.name)
 
           if (!initialSrc) return null
@@ -88,15 +85,16 @@ const MarqueeRow = ({ items, reverse = false, duration = 28 }) => {
                 const img = e.currentTarget
                 if (img.dataset.fallbackApplied === '1') return
 
-                const techName = img.dataset.name
-                const cdn = simpleIconsCdnUrl(techName)
-                if (!cdn) return
-
-                if (img.currentSrc === cdn || img.src === cdn) return
+                const fallback = getCdnFallback(img.dataset.name)
+                if (fallback && img.currentSrc !== fallback && img.src !== fallback) {
+                  img.dataset.fallbackApplied = '1'
+                  img.dataset.from = 'cdn'
+                  img.src = fallback
+                  return
+                }
 
                 img.dataset.fallbackApplied = '1'
-                img.dataset.from = 'cdn'
-                img.src = cdn
+                img.style.display = 'none'
               }}
             />
           )

@@ -59,8 +59,8 @@ const Home = () => {
           <div className='text-zinc-500 dark:text-zinc-300 font-bold text-2xl'>Projects</div>
           <div className=' w-full flex flex-wrap gap-2 justify-center mt-2'>
             {<div className="w-full flex flex-wrap gap-2 justify-center">
-              {projects.map((_, i) => (
-                <ProjectCard key={i} data={projects[i]} />
+              {projects.slice(0, 4).map((project, i) => (
+                <ProjectCard key={i} data={project} />
               ))}
             </div>}
           </div>

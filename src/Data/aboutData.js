@@ -23,19 +23,19 @@ const data = {
     frontend: [
       { name: 'React.js', icon: '/techstack/react-icon.png' },
       { name: 'Redux', icon: '/techstack/redux-icon.png' },
-      { name: 'Tailwind CSS', icon: '/techstack/tailwind-icon.png' },
+      { name: 'Tailwind CSS', icon: '/techstack/tailwindcss-icon.png' },
       { name: 'shadcn UI', icon: '/techstack/shadcn-icon.png' },
     ],
     backend: [
-      { name: 'Node.js', icon: '/techstack/nodejs-icon.png' },
-      { name: 'Express.js', icon: '/techstack/expressjs-icon.png' },
+      { name: 'Node.js', icon: '/techstack/node-icon.png' },
+      { name: 'Express.js', icon: '/techstack/express-icon.png' },
       { name: 'Flask', icon: '/techstack/flask-icon.png' },
       { name: 'REST APIs', icon: '/techstack/api-icon.png' },
       { name: 'JWT Authentication', icon: '/techstack/jwt-icon.png' },
     ],
     databases: [
       { name: 'MongoDB', icon: '/techstack/mongodb-icon.png' },
-      { name: 'PostgreSQL', icon: '/techstack/postgresql-icon.png' },
+      { name: 'PostgreSQL', icon: '/techstack/postgres-icon.png' },
     ],
     cloudDevOps: [
       { name: 'Google Cloud Platform', icon: '/techstack/gcp-icon.png' },

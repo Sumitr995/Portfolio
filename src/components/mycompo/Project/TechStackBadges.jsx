@@ -1,7 +1,47 @@
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 export default function TechStackBadges({ technologies }) {
   const [activeTech, setActiveTech] = useState(null);
+  const [iconSrcByTech, setIconSrcByTech] = useState({});
+  const [cdnIconByTech, setCdnIconByTech] = useState({});
+
+  const normalize = (value) => String(value ?? "").trim().toLowerCase();
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const load = async () => {
+      try {
+        // Source of truth lives in /public/techstackCDN/techCDN.js
+        const moduleUrl = new URL(
+          "/techstackCDN/techCDN.js",
+          window.location.origin
+        ).href;
+        const mod = await import(/* @vite-ignore */ moduleUrl);
+        const list = mod?.default ?? [];
+
+        const map = {};
+        for (const item of list) {
+          const key = normalize(item?.name);
+          if (!key || !item?.icon) continue;
+          map[key] = item.icon;
+        }
+
+        if (!cancelled) setCdnIconByTech(map);
+      } catch {
+        // ignore: CDN fallback list is optional
+      }
+    };
+
+    if (typeof window !== "undefined") load();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const getCdnFallback = useMemo(() => {
+    return (techName) => cdnIconByTech[normalize(techName)] ?? null;
+  }, [cdnIconByTech]);
 
   const handleTechClick = (techName) => {
     if (typeof window !== "undefined") {
@@ -35,11 +75,37 @@ export default function TechStackBadges({ technologies }) {
             "
           title={tech.name}
         >
-          <img
-            src={tech.icon}
-            alt={tech.name}
-            className="w-4 h-4 shrink-0 md:w-5 md:h-5"
-          />
+          {(() => {
+            const techKey = normalize(tech.name);
+            const src =
+              Object.prototype.hasOwnProperty.call(iconSrcByTech, techKey)
+                ? iconSrcByTech[techKey]
+                : tech.icon || getCdnFallback(tech.name);
+
+            if (!src) return null;
+
+            return (
+              <img
+                src={src}
+                alt={tech.name}
+                className="w-4 h-4 shrink-0 md:w-5 md:h-5"
+                onError={() => {
+                  const fallback = getCdnFallback(tech.name);
+
+                  setIconSrcByTech((prev) => {
+                    const current = prev[techKey];
+                    if (current === null) return prev;
+
+                    if (fallback && src !== fallback) {
+                      return { ...prev, [techKey]: fallback };
+                    }
+
+                    return { ...prev, [techKey]: null };
+                  });
+                }}
+              />
+            );
+          })()}
 
           <span
             className={`
