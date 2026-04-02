@@ -1,6 +1,8 @@
-import { Github, Globe } from "lucide-react";
+import { useMemo, useState } from "react";
+import { Eye, Github, Globe } from "lucide-react";
 import TechStackBadges from "@/components/mycompo/Project/TechStackBadges";
 import { hasLiveLink } from "@/Utils/projectUtils";
+import PreviewImage from "@/components/other/PreviewImage";
 
 export default function ProjectsTimelineRow({
   project,
@@ -9,6 +11,26 @@ export default function ProjectsTimelineRow({
   setOpenIndex,
 }) {
   const isOpen = openIndex === index;
+  const [isPreviewOpen, setIsPreviewOpen] = useState(false);
+
+  const primaryLink = hasLiveLink(project)
+    ? project?.["Live-Link"]
+    : project?.["Github-Link"];
+
+  const previewImages = useMemo(() => {
+    if (!project) return [];
+
+    const extra = Array.isArray(project.previews)
+      ? project.previews
+      : Array.isArray(project.images)
+        ? project.images
+        : [];
+
+    const first = project.preview ? [project.preview] : [];
+    const merged = [...first, ...extra].filter(Boolean);
+
+    return merged.filter((src, i) => merged.indexOf(src) === i);
+  }, [project]);
 
   return (
     <div className="relative pl-6 py-3">
@@ -20,9 +42,21 @@ export default function ProjectsTimelineRow({
           <div className="text-xs text-zinc-500 dark:text-zinc-400">
             {project.duration}
           </div>
-          <div className="mt-0.5 text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-            {project.title}
-          </div>
+          {primaryLink ? (
+            <a
+              href={primaryLink}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-0.5 inline-flex text-sm font-semibold text-zinc-900 dark:text-zinc-100 hover:underline underline-offset-4"
+              aria-label={`Open ${project.title}`}
+            >
+              {project.title}
+            </a>
+          ) : (
+            <div className="mt-0.5 text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+              {project.title}
+            </div>
+          )}
 
           <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
             {project?.description?.[0] ?? ""}
@@ -40,6 +74,17 @@ export default function ProjectsTimelineRow({
             >
               {isOpen ? "Hide details" : "Show details"}
             </button>
+
+            {project?.preview && (
+              <button
+                type="button"
+                onClick={() => setIsPreviewOpen(true)}
+                className="sm:hidden inline-flex items-center gap-1 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition"
+                aria-label={`Preview ${project.title}`}
+              >
+                <Eye className="w-3.5 h-3.5" /> Preview
+              </button>
+            )}
 
             {hasLiveLink(project) && (
               <a
@@ -70,7 +115,7 @@ export default function ProjectsTimelineRow({
                 Details
               </div>
               <ul className="mt-2 space-y-2">
-                {(project?.description ?? []).map((line, i) => (
+                {((project?.details?.length ? project.details : project?.description) ?? []).map((line, i) => (
                   <li key={i} className="flex gap-2">
                     <span className="text-zinc-600 dark:text-zinc-500 mt-1 text-[8px]">
                       ▪
@@ -84,14 +129,35 @@ export default function ProjectsTimelineRow({
         </div>
 
         {project?.preview && (
-          <img
-            src={project.preview}
-            alt={project.title}
-            loading="lazy"
-            className="hidden sm:block w-36 h-20 object-cover opacity-90 dark:opacity-80"
-          />
+          <button
+            type="button"
+            onClick={() => setIsPreviewOpen(true)}
+            className="group/preview relative hidden sm:block w-36 h-20"
+            aria-label={`Open preview for ${project.title}`}
+            aria-haspopup="dialog"
+            title="Open preview"
+          >
+            <img
+              src={project.preview}
+              alt={project.title}
+              loading="lazy"
+              className="w-36 h-20 object-cover opacity-90 dark:opacity-80 rounded-md border border-zinc-200/70 dark:border-zinc-800/70 group-hover/preview:opacity-100 transition"
+            />
+            <span className="absolute top-1.5 right-1.5 inline-flex items-center justify-center w-6 h-6 rounded-full bg-black/50 text-white opacity-90 group-hover/preview:opacity-100 transition">
+              <Eye className="w-3.5 h-3.5" />
+            </span>
+          </button>
         )}
       </div>
+
+      <PreviewImage
+        open={isPreviewOpen}
+        onClose={() => setIsPreviewOpen(false)}
+        title={project?.title}
+        images={previewImages}
+        liveLink={project?.["Live-Link"]}
+        githubLink={project?.["Github-Link"]}
+      />
     </div>
   );
 }

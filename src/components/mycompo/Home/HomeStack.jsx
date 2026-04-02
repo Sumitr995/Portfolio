@@ -83,7 +83,6 @@ const HomeStack = ({
           ))}
         </div>
 
-        {/* Desktop/Tablet: keep the original two-row layout */}
         <div className="hidden flex-col gap-6 md:flex">
           {[row1, row2].map((row, rowIndex) => (
             <div
@@ -98,7 +97,7 @@ const HomeStack = ({
                   title={tech.name ?? ""}
                   loading="lazy"
                   decoding="async"
-                  className={`h-9 w-9 object-contain transition-transform duration-200 hover:scale-110 ${contrastClassFor(tech.name)}`}
+                  className={`h-9 w-9 cursor-pointer object-contain transition-transform duration-200 hover:scale-110 ${contrastClassFor(tech.name)}`}
                 />
               ))}
             </div>

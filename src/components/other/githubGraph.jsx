@@ -7,37 +7,36 @@ export default function GitHubGraph({ username, accessToken, className = "" }) {
   const [streak, setStreak] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const githubProfile = data.basics.profiles.github;
 
   const DAYS = ["Mon", "", "Wed", "", "Fri", ""];
   const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-  const LEVEL_FILL_CLASSES = useMemo(
-    () => [
-      "fill-zinc-300 dark:fill-zinc-800",
-      "fill-primary/25",
-      "fill-primary/45",
-      "fill-primary/70",
-      "fill-primary",
-    ],
-    []
-  );
+  useEffect(() => {
+    const updateTheme = () => {
+      setIsDarkMode(document.documentElement.classList.contains("dark"));
+    };
 
-  const LEVEL_BG_CLASSES = useMemo(
-    () => [
-      "bg-zinc-300 dark:bg-zinc-800",
-      "bg-primary/25",
-      "bg-primary/45",
-      "bg-primary/70",
-      "bg-primary",
-    ],
-    []
-  );
+    updateTheme();
 
-  const CELL_STROKE_CLASS = useMemo(
-    () => "stroke-zinc-500/25 dark:stroke-zinc-700/60",
-    []
-  );
+    const observer = new MutationObserver(updateTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const levelColors = useMemo(() => {
+    // GitHub contribution colors
+    // Light: https://github.com (classic)
+    const light = ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"];
+    // Dark: GitHub dark theme
+    const dark = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"];
+    return isDarkMode ? dark : light;
+  }, [isDarkMode]);
 
   const getMonthLabels = () => {
     const labels = [];
@@ -206,7 +205,7 @@ export default function GitHubGraph({ username, accessToken, className = "" }) {
             <g key={wi} transform={`translate(${wi * totalWidth},0)`}>
               {week.contributionDays.map((day, di) => {
                 const level = getLevel(day.contributionCount);
-                const fillClass = LEVEL_FILL_CLASSES[level] ?? LEVEL_FILL_CLASSES[0];
+                const fill = levelColors[level] ?? levelColors[0];
 
                 return (
                   <rect
@@ -216,8 +215,7 @@ export default function GitHubGraph({ username, accessToken, className = "" }) {
                     width={cellSize}
                     height={cellSize}
                     rx={2}
-                    strokeWidth={0.75}
-                    className={`${fillClass} ${CELL_STROKE_CLASS}`}
+                    fill={fill}
                   >
                     {showTitle ? (
                       <title>
@@ -247,8 +245,10 @@ export default function GitHubGraph({ username, accessToken, className = "" }) {
 
           <div className="relative">
             {/* Calendar skeleton */}
-            <div className="animate-pulse opacity-80">
-              {renderCalendarSvg(skeletonWeeks, { showTitle: false })}
+            <div className="overflow-x-auto sm:overflow-x-visible">
+              <div className="min-w-174 sm:min-w-0 animate-pulse opacity-80">
+                {renderCalendarSvg(skeletonWeeks, { showTitle: false })}
+              </div>
             </div>
 
             {/* Legend (keep same as final for layout stability) */}
@@ -257,7 +257,8 @@ export default function GitHubGraph({ username, accessToken, className = "" }) {
               {[0, 1, 2, 3, 4].map((i) => (
                 <div
                   key={i}
-                  className={`w-3 h-3 rounded-sm ${LEVEL_BG_CLASSES[i] ?? LEVEL_BG_CLASSES[0]}`}
+                  className="w-3 h-3 rounded-sm"
+                  style={{ backgroundColor: levelColors[i] ?? levelColors[0] }}
                 />
               ))}
               <span>More</span>
@@ -283,7 +284,11 @@ export default function GitHubGraph({ username, accessToken, className = "" }) {
   return (
     <div className={`w-full ${className}`}>
       <div className="relative rounded-xl p-4">
-        {renderCalendarSvg(contributions)}
+        <div className="overflow-x-auto sm:overflow-x-visible">
+          <div className="min-w-174 sm:min-w-0">
+            {renderCalendarSvg(contributions)}
+          </div>
+        </div>
 
         {/* Footer */}
         <div className="flex items-center gap-2 mt-3 text-xs text-zinc-500">
@@ -291,7 +296,8 @@ export default function GitHubGraph({ username, accessToken, className = "" }) {
           {[0, 1, 2, 3, 4].map((i) => (
             <div
               key={i}
-              className={`w-3 h-3 rounded-sm ${LEVEL_BG_CLASSES[i] ?? LEVEL_BG_CLASSES[0]}`}
+              className="w-3 h-3 rounded-sm"
+              style={{ backgroundColor: levelColors[i] ?? levelColors[0] }}
             />
           ))}
           <span>More</span>
