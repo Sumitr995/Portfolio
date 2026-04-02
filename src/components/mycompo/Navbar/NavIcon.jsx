@@ -7,7 +7,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { NavLink } from "react-router-dom"
-import { AnimatedThemeToggler } from '../../ui/animated-theme-toggler'
 
 const NavIcon = () => {
   return (
@@ -31,16 +30,12 @@ const NavIcon = () => {
               <NavLink className="rounded-lg border-b px-3 py-2 text-base hover:bg-black/5 dark:hover:bg-white/10" to="/projects">Projects</NavLink>
             </SheetClose>
             <SheetClose asChild>
-              <NavLink className="rounded-lg border-b px-3 py-2 text-base hover:bg-black/5 dark:hover:bg-white/10" to="/certificates">Certificate</NavLink>
+              <NavLink className="rounded-lg border-b px-3 py-2 text-base hover:bg-black/5 dark:hover:bg-white/10" to="/about">About</NavLink>
             </SheetClose>
             <SheetClose asChild>
               <NavLink className="rounded-lg border-b px-3 py-2 text-base hover:bg-black/5 dark:hover:bg-white/10" to="/contact">Contact</NavLink>
             </SheetClose>
           </nav>
-          <div className="mt-auto flex items-center gap-2 border-t border-black/5 dark:border-white/5 pt-4">
-            <span className="text-sm m-5 text-zinc-500 dark:text-zinc-400">Theme</span>
-            <AnimatedThemeToggler duration={1000} className={"px-2.5 cursor-pointer"} />
-          </div>
         </div>
       </SheetContent>
     </Sheet>

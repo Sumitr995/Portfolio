@@ -8,9 +8,9 @@ const Project = () => {
       <div className='w-full min-h-screen flex flex-col items-center justify-start gap-10 py-6'>
 
         <div className='w-full md:w-1/2 px-4 md:px-0'>
-          <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300'>Featured</div>
           <div className='text-zinc-500 dark:text-zinc-300 font-bold text-2xl'>Projects</div>
-          <div className='mt-3'>
+          <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300'>My Personal & Open Source Projects</div>
+          <div className='mt-5'>
             <ProjectsTimeline />
           </div>
         </div>

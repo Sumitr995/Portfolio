@@ -7,15 +7,15 @@ import { Textarea } from '@/components/ui/textarea'
 import { buildMailto } from '@/Utils/contactUtils'
 
 const SUBJECT_PRESETS = [
-  { label: 'Freelance / Project', value: 'Freelance / Project' },
-  { label: 'Full-time / Internship', value: 'Full-time / Internship' },
-  { label: 'Collaboration', value: 'Collaboration' },
+  { label: 'Full Time / Part Time role', value: 'Full Time / Part Time role' },
+  { label: 'Internship Opportunity', value: 'Internship Opportunity' },
+  { label: 'Project Collaboration', value: 'Project Collaboration' },
   { label: 'Speaking / Community', value: 'Speaking / Community' },
   { label: 'Other', value: 'Other' },
 ]
 
 const ContactForm = ({ email }) => {
-  const [subjectPreset, setSubjectPreset] = React.useState(SUBJECT_PRESETS[0]?.value ?? 'Freelance / Project')
+  const [subjectPreset, setSubjectPreset] = React.useState(SUBJECT_PRESETS[0]?.value ?? 'Full Time / Part Time role')
   const [name, setName] = React.useState('')
   const [fromEmail, setFromEmail] = React.useState('')
   const [message, setMessage] = React.useState('')
