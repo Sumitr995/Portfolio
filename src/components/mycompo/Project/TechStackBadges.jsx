@@ -13,7 +13,11 @@ export default function TechStackBadges({ technologies }) {
     const load = async () => {
       try {
         // Source of truth lives in /public/techstackCDN/techCDN.js
-        const mod = await import("/techstackCDN/techCDN.js");
+        const moduleUrl = new URL(
+          "/techstackCDN/techCDN.js",
+          window.location.origin
+        ).href;
+        const mod = await import(/* @vite-ignore */ moduleUrl);
         const list = mod?.default ?? [];
 
         const map = {};
