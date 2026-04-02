@@ -3,8 +3,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { Tabs, TabsList, TabsTab } from "@/components/ui/tabs";
 import { AnimatedThemeToggler } from '../../ui/animated-theme-toggler';
 
-
-
 const Navlists = () => {
     const navigate = useNavigate()
     const { pathname } = useLocation()
@@ -27,7 +25,7 @@ const Navlists = () => {
                     <TabsTab onClick={() => navigate('/projects')} value="tab-3">Projects</TabsTab>
                     <TabsTab onClick={() => navigate('/about')} value="tab-4">About</TabsTab>
                     <TabsTab onClick={() => navigate('/contact')} value="tab-5">Contact</TabsTab>
-                    <AnimatedThemeToggler duration={1000} className={" px-2.5 cursor-pointer "} />
+                    <AnimatedThemeToggler origin="top-right" duration={1000} className={" px-2.5 cursor-pointer "} />
                 </TabsList>
             </Tabs>
         </div>
