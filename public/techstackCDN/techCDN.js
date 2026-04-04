@@ -10,7 +10,7 @@ const techCDN = [
   { name: "Framer Motion", icon: "https://cdn.simpleicons.org/framer/0055ff" },
   { name: "GSAP", icon: "https://cdn.simpleicons.org/greensock/88ce02" },
   { name: "OpenAI API", icon: "https://cdn.simpleicons.org/openai/000000" },
-  { name: "Bun", icon: "https://cdn.simpleicons.org/bun/fbf0df" },
+  { name: "Bun", icon: "/svgs/bun-icon.svg" },
   { name: "AWS", icon: "https://cdn.simpleicons.org/amazonaws/ff9900" },
   { name: "Postman", icon: "https://cdn.simpleicons.org/postman/ff6c37" },
 ];

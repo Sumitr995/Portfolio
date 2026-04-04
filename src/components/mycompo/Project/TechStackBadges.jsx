@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { contrastClassFor } from "@/Utils/techIconUtils";
 
 export default function TechStackBadges({ technologies }) {
   const [activeTech, setActiveTech] = useState(null);
@@ -88,7 +89,7 @@ export default function TechStackBadges({ technologies }) {
               <img
                 src={src}
                 alt={tech.name}
-                className="w-4 h-4 shrink-0 md:w-5 md:h-5"
+                className={`w-4 h-4 shrink-0 md:w-5 md:h-5 ${contrastClassFor(tech.name)}`}
                 onError={() => {
                   const fallback = getCdnFallback(tech.name);
 

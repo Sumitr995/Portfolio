@@ -1,6 +1,48 @@
+import { useEffect, useMemo, useState } from "react";
 import { Globe, Github, ArrowRight } from "lucide-react";
+import { contrastClassFor } from "@/Utils/techIconUtils";
 
 export default function ProjectCard({ data }) {
+  const [iconSrcByTech, setIconSrcByTech] = useState({});
+  const [cdnIconByTech, setCdnIconByTech] = useState({});
+
+  const normalize = (value) => String(value ?? "").trim().toLowerCase();
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const load = async () => {
+      try {
+        const moduleUrl = new URL(
+          "/techstackCDN/techCDN.js",
+          window.location.origin
+        ).href;
+        const mod = await import(/* @vite-ignore */ moduleUrl);
+        const list = mod?.default ?? [];
+
+        const map = {};
+        for (const item of list) {
+          const key = normalize(item?.name);
+          if (!key || !item?.icon) continue;
+          map[key] = item.icon;
+        }
+
+        if (!cancelled) setCdnIconByTech(map);
+      } catch {
+        // ignore: CDN fallback list is optional
+      }
+    };
+
+    if (typeof window !== "undefined") load();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const getCdnFallback = useMemo(() => {
+    return (techName) => cdnIconByTech[normalize(techName)] ?? null;
+  }, [cdnIconByTech]);
+
   const status =
     data?.status ??
     (data?.["Live-Link"] && data["Live-Link"] !== "NIL"
@@ -75,17 +117,47 @@ export default function ProjectCard({ data }) {
 
           <div className="flex items-center">
             {data.techStack.slice(0, 4).map((tech, i) => (
-              <div
-                key={tech.name}
-                title={tech.name}
-                className="w-6 h-6 rounded-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-600 flex items-center justify-center overflow-hidden"
-                style={{
-                  marginLeft: i === 0 ? 0 : "-6px",
-                  zIndex: 10 - i,
-                }}
-              >
-                <img src={tech.icon} alt={tech.name} className="w-3.5 h-3.5" />
-              </div>
+              (() => {
+                const techKey = normalize(tech?.name);
+                const explicit = String(tech?.icon ?? "").trim() || null;
+                const fallback = getCdnFallback(tech?.name);
+                const src = Object.prototype.hasOwnProperty.call(iconSrcByTech, techKey)
+                  ? iconSrcByTech[techKey]
+                  : explicit || fallback;
+
+                if (!src) return null;
+
+                return (
+                  <div
+                    key={tech.name}
+                    title={tech.name}
+                    className="w-6 h-6 rounded-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-600 flex items-center justify-center overflow-hidden"
+                    style={{
+                      marginLeft: i === 0 ? 0 : "-6px",
+                      zIndex: 10 - i,
+                    }}
+                  >
+                    <img
+                      src={src}
+                      alt={tech.name}
+                      className={`w-3.5 h-3.5 ${contrastClassFor(tech?.name)}`}
+                      onError={() => {
+                        setIconSrcByTech((prev) => {
+                          const current = prev[techKey];
+                          if (current === null) return prev;
+
+                          const nextFallback = getCdnFallback(tech?.name);
+                          if (nextFallback && src !== nextFallback) {
+                            return { ...prev, [techKey]: nextFallback };
+                          }
+
+                          return { ...prev, [techKey]: null };
+                        });
+                      }}
+                    />
+                  </div>
+                );
+              })()
             ))}
           </div>
 
