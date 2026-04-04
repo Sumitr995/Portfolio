@@ -1,19 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react'
+import { contrastClassFor } from '@/Utils/techIconUtils'
 
 const normalizeItems = (items) => (items ?? []).filter((t) => t?.name || t?.icon)
-
-const LOW_CONTRAST_ICON_NAMES = new Set([
-  'shadcn UI',
-  'Flask',
-  'REST APIs',
-  'Restful APIs',
-  'Express.js',
-])
-
-const contrastClassFor = (name) => {
-  if (!name) return ''
-  return LOW_CONTRAST_ICON_NAMES.has(name) ? 'dark:brightness-0 dark:invert' : ''
-}
 
 const normalize = (value) => String(value ?? '').trim().toLowerCase()
 

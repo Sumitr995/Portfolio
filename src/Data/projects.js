@@ -61,7 +61,7 @@ const projects = [
     previews: [],
     techStack: [
       { name: "React 19", icon: "/techstack/react-icon.png" },
-      { name: "Bun", icon: "" },
+      { name: "Bun", icon: "/techstack/bun-icon.png" },
       { name: "Tailwind CSS v4", icon: "/techstack/tailwindcss-icon.png" },
       { name: "Framer Motion", icon: "" },
       { name: "Shadcn UI", icon: "/techstack/shadcn-icon.png" },
@@ -88,7 +88,7 @@ const projects = [
     techStack: [
       { name: "Node.js", icon: "/techstack/node-icon.png" },
       { name: "Express.js", icon: "/techstack/express-icon.png" },
-      { name: "OpenAI API", icon: "" },
+      { name: "OpenAI API", icon: "/svgs/chatgpt.svg" },
       { name: "Google Sheets API", icon: "/techstack/gcp-icon.png" },
       { name: "Nodemailer", icon: "/techstack/nodemailer.png" },
     ],

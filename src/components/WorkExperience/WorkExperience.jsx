@@ -5,6 +5,7 @@ import {
   AccordionContent,
 } from "@/components/ui/accordion";
 import data from "@/Data/Data.json";
+import { contrastClassFor } from "@/Utils/techIconUtils";
 
 export default function WorkExperience() {
 
@@ -56,7 +57,7 @@ export default function WorkExperience() {
                   <img
                     src={tech.icon}
                     alt={tech.name}
-                    className="w-4 h-4 object-contain"
+                    className={`w-4 h-4 object-contain ${contrastClassFor(tech.name)}`}
                   />
                   {tech.name}
                 </span>
@@ -106,7 +107,7 @@ export default function WorkExperience() {
                   <img
                     src={tech.icon}
                     alt={tech.name}
-                    className="w-4 h-4 object-contain"
+                    className={`w-4 h-4 object-contain ${contrastClassFor(tech.name)}`}
                   />
                   {tech.name}
                 </span>

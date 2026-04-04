@@ -1,18 +1,6 @@
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import data from "@/Data/Data.json";
-
-const LOW_CONTRAST_ICON_NAMES = new Set([
-  "shadcn UI",
-  "Flask",
-  "REST APIs",
-  "Restful APIs",
-  "Express.js",
-]);
-
-const contrastClassFor = (name) => {
-  if (!name) return "";
-  return LOW_CONTRAST_ICON_NAMES.has(name) ? "dark:brightness-0 dark:invert" : "";
-};
+import { contrastClassFor } from "@/Utils/techIconUtils";
 
 const uniqueBy = (items, keyFn) => {
   const seen = new Set();
@@ -35,6 +23,46 @@ const HomeStack = ({
   title = "Stack",
   className = "",
 } = {}) => {
+  const [iconSrcByTech, setIconSrcByTech] = useState({});
+  const [cdnIconByTech, setCdnIconByTech] = useState({});
+
+  const normalize = (value) => String(value ?? "").trim().toLowerCase();
+
+  useEffect(() => {
+    let cancelled = false;
+
+    const load = async () => {
+      try {
+        const moduleUrl = new URL(
+          "/techstackCDN/techCDN.js",
+          window.location.origin
+        ).href;
+        const mod = await import(/* @vite-ignore */ moduleUrl);
+        const list = mod?.default ?? [];
+
+        const map = {};
+        for (const item of list) {
+          const key = normalize(item?.name);
+          if (!key || !item?.icon) continue;
+          map[key] = item.icon;
+        }
+
+        if (!cancelled) setCdnIconByTech(map);
+      } catch {
+        // ignore: CDN fallback list is optional
+      }
+    };
+
+    if (typeof window !== "undefined") load();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const getCdnFallback = useMemo(() => {
+    return (techName) => cdnIconByTech[normalize(techName)] ?? null;
+  }, [cdnIconByTech]);
+
   const skills = data?.skills ?? {};
 
   // Keep your requested sequence
@@ -71,15 +99,41 @@ const HomeStack = ({
         {/* Mobile-first: wrap naturally (no forced rows) */}
         <div className="flex flex-wrap items-center justify-center gap-3 md:hidden">
           {items.map((tech) => (
-            <img
-              key={tech.name ?? tech.icon}
-              src={tech.icon}
-              alt={tech.name ?? "tech"}
-              title={tech.name ?? ""}
-              loading="lazy"
-              decoding="async"
-              className={`h-8 w-8 object-contain transition-transform duration-200 hover:scale-110 ${contrastClassFor(tech.name)}`}
-            />
+            (() => {
+              const techKey = normalize(tech?.name);
+              const explicit = String(tech?.icon ?? "").trim() || null;
+              const fallback = getCdnFallback(tech?.name);
+              const src = Object.prototype.hasOwnProperty.call(iconSrcByTech, techKey)
+                ? iconSrcByTech[techKey]
+                : explicit || fallback;
+
+              if (!src) return null;
+
+              return (
+                <img
+                  key={tech.name ?? tech.icon}
+                  src={src}
+                  alt={tech.name ?? "tech"}
+                  title={tech.name ?? ""}
+                  loading="lazy"
+                  decoding="async"
+                  className={`h-8 w-8 object-contain transition-transform duration-200 hover:scale-110 ${contrastClassFor(tech.name)}`}
+                  onError={() => {
+                    setIconSrcByTech((prev) => {
+                      const current = prev[techKey];
+                      if (current === null) return prev;
+
+                      const nextFallback = getCdnFallback(tech?.name);
+                      if (nextFallback && src !== nextFallback) {
+                        return { ...prev, [techKey]: nextFallback };
+                      }
+
+                      return { ...prev, [techKey]: null };
+                    });
+                  }}
+                />
+              );
+            })()
           ))}
         </div>
 
@@ -90,15 +144,41 @@ const HomeStack = ({
               className="flex w-full items-center justify-between gap-2"
             >
               {row.map((tech) => (
-                <img
-                  key={tech.name ?? tech.icon}
-                  src={tech.icon}
-                  alt={tech.name ?? "tech"}
-                  title={tech.name ?? ""}
-                  loading="lazy"
-                  decoding="async"
-                  className={`h-9 w-9 cursor-pointer object-contain transition-transform duration-200 hover:scale-110 ${contrastClassFor(tech.name)}`}
-                />
+                (() => {
+                  const techKey = normalize(tech?.name);
+                  const explicit = String(tech?.icon ?? "").trim() || null;
+                  const fallback = getCdnFallback(tech?.name);
+                  const src = Object.prototype.hasOwnProperty.call(iconSrcByTech, techKey)
+                    ? iconSrcByTech[techKey]
+                    : explicit || fallback;
+
+                  if (!src) return null;
+
+                  return (
+                    <img
+                      key={tech.name ?? tech.icon}
+                      src={src}
+                      alt={tech.name ?? "tech"}
+                      title={tech.name ?? ""}
+                      loading="lazy"
+                      decoding="async"
+                      className={`h-9 w-9 cursor-pointer object-contain transition-transform duration-200 hover:scale-110 ${contrastClassFor(tech.name)}`}
+                      onError={() => {
+                        setIconSrcByTech((prev) => {
+                          const current = prev[techKey];
+                          if (current === null) return prev;
+
+                          const nextFallback = getCdnFallback(tech?.name);
+                          if (nextFallback && src !== nextFallback) {
+                            return { ...prev, [techKey]: nextFallback };
+                          }
+
+                          return { ...prev, [techKey]: null };
+                        });
+                      }}
+                    />
+                  );
+                })()
               ))}
             </div>
           ))}

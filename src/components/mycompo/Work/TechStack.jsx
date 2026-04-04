@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { contrastClassFor } from '@/Utils/techIconUtils'
 
 const TechStack = ({ technologies }) => {
   const [activeTech, setActiveTech] = useState(null)
@@ -43,7 +44,7 @@ const TechStack = ({ technologies }) => {
             <img
               src={tech.icon}
               alt={tech.name}
-              className="w-4 h-4 shrink-0 md:w-5 md:h-5"
+              className={`w-4 h-4 shrink-0 md:w-5 md:h-5 ${contrastClassFor(tech.name)}`}
             />
 
             {/* TEXT */}
