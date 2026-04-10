@@ -11,7 +11,7 @@ import Work from './pages/Work';
 import PageNotFound from './pages/PageNotFound';
 const AppRoutes = () => {
     return (
-        <div className="w-screen pt-[10vh]">
+        <div className="w-full pt-[10vh]">
             <ScrollToTop />
             <Routes>
                 <Route path='/' element={<Home />} />
