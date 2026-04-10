@@ -58,7 +58,7 @@ export default function ProjectCard({ data }) {
   })();
 
   return (
-    <div className="group relative w-full max-w-100 md:max-w-80 rounded-3xl overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-sm hover:shadow-md transition-all duration-300">
+    <div className="group relative w-full min-[1400px]:max-w-sm rounded-3xl overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-sm hover:shadow-md transition-all duration-300">
 
       {/* Thumbnail */}
       <div className="relative h-40 sm:h-44 overflow-hidden ">

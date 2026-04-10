@@ -19,7 +19,7 @@ const Contact = () => {
 
   return (
     <div className='flex w-full flex-col'>
-      <div className='w-full min-h-screen mx-auto p-4 md:w-1/2 md:m-auto md:p-6'>
+      <div className='w-full min-h-screen mx-auto p-4 md:w-1/2 md:max-w-3xl md:m-auto md:p-6'>
         <ContactHeader subtitle='The fastest way to reach me is email. WhatsApp works too.' />
 
         <div className='flex flex-col gap-6'>

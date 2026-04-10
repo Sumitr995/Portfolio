@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
     <div className='w-full dark:bg-zinc-900 border flex items-center justify-center bg-zinc-100 py-8 md:py-0 md:h-[40vh]'>
-      <div className='w-full px-4 md:px-0 md:w-1/2 md:h-full'>
+      <div className='w-full px-4 md:px-0 md:w-1/2 md:max-w-3xl md:h-full'>
         <div className='w-full md:h-[60%] md:w-[95%] m-auto md:mt-8 flex flex-col gap-6 md:gap-0 md:flex-row'>
           <FooterContent />
           <div className='h-auto md:h-[20vh] flex flex-col gap-0 justify-start w-full md:w-[40%]'>

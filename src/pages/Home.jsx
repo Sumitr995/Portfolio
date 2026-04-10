@@ -24,7 +24,7 @@ const Home = () => {
 
 
         {/* HOME PROFILE */}
-        <div className='w-full md:w-1/2 px-4 md:px-0'>
+        <div className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0'>
           <HomeProfile />
           <HomeHeading />
           <HomeButtons />
@@ -34,7 +34,7 @@ const Home = () => {
 
 
         {/* WORK EXPERIENCE */}
-        <div className='w-full md:w-1/2 px-4 md:px-0'>
+        <div className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0'>
           <WorkExperience />
           <div className='w-full flex items-center justify-center'>
             <Button className={"m-3"} variant="outline" onClick={() => navigate('/work')}>Show More</Button>
@@ -42,7 +42,7 @@ const Home = () => {
         </div>
 
         {/* GitHub Contributions */}
-        <div className='w-full md:w-1/2 px-4 md:px-0'>
+        <div className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0'>
           <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300 mt-5'>Featured</div>
           <div className='text-zinc-500 dark:text-zinc-300 font-bold text-xl'>GitHub Contribution</div>
           <GitHubGraph
@@ -54,26 +54,24 @@ const Home = () => {
 
 
         {/* PROJECTS */}
-        <div className='w-full md:w-1/2 px-4 md:px-0'>
+        <div className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0'>
           <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300 mt-5 '>Featured</div>
           <div className='text-zinc-500 dark:text-zinc-300 font-bold text-2xl'>Projects</div>
-          <div className=' w-full flex flex-wrap gap-2 justify-center mt-2'>
-            {<div className="w-full flex flex-wrap gap-2 justify-center">
+          <div className='w-full mt-2'>
+            <div className="w-full flex flex-wrap gap-2 justify-center min-[1400px]:grid min-[1400px]:grid-cols-2 min-[1400px]:gap-4 min-[1400px]:justify-items-center">
               {projects.slice(0, 4).map((project, i) => (
                 <ProjectCard key={i} data={project} />
               ))}
-            </div>}
+            </div>
           </div>
-
-
-
+          
           {/* Project Button */}
           <div className='w-full flex items-center justify-center'>
             <Button className={"m-3"} variant="outline" onClick={() => navigate('/projects')}>Show More</Button>
           </div>
         </div>
 
-        <div className='w-full md:w-1/2 px-4 md:px-0 mt-5'>
+        <div className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0 mt-5'>
           <HomeStack />
         </div>
 
