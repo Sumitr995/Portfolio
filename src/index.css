@@ -198,6 +198,10 @@ html, body {
   mask-image: radial-gradient(circle at center, black 48%, transparent 78%);
 }
 
+.image-rendering-pixelated {
+  image-rendering: pixelated;
+}
+
 .p404-scanlines::before {
   content: "";
   position: absolute;
@@ -333,4 +337,9 @@ html, body {
     transform: translate(0, 0);
     clip-path: inset(0 0 0 0);
   }
+}
+
+.logo.react {
+  width: 150%;
+  height: 150%;
 }

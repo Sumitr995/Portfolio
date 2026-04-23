@@ -11,11 +11,10 @@ const Work = () => {
 
       {/* LAYOUT */}
       <div className='w-full min-h-screen mx-auto p-4 md:w-1/2 md:max-w-3xl md:m-auto md:p-6'>
-      <div className='pb-3 mb-5 rounded-b-xl  border-b border-zinc-700'>
-        <h1 className='text-xl text-zinc-600 dark:text-zinc-300 mx-2 font-bold text-left '>Work Experience</h1>
-        <p className='text-left text-sm text-semibold mx-2 text-zinc-500 '>A glimpse into my professional journey and accomplishments.</p>
-      </div>
-        <div className="">
+        <div className='text-zinc-500 dark:text-zinc-300 font-bold text-2xl'>Work Experience</div>
+        <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300'>A glimpse into my professional journey and accomplishments.</div>
+
+        <div className='mt-5'>
           {workData.map((job, index) => (
             <WorkCard key={index} job={job} />
           ))}

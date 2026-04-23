@@ -22,12 +22,14 @@ export const spriteSets = {
 
 export class ONekoElement extends HTMLElement {
   static get observedAttributes() {
-    return ['speed', 'x', 'y', 'goto-x', 'goto-y', 'neko-x', 'neko-y'];
+    return ['speed', 'x', 'y', 'goto-x', 'goto-y', 'neko-x', 'neko-y', 'follow-mouse'];
   }
 
   neko = { x: 32, y: 32, speed: 10 };
   goto = { x: 0, y: 0 };
   lastMouse = { x: 0, y: 0 };
+
+  followMouse = true;
 
   frame = 0;
   idleFrame = 0;
@@ -50,10 +52,21 @@ export class ONekoElement extends HTMLElement {
       this.goto.y = this.lastMouse.y;
     };
 
+    this.interval = setInterval(() => this.playFrame(), 100);
+  }
+
+  attachListeners() {
+    if (this._listenersAttached) return;
     document.addEventListener("mousemove", this.onMouseMove, { passive: true });
     window.addEventListener("scroll", this.onScroll, { passive: true });
+    this._listenersAttached = true;
+  }
 
-    this.interval = setInterval(() => this.playFrame(), 100);
+  detachListeners() {
+    if (!this._listenersAttached) return;
+    document.removeEventListener("mousemove", this.onMouseMove);
+    window.removeEventListener("scroll", this.onScroll);
+    this._listenersAttached = false;
   }
 
   playFrame() {
@@ -151,6 +164,13 @@ export class ONekoElement extends HTMLElement {
   }
 
   connectedCallback() {
+    // If follow-mouse is not set, default is true.
+    const attr = this.getAttribute('follow-mouse');
+    this.followMouse = attr == null ? true : attr !== 'false';
+
+    if (this.followMouse) this.attachListeners();
+    else this.detachListeners();
+
     this.style.backgroundImage ||= "url('./oneko.gif')";
     this.style.imageRendering ||= "pixelated";
     this.style.width ||= "32px";
@@ -164,8 +184,7 @@ export class ONekoElement extends HTMLElement {
   }
 
   disconnectedCallback() {
-    document.removeEventListener("mousemove", this.onMouseMove);
-    window.removeEventListener("scroll", this.onScroll);
+    this.detachListeners();
     clearInterval(this.interval);
   }
 
@@ -173,6 +192,11 @@ export class ONekoElement extends HTMLElement {
     switch (name) {
       case "speed":
         this.neko.speed = parseInt(newValue);
+        break;
+      case "follow-mouse":
+        this.followMouse = newValue == null ? true : newValue !== 'false';
+        if (this.followMouse) this.attachListeners();
+        else this.detachListeners();
         break;
       case "x":
       case "y":

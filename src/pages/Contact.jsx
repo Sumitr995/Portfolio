@@ -22,7 +22,7 @@ const Contact = () => {
       <div className='w-full min-h-screen mx-auto p-4 md:w-1/2 md:max-w-3xl md:m-auto md:p-6'>
         <ContactHeader subtitle='The fastest way to reach me is email. WhatsApp works too.' />
 
-        <div className='flex flex-col gap-6'>
+        <div className='mt-5 flex flex-col gap-6'>
           <ContactQuickActions email={email} whatsappUrl={whatsappUrl} bookCallUrl={bookCallUrl} />
           <ContactForm email={email} />
           <ContactContext />

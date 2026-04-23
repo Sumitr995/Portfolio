@@ -10,7 +10,7 @@ const AboutClassic = ({ about }) => {
   const displayName = about?.basics?.name ?? 'Sumit'
   const locationText = about?.basics?.locationText
   const educationText = about?.education?.educationText
-  const highlights = about?.highlights ?? []
+  const achievements = about?.achievements ?? about?.highlights ?? []
   const profileLinks = about?.basics?.profiles ?? {}
 
   return (
@@ -46,11 +46,11 @@ const AboutClassic = ({ about }) => {
       <AboutFocus items={about?.currentFocus} />
       <AboutQuickFacts items={about?.quickFacts} />
 
-      {highlights.length ? (
+      {achievements.length ? (
         <div>
-          <h3 className='text-sm font-bold text-zinc-700 dark:text-zinc-200'>Highlights</h3>
+          <h3 className='text-sm font-bold text-zinc-700 dark:text-zinc-200'>Achievements</h3>
           <ul className='mt-2 list-disc space-y-1 pl-5 text-sm text-zinc-600 dark:text-zinc-300'>
-            {highlights.map((item) => (
+            {achievements.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>

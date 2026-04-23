@@ -7,11 +7,10 @@ const About = () => {
   return (
     <div className='flex w-full flex-col'>
       <div className='w-full min-h-screen mx-auto p-4 md:w-1/2 md:max-w-3xl md:m-auto md:p-6'>
-        <div className='pb-3 mb-5'>
-          <h1 className='text-xl text-zinc-600 dark:text-zinc-300 mx-0 font-bold text-left'>About</h1>
-        </div>
+        <div className='text-zinc-500 dark:text-zinc-300 font-bold text-2xl'>About</div>
+        <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300'>Know more about me, my background, and my journey.</div>
 
-        <div className='flex flex-col gap-6'>
+        <div className='mt-5 flex flex-col gap-6'>
           <AboutClassic about={aboutData} />
         </div>
       </div>

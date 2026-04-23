@@ -1,17 +1,23 @@
 import Footer from '@/components/mycompo/Footer/Footer'
-import UnderDevelopment from '@/components/other/underDevelopment'
+import CertificateList from '@/components/mycompo/Certificate/CertificateList'
+import certificates from '@/Data/certificates'
 import React from 'react'
 
 const Certificate = () => {
   return (
     <div className='flex w-full flex-col'>
-        <div className='w-1/2 min-h-screen flex items-center justify-center m-auto'>
-          
-        <UnderDevelopment/>
-        </div>
-        <Footer/>
-    </div>
-  )
-}
+      <div className='w-full min-h-screen mx-auto p-4 md:w-1/2 md:max-w-3xl md:m-auto md:p-6'>
+        <div className='text-zinc-500 dark:text-zinc-300 font-bold text-2xl'>Certificates</div>
+        <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300'>Click a certificate to view all details.</div>
 
-export default Certificate
+        <div className='mt-5'>
+          <CertificateList certificates={certificates} />
+        </div>
+      </div>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default Certificate;
