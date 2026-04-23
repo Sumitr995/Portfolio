@@ -131,6 +131,7 @@ const aboutData = {
     location: education?.location ?? '',
     educationText,
   },
+  achievements: data?.achievements ?? [],
   highlights: (data?.achievements ?? []).slice(0, 4),
   quickFacts: [
     { label: 'Location', value: locationText || '' },
