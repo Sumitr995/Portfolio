@@ -14,9 +14,8 @@ const CertificateDetail = () => {
 
   return (
     <div className='flex w-full flex-col'>
-      <div className='w-full min-h-screen mx-auto p-1 md:w-1/2 md:max-w-3xl md:m-auto md:p-0'>
+      <div className='w-full min-h-screen mx-auto p-4 md:w-1/2 md:max-w-3xl md:m-auto md:p-6'>
         <CertificateDetailHeader />
-
         {!cert ? (
           <div className='rounded-xl border bg-background p-6'>
             <div className='text-base font-semibold'>Certificate not found</div>
