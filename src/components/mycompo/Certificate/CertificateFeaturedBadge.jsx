@@ -12,4 +12,4 @@ const CertificateFeaturedBadge = ({ featured }) => {
   )
 }
 
-export default CertificateFeaturedBadge
+export default CertificateFeaturedBadge;
