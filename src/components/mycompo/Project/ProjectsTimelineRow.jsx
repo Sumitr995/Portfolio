@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { Eye, Github, Globe } from "lucide-react";
+import { Link } from "react-router-dom";
 import TechStackBadges from "@/components/mycompo/Project/TechStackBadges";
 import { hasLiveLink } from "@/Utils/projectUtils";
 import PreviewImage from "@/components/other/PreviewImage";
@@ -16,6 +17,8 @@ export default function ProjectsTimelineRow({
   const primaryLink = hasLiveLink(project)
     ? project?.["Live-Link"]
     : project?.["Github-Link"];
+
+  const projectId = project?.id;
 
   const previewImages = useMemo(() => {
     if (!project) return [];
@@ -42,7 +45,15 @@ export default function ProjectsTimelineRow({
           <div className="text-xs text-zinc-500 dark:text-zinc-400">
             {project.duration}
           </div>
-          {primaryLink ? (
+          {projectId ? (
+            <Link
+              to={`/projects/${projectId}`}
+              className="mt-0.5 inline-flex text-sm font-semibold text-zinc-900 dark:text-zinc-100 hover:underline underline-offset-4"
+              aria-label={`Open details for ${project.title}`}
+            >
+              {project.title}
+            </Link>
+          ) : primaryLink ? (
             <a
               href={primaryLink}
               target="_blank"

@@ -4,6 +4,7 @@ import ScrollToTop from './Utils/ScrollToTop';
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Project from "./pages/Project";
+import ProjectDetail from "./pages/ProjectDetail";
 import Certificate from "./pages/Certificate";
 import CertificateDetail from "./pages/CertificateDetail";
 import Contact from "./pages/Contact";
@@ -19,6 +20,7 @@ const AppRoutes = () => {
                 <Route path='/' element={<Home />} />
                 <Route path='/about' element={<About />} />
                 <Route path='/projects' element={<Project />} />
+                <Route path='/projects/:id' element={<ProjectDetail />} />
                 <Route path='/certificates' element={<Certificate />} />
                 <Route path='/certificates/:id' element={<CertificateDetail />} />
                 <Route path='/contact' element={<Contact />} />

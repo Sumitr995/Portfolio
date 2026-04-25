@@ -90,7 +90,7 @@ const HomeStack = ({
         </div>
       ) : null}
       {showTitle ? (
-        <h2 className="text-2xl md:text-3xl font-semibold mb-5 text-zinc-900 dark:text-zinc-200">
+        <h2 className="text-2xl md:font-bold md:text-3xl font-semibold mb-5 text-zinc-500 dark:text-zinc-300">
           {title}
         </h2>
       ) : null}

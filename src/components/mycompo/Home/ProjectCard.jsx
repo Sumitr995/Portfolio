@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Globe, Github, ArrowRight } from "lucide-react";
 import { contrastClassFor } from "@/Utils/techIconUtils";
+import { Link } from "react-router-dom";
 
 export default function ProjectCard({ data }) {
   const [iconSrcByTech, setIconSrcByTech] = useState({});
@@ -56,6 +57,8 @@ export default function ProjectCard({ data }) {
     if (normalized.includes("inactive") || normalized.includes("down")) return "bg-red-400";
     return "bg-zinc-300";
   })();
+
+  const projectId = data?.id;
 
   return (
     <div className="group relative w-full min-[1400px]:max-w-sm rounded-3xl overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-sm hover:shadow-md transition-all duration-300">
@@ -162,10 +165,15 @@ export default function ProjectCard({ data }) {
           </div>
 
           {/* Button */}
-          <button className="flex items-center gap-1 text-xs font-medium text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition">
-            View Details
-            <ArrowRight className="w-3 h-3" />
-          </button>
+          {projectId ? (
+            <Link
+              to={`/projects/${projectId}`}
+              className="flex items-center gap-1 text-xs font-medium text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition"
+            >
+              View Details
+              <ArrowRight className="w-3 h-3" />
+            </Link>
+          ) : null}
 
         </div>
       </div>
