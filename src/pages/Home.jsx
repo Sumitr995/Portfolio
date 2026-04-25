@@ -12,11 +12,15 @@ import { Button } from "@/components/ui/button"
 import Footer from '@/components/mycompo/Footer/Footer';
 import GitHubGraph from '@/components/other/githubGraph';
 import HomeStack from '@/components/mycompo/Home/HomeStack'
+import certificates from '@/Data/certificates'
+import HomeCertificateList from '@/components/mycompo/Home/HomeCertificateList'
 
 
 const Home = () => {
 
   const navigate = useNavigate();
+  const featuredCertificates = (certificates ?? []).filter((c) => Boolean(c?.featured))
+  const homeFeaturedCertificates = featuredCertificates.slice(0, 4)
 
   return (
     <div className='flex flex-col '>
@@ -71,11 +75,19 @@ const Home = () => {
           </div>
         </div>
 
+        {/* Certifications */}
+        <div className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0 mt-5'>
+          <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300 mt-5'>Featured</div>
+          <div className='text-zinc-500 dark:text-zinc-300 font-bold text-2xl'>Certificates</div>
+          <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300'>Click a certificate to view details.</div>
+          <div className='mt-4'>
+            <HomeCertificateList certificates={homeFeaturedCertificates} />
+          </div>
+        </div>
+
         <div className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0 mt-5'>
           <HomeStack />
         </div>
-
-
       </div>
       <Footer />
     </div>

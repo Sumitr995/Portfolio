@@ -1,5 +1,6 @@
 const projects = [
   {
+    id: "gdgc-designathon-2-0-platform",
     title: "GDGC Designathon 2.0 Platform",
     duration: "Nov 2025 - Jan 2026",
     preview: "/thumbnail/GDGC-Designathon.png",
@@ -28,6 +29,7 @@ const projects = [
     "Live-Link": "https://designathon.gdgcace.in/",
   },
   {
+    id: "auth-service-mern-authentication-system",
     title: "Auth Service — MERN Authentication System",
     duration: "Oct 2025 - Dec 2025",
     preview: "/thumbnail/Auth-App.png",
@@ -55,6 +57,7 @@ const projects = [
     "Live-Link": "https://auth-app-sumitr995.netlify.app/",
   },
   {
+    id: "personal-engineering-portfolio",
     title: "Personal Engineering Portfolio",
     duration: "Nov 2025 - Mar 2026",
     preview: "/thumbnail/portfolio.png",
@@ -81,6 +84,7 @@ const projects = [
     "Live-Link": "https://sumitr995.me/",
   },
   {
+    id: "ai-cold-email-composer",
     title: "AI Cold Email Composer",
     duration: "Jan 2026 - Present",
     preview: "/thumbnail/Cold-Email-Composer.png",
@@ -106,6 +110,7 @@ const projects = [
     "Live-Link": "NIL",
   },
   {
+    id: "hackathon-ticket-system",
     title: "Hackathon Ticket System",
     duration: "Nov 2024 - Dec 2025",
     preview: "/thumbnail/ticket-system.png",

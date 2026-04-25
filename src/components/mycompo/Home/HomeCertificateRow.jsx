@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import CertificateFeaturedBadge from './CertificateFeaturedBadge'
+import CertificateFeaturedBadge from '@/components/mycompo/Certificate/CertificateFeaturedBadge'
 
-const CertificateRow = ({ certificate }) => {
+const HomeCertificateRow = ({ certificate }) => {
   const c = certificate
   const isFeatured = Boolean(c?.featured)
 
@@ -11,7 +11,7 @@ const CertificateRow = ({ certificate }) => {
     <Link
       to={`/certificates/${c.id}`}
       className={
-        'group flex items-center justify-between gap-4 rounded-2xl border bg-background p-4 transition-colors hover:bg-accent/40 ' +
+        'group flex items-center justify-between gap-4 rounded-2xl border bg-background px-4 py-3 transition-colors hover:bg-accent/40 ' +
         (isFeatured ? 'border-primary/30 ring-1 ring-primary/15' : '')
       }
     >
@@ -21,11 +21,11 @@ const CertificateRow = ({ certificate }) => {
           <CertificateFeaturedBadge featured={isFeatured} />
         </div>
 
-        <div className='mt-1 text-sm text-muted-foreground'>
+        <div className='mt-1 text-sm text-muted-foreground truncate'>
           {c.description || c.note || `${c.issuer} • ${c.issued}`}
         </div>
 
-        <div className='mt-2 text-xs text-muted-foreground'>
+        <div className='mt-1 text-xs text-muted-foreground'>
           {c.issuer} • {c.issued}
         </div>
       </div>
@@ -37,4 +37,4 @@ const CertificateRow = ({ certificate }) => {
   )
 }
 
-export default CertificateRow
+export default HomeCertificateRow
