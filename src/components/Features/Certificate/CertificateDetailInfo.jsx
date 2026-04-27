@@ -1,8 +1,8 @@
 import React from 'react'
 
-import CertificateMeta from '@/components/mycompo/Certificate/CertificateMeta'
-import CertificateFeaturedBadge from '@/components/mycompo/Certificate/CertificateFeaturedBadge'
-import CertificatePill from '@/components/mycompo/Certificate/CertificatePill'
+import CertificateMeta from '@/components/Features/Certificate/CertificateMeta'
+import CertificateFeaturedBadge from '@/components/Features/Certificate/CertificateFeaturedBadge'
+import CertificatePill from '@/components/Features/Certificate/CertificatePill'
 import { Separator } from '@/components/ui/separator'
 
 const CertificateDetailInfo = ({ cert }) => {

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Navbar from "./components/mycompo/Navbar/Navbar";
-import Oneko from "@/components/mycompo/Oneko/Oneko";
+import Navbar from "./components/Features/Navbar/Navbar";
+import Oneko from "@/components/Features/Oneko/Oneko";
 import { BlurFade } from "@/components/ui/blur-fade";
 import AppRoutes from "./AppRoutes";
 import Preloader from "./components/other/Preloader";

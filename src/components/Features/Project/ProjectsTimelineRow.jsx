@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Eye, Github, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
-import TechStackBadges from "@/components/mycompo/Project/TechStackBadges";
+import TechStackBadges from "@/components/Features/Project/TechStackBadges";
 import { hasLiveLink } from "@/Utils/projectUtils";
 import PreviewImage from "@/components/other/PreviewImage";
 

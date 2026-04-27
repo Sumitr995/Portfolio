@@ -1,19 +1,19 @@
-import HomeHeading from '@/components/mycompo/Home/HomeHeading'
-import HomeProfile from '@/components/mycompo/Home/HomeProfile'
-import HomeLinks from "../components/mycompo/Home/HomeLinks";
-import HomeButtons from '@/components/mycompo/Home/HomeButtons'
+import HomeHeading from '@/components/Features/Home/HomeHeading'
+import HomeProfile from '@/components/Features/Home/HomeProfile'
+import HomeLinks from "../components/Features/Home/HomeLinks";
+import HomeButtons from '@/components/Features/Home/HomeButtons'
 import React from 'react'
 import WorkExperience from '@/components/WorkExperience/WorkExperience';
-import ProjectCard from '@/components/mycompo/Home/ProjectCard';
+import ProjectCard from '@/components/Features/Home/ProjectCard';
 import data from "@/Data/Data.json"
 import projects from "@/Data/projects";
 import { useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button"
-import Footer from '@/components/mycompo/Footer/Footer';
+import Footer from '@/components/Features/Footer/Footer';
 import GitHubGraph from '@/components/other/githubGraph';
-import HomeStack from '@/components/mycompo/Home/HomeStack'
+import HomeStack from '@/components/Features/Home/HomeStack'
 import certificates from '@/Data/certificates'
-import HomeCertificateList from '@/components/mycompo/Home/HomeCertificateList'
+import HomeCertificateList from '@/components/Features/Home/HomeCertificateList'
 
 
 const Home = () => {

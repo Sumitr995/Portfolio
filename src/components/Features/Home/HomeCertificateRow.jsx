@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
-import CertificateFeaturedBadge from '@/components/mycompo/Certificate/CertificateFeaturedBadge'
+import CertificateFeaturedBadge from '@/components/Features/Certificate/CertificateFeaturedBadge'
 
 const HomeCertificateRow = ({ certificate }) => {
   const c = certificate

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import NekoLoader from "../mycompo/Loader/NekoLoader";
+import NekoLoader from "../Features/Loader/NekoLoader";
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));

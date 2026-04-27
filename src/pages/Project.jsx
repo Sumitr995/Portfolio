@@ -1,6 +1,6 @@
-import Footer from '@/components/mycompo/Footer/Footer'
+import Footer from '@/components/Features/Footer/Footer'
 import React from 'react'
-import ProjectsTimeline from '@/components/mycompo/Project/ProjectsTimeline'
+import ProjectsTimeline from '@/components/Features/Project/ProjectsTimeline'
 
 const Project = () => {
   return (

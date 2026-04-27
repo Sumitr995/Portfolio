@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import { Button } from '@/components/ui/button'
-import AboutFocus from '@/components/mycompo/About/AboutFocus'
-import AboutQuickFacts from '@/components/mycompo/About/AboutQuickFacts'
-import HomeStack from '@/components/mycompo/Home/HomeStack'
+import AboutFocus from '@/components/Features/About/AboutFocus'
+import AboutQuickFacts from '@/components/Features/About/AboutQuickFacts'
+import HomeStack from '@/components/Features/Home/HomeStack'
 
 const AboutClassic = ({ about }) => {
   const displayName = about?.basics?.name ?? 'Sumit'
