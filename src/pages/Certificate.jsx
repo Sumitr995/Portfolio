@@ -1,5 +1,5 @@
-import Footer from '@/components/mycompo/Footer/Footer'
-import CertificateList from '@/components/mycompo/Certificate/CertificateList'
+import Footer from '@/components/Features/Footer/Footer'
+import CertificateList from '@/components/Features/Certificate/CertificateList'
 import certificates from '@/Data/certificates'
 import React from 'react'
 

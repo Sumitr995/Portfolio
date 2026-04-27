@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import data from "@/Data/Data.json";
 import projectsData from "@/Data/projects";
-import ProjectsTimelineRow from "@/components/mycompo/Project/ProjectsTimelineRow";
+import ProjectsTimelineRow from "@/components/Features/Project/ProjectsTimelineRow";
 import { getCategory } from "@/Utils/projectUtils";
 
 export default function ProjectsTimeline() {

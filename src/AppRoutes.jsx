@@ -8,7 +8,7 @@ import ProjectDetail from "./pages/ProjectDetail";
 import Certificate from "./pages/Certificate";
 import CertificateDetail from "./pages/CertificateDetail";
 import Contact from "./pages/Contact";
-import Resume from './components/mycompo/Resume/Resume';
+import Resume from './components/Features/Resume/Resume';
 import Work from './pages/Work';
 import PageNotFound from './pages/PageNotFound';
 import Anime from './components/other/Anime';

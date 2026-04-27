@@ -1,6 +1,6 @@
-import Footer from '@/components/mycompo/Footer/Footer'
+import Footer from '@/components/Features/Footer/Footer'
 import React from 'react'
-import WorkCard from '@/components/mycompo/Work/WorkCard'
+import WorkCard from '@/components/Features/Work/WorkCard'
 import { workData } from '@/Data/WorkData'
 
 const Work = () => {

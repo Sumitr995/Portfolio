@@ -1,10 +1,10 @@
-import Footer from '@/components/mycompo/Footer/Footer'
+import Footer from '@/components/Features/Footer/Footer'
 import React from 'react'
 import data from '@/Data/Data.json'
-import ContactHeader from '@/components/mycompo/Contact/ContactHeader'
-import ContactQuickActions from '@/components/mycompo/Contact/ContactQuickActions'
-import ContactForm from '@/components/mycompo/Contact/ContactForm'
-import ContactContext from '@/components/mycompo/Contact/ContactContext'
+import ContactHeader from '@/components/Features/Contact/ContactHeader'
+import ContactQuickActions from '@/components/Features/Contact/ContactQuickActions'
+import ContactForm from '@/components/Features/Contact/ContactForm'
+import ContactContext from '@/components/Features/Contact/ContactContext'
 import { toWhatsAppNumber } from '@/Utils/contactUtils'
 
 const Contact = () => {

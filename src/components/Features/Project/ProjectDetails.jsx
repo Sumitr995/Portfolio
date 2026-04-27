@@ -2,7 +2,7 @@ import React from 'react'
 import { ExternalLink, Eye, Github, Globe } from 'lucide-react'
 
 import PreviewImage from '@/components/other/PreviewImage'
-import TechStackBadges from '@/components/mycompo/Project/TechStackBadges'
+import TechStackBadges from '@/components/Features/Project/TechStackBadges'
 import { Separator } from '@/components/ui/separator'
 import { Button } from '@/components/ui/button'
 import { hasLiveLink } from '@/Utils/projectUtils'
