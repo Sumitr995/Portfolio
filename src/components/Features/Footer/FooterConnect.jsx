@@ -3,7 +3,7 @@ import React from 'react'
 import x from "/svgs/twitter.svg"
 import linkedin from "/svgs/linkedin.svg"
 import github from "/svgs/github-fill.svg"
-import linktree from "/svgs/linktree.svg"
+import linktree from "/svgs/Leetcode.svg"
 import instagram from "/svgs/instagram-line.svg"
 import gcp from "/svgs/GCP-black.svg"
 import whatsapp from "/svgs/whatsapp-line.svg"
@@ -19,7 +19,7 @@ const FooterConnect = () => {
         // { src: youtube, link: "#" },
         { src: whatsapp, link: "https://wa.me/918779374948" },
         { src: mail, link: "mailto:itzsumitr995@gmail.com" },
-        { src: linktree, link: "https://linktr.ee/Sumit_995" },
+        { src: linktree, link: "https://leetcode.com/u/Sumitr995" },
         { src: instagram, link: "https://www.instagram.com/sumitr995" },
         { src: gcp, link: "https://www.skills.google/public_profiles/2a52f481-e269-404f-babc-9279827a6585" }
     ];
