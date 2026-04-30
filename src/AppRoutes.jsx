@@ -12,6 +12,7 @@ import Resume from './components/Features/Resume/Resume';
 import Work from './pages/Work';
 import PageNotFound from './pages/PageNotFound';
 import Anime from './components/other/Anime';
+import LeetCode from "./pages/leetcode";
 const AppRoutes = () => {
     return (
         <div className="w-full pt-[10vh]">
@@ -26,6 +27,7 @@ const AppRoutes = () => {
                 <Route path='/contact' element={<Contact />} />
                 <Route path='/resume' element={<Resume />} />
                 <Route path='/work' element={<Work />} />
+                {/* <Route path='/leetcode' element={<LeetCode />} /> */}
                 <Route path='*' element={<PageNotFound />} />
             </Routes>
         </div>
