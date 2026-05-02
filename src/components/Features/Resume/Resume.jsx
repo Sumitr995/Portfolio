@@ -25,11 +25,11 @@ const Resume = () => {
                         <div className='w-3 h-3 rounded-full bg-green-500'></div>
 
                         <span className='ml-4 text-sm text-zinc-400'>
-                            ResumeSR3.10.pdf
+                            ResumeSR4.pdf
                         </span>
                     </div>
                     <div className='ml-2 flex gap-4 items-center'>
-                        <a href="/ResumeSR3.10.pdf" download className='text-sm text-zinc-400 hover:text-zinc-300'>
+                        <a href="/ResumeSR4.pdf" download className='text-sm text-zinc-400 hover:text-zinc-300'>
                             <img height={20} width={20} src="/svgs/download-2-line.svg" alt="Download" />
                         </a>
                         <a href={data.driveLink} target='_blank' rel="noopener noreferrer" className='text-sm text-zinc-400 hover:text-zinc-300'>
@@ -40,7 +40,7 @@ const Resume = () => {
 
                 {/* PDF */}
                 <iframe
-                    src="/ResumeSR3.10.pdf"
+                    src="/ResumeSR4.pdf"
                     title="Resume"
                     className="w-full flex-1"
                 />
