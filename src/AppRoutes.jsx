@@ -13,6 +13,7 @@ import Work from './pages/Work';
 import PageNotFound from './pages/PageNotFound';
 import Anime from './components/other/Anime';
 import LeetCode from "./pages/leetcode";
+import Share from "./pages/Share";
 const AppRoutes = () => {
     return (
         <div className="w-full pt-[10vh]">
@@ -20,6 +21,8 @@ const AppRoutes = () => {
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/about' element={<About />} />
+                <Route path='/share' element={<Share />} />
+                <Route path='/share/:id' element={<Share />} />
                 <Route path='/projects' element={<Project />} />
                 <Route path='/projects/:id' element={<ProjectDetail />} />
                 <Route path='/certificates' element={<Certificate />} />
