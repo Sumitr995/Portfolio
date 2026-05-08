@@ -10,4 +10,28 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes("node_modules")) {
+            if (id.includes("three")) {
+              return "vendor-three";
+            }
+            if (id.includes("@react-pdf")) {
+              return "vendor-pdf";
+            }
+            if (id.includes("motion") || id.includes("framer-motion")) {
+              return "vendor-motion";
+            }
+            if (id.includes("lucide-react")) {
+              return "vendor-icons";
+            }
+            return "vendor";
+          }
+        },
+      },
+    },
+    chunkSizeWarningLimit: 1000,
+  },
 });
