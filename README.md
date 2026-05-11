@@ -1,110 +1,95 @@
-# Portfolio
+# 🚀 Personal Engineering Portfolio
 
-A personal portfolio website built and maintained by Sumitr995. This repository provides the complete source code for a modern, responsive portfolio site, showcasing personal projects, skills, and contact information. The application is designed to be easily customizable and serves as an online presence for professionals.
+![Portfolio Preview](public/thumbnail/portfolio.png)
 
----
+## 👋 About Me
 
-## Introduction
+I'm **Sumit Rathod**, a Full Stack and Software Developer based in Mumbai, India. I specialize in building scalable, real-time systems and modern web applications with a focus on clean engineering and high-performance user experiences.
 
-This project is a personal portfolio website developed to highlight an individual's projects, experience, and skills. It is designed with a modern user interface, responsive layouts, and interactive components to ensure a pleasant user experience across devices. The codebase is organized for straightforward maintenance and extension.
-
-> [!NOTE]
-> This repository contains all required assets, components, and configuration files to deploy a fully functional portfolio site.
-
----
-
-## Usage
-
-After setting up the repository locally, you can customize the content, such as project details and personal information, to reflect your own background. The application can be run locally for development or deployed to a production environment for public access.
-
-- Clone the repository to your local machine.
-- Install the necessary dependencies.
-- Update content files as needed.
-- Run the development server or build for production.
-- Deploy to your preferred hosting service.
+- 🎓 **Education:** B.E. in Electronics & Telecommunication Engineering @ Atharva College of Engineering (2023 - 2027)
+- 🌐 **Website:** [sumitr995.me](https://sumitr995.me/)
+- 📧 **Email:** [itzsumitr995@gmail.com](mailto:itzsumitr995@gmail.com)
 
 ---
 
-## Features
+## 🛠️ Tech Stack
 
-The portfolio website offers the following features:
+### Frontend
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer-Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+![Three.js](https://img.shields.io/badge/three.js-black?style=for-the-badge&logo=three.js&logoColor=white)
+![Bun](https://img.shields.io/badge/Bun-%23000000.svg?style=for-the-badge&logo=bun&logoColor=white)
 
-- Responsive design for mobile, tablet, and desktop screens.
-- Project showcase with descriptions and links.
-- Skills and technologies section.
-- About section with personal background.
-- Contact form for direct communication.
-- Dynamic and static content integration.
-- Organized codebase for easy updates.
+### Backend & Databases
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 
----
-
-## Configuration
-
-You can configure most content by modifying the relevant files and directories in the project:
-
-- Update your personal information in designated content files.
-- Add or remove project entries as required.
-- Adjust theme colors and styles via the stylesheet files.
-- Set up environment variables for deployment if necessary.
-
-> [!TIP]
-> Review the configuration files and documentation in the repository for details on customizing your site.
+### Cloud & DevOps
+![GCP](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Ansible](https://img.shields.io/badge/ansible-%231A1918.svg?style=for-the-badge&logo=ansible&logoColor=white)
+![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)
 
 ---
 
-## Requirements
+## 🌟 Featured Projects
 
-To develop and deploy this portfolio, ensure the following prerequisites are met:
+### 🎨 [GDGC Designathon 2.0 Platform](https://github.com/Sumitr995/designathon-2.0)
+A high-performance hackathon platform used by 700+ participants.
+- **Tech:** React, TypeScript, TailwindCSS, GSAP, Framer Motion.
+- **Key Feature:** Custom Mission Log and animated Preloader.
 
-- Node.js (version specified in the repository)
-- npm or yarn (package manager)
-- Modern web browser for testing
-- (Optional) Hosting platform for production deployment
+### 🔐 [Auth Service — MERN Authentication System](https://github.com/Sumitr995/Auth-Service-App)
+Secure, production-style authentication system.
+- **Tech:** React, Node.js, Express.js, MongoDB, JWT, Nodemailer.
+- **Key Feature:** OTP-driven email workflows and Refresh Token management.
 
-> [!IMPORTANT]
-> Always use the Node.js version specified in the project configuration to avoid compatibility issues.
-
----
-
-## Contributing
-
-Contributions are welcome! To contribute to this project, follow these steps:
-
-- Fork the repository.
-- Create a new branch for your feature or bugfix.
-- Make your changes with clear and descriptive commit messages.
-- Push your branch to your forked repository.
-- Open a pull request describing your changes.
-
-> [!NOTE]
-> Please ensure your code follows the existing style and structure of the project.
+### 🚑 [Trafficore — R&D Project](https://github.com/Sumitr995/Trafficore)
+Real-time emergency traffic management system connecting ambulances and hospitals.
+- **Tech:** Node.js, PostgreSQL, MQTT, WebSockets, Raspberry Pi, ESP32.
+- **Key Feature:** Event-driven architecture for real-time IoT communication.
 
 ---
 
-## Installation
-
-Follow these steps to install and run the portfolio site locally:
-
-```steps
-1. Clone the Repository | git clone https://github.com/Sumitr995/Portfolio.git
-2. Change Directory | cd Portfolio
-3. Install Dependencies | npm install
-4. Start Development Server | npm run dev
-5. Visit Localhost | Open http://localhost:3000 in your browser
-```
-
-> [!CAUTION]
-> Always review the README and project documentation for any additional setup steps or configuration.
+## 📈 Stats & Achievements
+- 🏆 **AIR 4,967** in AINCAT 2025 (2.1L+ participants).
+- 🏅 **25+ Google Cloud Skill Badges**.
+- 🤖 **Team Lead** at HackRobo 1.0 (Top 10 Finalist).
 
 ---
 
-## License
+## 🚀 Getting Started
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+To run this portfolio locally:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Sumitr995/Portfolio.git
+   ```
+2. **Install dependencies:**
+   ```bash
+   bun install
+   # or
+   npm install
+   ```
+3. **Start the development server:**
+   ```bash
+   bun dev
+   # or
+   npm run dev
+   ```
 
 ---
 
-> [!NOTE]
-> For more information, refer to the source code and documentation within the repository.
+## 📫 Connect with Me
 
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sumitr995/)
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Sumitr995)
+[![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/Sumitr995)
+
+---
+⭐️ From [Sumitr995](https://github.com/Sumitr995)
