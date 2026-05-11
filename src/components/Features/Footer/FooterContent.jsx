@@ -12,6 +12,7 @@ const FooterContent = () => {
         { name: "Contact", link: "/contact" },
         { name: "Resume", link: "/resume" },
         { name: "Certificate", link: "/certificates" },
+        { name: "Share", link: "/share" },
       ]
 
     return (
