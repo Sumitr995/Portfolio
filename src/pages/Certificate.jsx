@@ -1,4 +1,5 @@
 import Footer from '@/components/Features/Footer/Footer'
+import Qoutes from '@/components/Features/Qoutes/Qoutes'
 import CertificateList from '@/components/Features/Certificate/CertificateList'
 import certificates from '@/Data/certificates'
 import React from 'react'
@@ -15,6 +16,7 @@ const Certificate = () => {
         </div>
       </div>
 
+      <Qoutes />
       <Footer />
     </div>
   );

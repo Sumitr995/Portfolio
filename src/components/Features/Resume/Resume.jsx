@@ -1,6 +1,7 @@
 import React from 'react'
 import data from '@/Data/Data.json'
 import Footer from '../Footer/Footer';
+import Qoutes from '../Qoutes/Qoutes';
 
 const Resume = () => {
     return <>
@@ -29,7 +30,7 @@ const Resume = () => {
                         </span>
                     </div>
                     <div className='ml-2 flex gap-4 items-center'>
-                        <a href="/ResumeSR4.pdf" download className='text-sm text-zinc-400 hover:text-zinc-300'>
+                        <a href="/media/ResumeSR4.pdf" download className='text-sm text-zinc-400 hover:text-zinc-300'>
                             <img height={20} width={20} src="/svgs/download-2-line.svg" alt="Download" />
                         </a>
                         <a href={data.driveLink} target='_blank' rel="noopener noreferrer" className='text-sm text-zinc-400 hover:text-zinc-300'>
@@ -40,7 +41,7 @@ const Resume = () => {
 
                 {/* PDF */}
                 <iframe
-                    src="/ResumeSR4.pdf"
+                    src="/media/ResumeSR4.pdf"
                     title="Resume"
                     className="w-full flex-1"
                 />
@@ -48,6 +49,7 @@ const Resume = () => {
             </div>
 
         </div>
+        <Qoutes />
         <Footer/>
     </>
 }

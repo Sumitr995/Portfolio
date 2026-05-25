@@ -1,4 +1,5 @@
 import Footer from '@/components/Features/Footer/Footer'
+import Qoutes from '@/components/Features/Qoutes/Qoutes'
 import React from 'react'
 import ProjectsTimeline from '@/components/Features/Project/ProjectsTimeline'
 
@@ -12,6 +13,7 @@ const Project = () => {
           <ProjectsTimeline />
         </div>
       </div>
+      <Qoutes />
       <Footer />
     </div>
   )

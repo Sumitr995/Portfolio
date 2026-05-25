@@ -7,7 +7,7 @@ export const workData = [
     website: "https://www.gdgcace.in/",
     live: "https://designathon.gdgcace.in/",
     github: "https://github.com/Sumitr995/designathon-2.0",
-    imageUrl: "/GDGC-icon.png",
+    imageUrl: "/images/GDGC-icon.png",
     technologies: [
       { name: "GCP", icon: "/techstack/gcp-icon.png" },
       { name: "Nginx", icon: "/techstack/nginx-icon.png" },
@@ -33,7 +33,7 @@ export const workData = [
     website: "https://atharvacoe.ac.in/R&D-Cell/",
     live: "",
     github: "",
-    imageUrl: "/Atharva-icon.png",
+    imageUrl: "/images/Atharva-icon.png",
     technologies: [
       { name: "Node.js", icon: "/techstack/node-icon.png" },
       { name: "PostgreSQL", icon: "/techstack/postgres-icon.png" },
@@ -60,7 +60,7 @@ export const workData = [
     location: "Malad West, Mumbai, India",
     website: "https://www.gdgcace.in/",
     link1: "https://designathon.gdgcace.in/",
-    imageUrl: "/GDGC-icon.png",
+    imageUrl: "/images/GDGC-icon.png",
     technologies: [
       { name: "React", icon: "/techstack/react-icon.png" },
       { name: "Node.js", icon: "/techstack/node-icon.png" },

@@ -14,11 +14,41 @@
       "calendly": "https://calendly.com/sumitr995"
     }
   },
+  "api": {
+    "quotes": "https://zenquotes.io/api/random"
+  },
+  "quotes": {
+    "strategy": "alternate",
+    "localChance": 0.35,
+    "maxLength": 120,
+    "items": [
+      {
+        "quote": "You have a right to perform your prescribed duty, but not to the fruits of action.",
+        "author": "Bhagavad Gita"
+      },
+      {
+        "quote": "Arise, awake, and stop not till the goal is reached.",
+        "author": "Katha Upanishad"
+      },
+      {
+        "quote": "Man is made by his belief. As he believes, so he is.",
+        "author": "Bhagavad Gita"
+      },
+      {
+        "quote": "The soul is neither born, and nor does it die.",
+        "author": "Bhagavad Gita"
+      },
+      {
+        "quote": "Strength is life, weakness is death.",
+        "author": "Swami Vivekananda"
+      }
+    ]
+  },
   "driveLink": "https://drive.google.com/file/d/1UqdK1s534-RsCg4OERO4VFNpJbH9CzsR/view?usp=sharing",
   "workExperience": [
     {
       "organization": "Google Developer Groups OnCampus ACE",
-      "imageUrl": "/GDGC-icon.png",
+      "imageUrl": "/images/GDGC-icon.png",
       "location": "Malad West, Mumbai",
       "role": "Core Team & Cloud Team Member",
       "startDate": "Sep 2025",
@@ -41,7 +71,7 @@
     },
     {
       "organization": "Google Developer Groups OnCampus ACE",
-      "imageUrl": "/GDGC-icon.png",
+      "imageUrl": "/images/GDGC-icon.png",
       "location": "Malad West, Mumbai",
       "role": "Web Team Member",
       "startDate": "Aug 2025",

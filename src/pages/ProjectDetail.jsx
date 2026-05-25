@@ -1,4 +1,5 @@
 import Footer from '@/components/Features/Footer/Footer'
+import Qoutes from '@/components/Features/Qoutes/Qoutes'
 import ProjectDetails from '@/components/Features/Project/ProjectDetails'
 import CertificateDetailHeader from '@/components/Features/Certificate/CertificateDetailHeader'
 import projects from '@/Data/projects'
@@ -24,6 +25,7 @@ const ProjectDetail = () => {
         )}
       </div>
 
+      <Qoutes />
       <Footer />
     </div>
   )

@@ -10,6 +10,7 @@ import projects from "@/Data/projects";
 import { useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button"
 import Footer from '@/components/Features/Footer/Footer';
+import Qoutes from '@/components/Features/Qoutes/Qoutes';
 import GitHubGraph from '@/components/other/githubGraph';
 import HomeStack from '@/components/Features/Home/HomeStack'
 import certificates from '@/Data/certificates'
@@ -68,7 +69,7 @@ const Home = () => {
               ))}
             </div>
           </div>
-          
+
           {/* Project Button */}
           <div className='w-full flex items-center justify-center'>
             <Button className={"m-3"} variant="outline" onClick={() => navigate('/projects')}>Show More</Button>
@@ -76,19 +77,26 @@ const Home = () => {
         </div>
 
         {/* Certifications */}
-        <div className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0 mt-5'>
+        <div className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0'>
           <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300 mt-5'>Featured</div>
           <div className='text-zinc-500 dark:text-zinc-300 font-bold text-2xl'>Certificates</div>
-          <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300'>Click a certificate to view details.</div>
           <div className='mt-4'>
             <HomeCertificateList certificates={homeFeaturedCertificates} />
           </div>
+
+          {/* Certificate Button */}
+          <div className='w-full flex items-center justify-center'>
+            <Button className={"m-3"} variant="outline" onClick={() => navigate('/certificates')}>Show More</Button>
+          </div>
+
         </div>
 
-        <div className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0 mt-5'>
+        <div className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0'>
           <HomeStack />
         </div>
+
       </div>
+      <Qoutes />
       <Footer />
     </div>
 

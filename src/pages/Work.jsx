@@ -1,4 +1,5 @@
 import Footer from '@/components/Features/Footer/Footer'
+import Qoutes from '@/components/Features/Qoutes/Qoutes'
 import React from 'react'
 import WorkCard from '@/components/Features/Work/WorkCard'
 import { workData } from '@/Data/WorkData'
@@ -22,6 +23,7 @@ const Work = () => {
 
       </div>
 
+      <Qoutes />
       <Footer/>
 
     </div>

@@ -1,4 +1,5 @@
 import Footer from '@/components/Features/Footer/Footer'
+import Qoutes from '@/components/Features/Qoutes/Qoutes'
 import { Separator } from '@/components/ui/separator'
 import CertificateDetailCover from '@/components/Features/Certificate/CertificateDetailCover'
 import CertificateDetailHeader from '@/components/Features/Certificate/CertificateDetailHeader'
@@ -36,6 +37,7 @@ const CertificateDetail = () => {
         )}
       </div>
 
+      <Qoutes />
       <Footer />
     </div>
   )

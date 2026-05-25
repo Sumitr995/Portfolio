@@ -1,4 +1,5 @@
 import Footer from '@/components/Features/Footer/Footer'
+import Qoutes from '@/components/Features/Qoutes/Qoutes'
 import React from 'react'
 import data from '@/Data/Data.json'
 import ContactHeader from '@/components/Features/Contact/ContactHeader'
@@ -29,6 +30,7 @@ const Contact = () => {
         </div>
       </div>
 
+      <Qoutes />
       <Footer />
     </div>
   )

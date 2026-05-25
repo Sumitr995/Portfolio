@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 import { ExternalLink } from 'lucide-react'
 
 import Footer from '@/components/Features/Footer/Footer'
+import Qoutes from '@/components/Features/Qoutes/Qoutes'
 import { Button } from '@/components/ui/button'
 import aboutData from '@/Data/aboutData'
 
@@ -91,6 +92,7 @@ const Share = () => {
         </div>
       </div>
 
+      <Qoutes />
       <Footer />
     </div>
   )

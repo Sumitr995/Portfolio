@@ -1,4 +1,5 @@
 import Footer from '@/components/Features/Footer/Footer'
+import Qoutes from '@/components/Features/Qoutes/Qoutes'
 import React from 'react'
 import AboutClassic from '@/components/Features/About/AboutClassic'
 import aboutData from '@/Data/aboutData'
@@ -15,6 +16,7 @@ const About = () => {
         </div>
       </div>
 
+      <Qoutes />
       <Footer />
     </div>
   )

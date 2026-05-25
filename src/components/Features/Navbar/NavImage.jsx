@@ -8,7 +8,7 @@ const NavImage = () => {
             aria-label='Go to home'
             className="
              w-12 h-12 rounded-xl cursor-pointer 
-            bg-[url('/Profile-pic.png')] bg-cover
+            bg-[url('/images/Profile-pic.png')] bg-cover
             bg-center border dark:border-zinc-500
             transition-transform hover:scale-95 
             bg-amber-100 shrink-0"
