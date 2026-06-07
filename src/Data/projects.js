@@ -54,7 +54,7 @@ const projects = [
       "Structured the backend using a modular architecture for scalability, maintainability, and production readiness.",
     ],
     "Github-Link": "https://github.com/Sumitr995/Auth-Service-App",
-    "Live-Link": "https://auth-app-sumitr995.netlify.app/",
+    "Live-Link": "https://auth.sumitr995.me/",
   },
   {
     id: "personal-engineering-portfolio",
