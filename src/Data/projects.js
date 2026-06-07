@@ -33,7 +33,7 @@ const projects = [
     title: "Auth Service — MERN Authentication System",
     duration: "Oct 2025 - Dec 2025",
     preview: "/thumbnail/Auth-App.png",
-    previews: [],
+    previews: ["/thumbnail/Auth-App-1.png"],
     techStack: [
       { name: "React", icon: "/techstack/react-icon.png" },
       { name: "Node.js", icon: "/techstack/node-icon.png" },
