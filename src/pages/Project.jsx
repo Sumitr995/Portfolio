@@ -1,17 +1,22 @@
-import Footer from '@/components/mycompo/Footer/Footer'
-import UnderDevelopment from '@/components/other/underDevelopment'
+import Footer from '@/components/Features/Footer/Footer'
+import Qoutes from '@/components/Features/Qoutes/Qoutes'
 import React from 'react'
+import ProjectsTimeline from '@/components/Features/Project/ProjectsTimeline'
 
 const Project = () => {
   return (
     <div className='flex w-full flex-col'>
-        <div className='w-1/2 min-h-screen border-2 border-zinc-500 m-auto'>
-          Project
+      <div className='w-full min-h-screen mx-auto p-4 md:w-1/2 md:max-w-3xl md:m-auto md:p-6'>
+        <div className='text-zinc-500 dark:text-zinc-300 font-bold text-2xl'>Projects</div>
+        <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300'>My Personal & Open Source Projects</div>
+        <div className='mt-5'>
+          <ProjectsTimeline />
         </div>
-        <Footer/>
-        <UnderDevelopment/>
+      </div>
+      <Qoutes />
+      <Footer />
     </div>
   )
 }
 
-export default Project
+export default Project;

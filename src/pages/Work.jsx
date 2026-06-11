@@ -1,17 +1,21 @@
-import Footer from '@/components/mycompo/Footer/Footer'
+import Footer from '@/components/Features/Footer/Footer'
+import Qoutes from '@/components/Features/Qoutes/Qoutes'
 import React from 'react'
-import UnderDevelopment from '@/components/other/underDevelopment'
-import WorkCard from '@/components/mycompo/Work/WorkCard'
+import WorkCard from '@/components/Features/Work/WorkCard'
 import { workData } from '@/Data/WorkData'
 
 const Work = () => {
   return (
     <div className='flex w-full flex-col'>
 
-      {/* SAME LAYOUT */}
-      <div className='w-1/2 min-h-screen m-auto p-6'>
+      
 
-        <div className="border-t border-zinc-800">
+      {/* LAYOUT */}
+      <div className='w-full min-h-screen mx-auto p-4 md:w-1/2 md:max-w-3xl md:m-auto md:p-6'>
+        <div className='text-zinc-500 dark:text-zinc-300 font-bold text-2xl'>Work Experience</div>
+        <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300'>A glimpse into my professional journey and accomplishments.</div>
+
+        <div className='mt-5'>
           {workData.map((job, index) => (
             <WorkCard key={index} job={job} />
           ))}
@@ -19,8 +23,8 @@ const Work = () => {
 
       </div>
 
+      <Qoutes />
       <Footer/>
-      <UnderDevelopment/>
 
     </div>
   )
