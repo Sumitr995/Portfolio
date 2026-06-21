@@ -171,7 +171,7 @@ export class ONekoElement extends HTMLElement {
     if (this.followMouse) this.attachListeners();
     else this.detachListeners();
 
-    this.style.backgroundImage ||= "url('./oneko.gif')";
+    this.style.backgroundImage ||= "url('/images/oneko.gif')";
     this.style.imageRendering ||= "pixelated";
     this.style.width ||= "32px";
     this.style.height ||= "32px";
