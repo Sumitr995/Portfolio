@@ -144,10 +144,10 @@ export default function Preloader({
           </div>
 
           {/* Sprite-based loader using Oneko coordinates (driven by preloader progress) */}
-          {/* <div className="absolute bottom-0 left-0 w-full h-12"> */}
-            {/* <div className="absolute inset-x-0 bottom-0 h-px bg-border/30" /> */}
-            {/* <NekoLoader progress={progress} /> */}
-          {/* </div> */}
+          {/* <div className="absolute bottom-0 left-0 w-full h-12">
+            <div className="absolute inset-x-0 bottom-0 h-px bg-border/30" />
+            <NekoLoader progress={progress} />
+          </div> */}
         </motion.div>
       )}
     </AnimatePresence>
