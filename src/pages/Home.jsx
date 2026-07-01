@@ -15,6 +15,7 @@ import GitHubGraph from '@/components/other/githubGraph';
 import HomeStack from '@/components/Features/Home/HomeStack'
 import certificates from '@/Data/certificates'
 import HomeCertificateList from '@/components/Features/Home/HomeCertificateList'
+import { BlurFade } from '@/components/ui/blur-fade'
 
 
 const Home = () => {
@@ -29,25 +30,23 @@ const Home = () => {
 
 
         {/* HOME PROFILE */}
-        <div className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0'>
+        <BlurFade inView delay={0.1} className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0'>
           <HomeProfile />
           <HomeHeading />
           <HomeButtons />
           <HomeLinks />
-        </div>
-
-
+        </BlurFade>
 
         {/* WORK EXPERIENCE */}
-        <div className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0'>
+        <BlurFade inView delay={0.15} className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0'>
           <WorkExperience />
           <div className='w-full flex items-center justify-center'>
             <Button className={"m-3"} variant="outline" onClick={() => navigate('/work')}>Show More</Button>
           </div>
-        </div>
+        </BlurFade>
 
         {/* GitHub Contributions */}
-        <div className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0'>
+        <BlurFade inView delay={0.15} className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0'>
           <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300 mt-5'>Featured</div>
           <div className='text-zinc-500 dark:text-zinc-300 font-bold text-xl'>GitHub Contribution</div>
           <GitHubGraph
@@ -55,17 +54,16 @@ const Home = () => {
             accessToken={import.meta.env.VITE_GITHUB_TOKEN}
             className="mt-2"
           />
-        </div>
-
+        </BlurFade>
 
         {/* PROJECTS */}
-        <div className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0'>
+        <BlurFade inView delay={0.15} className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0'>
           <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300 mt-5 '>Featured</div>
           <div className='text-zinc-500 dark:text-zinc-300 font-bold text-2xl'>Projects</div>
           <div className='w-full mt-2'>
-            <div className="w-full flex flex-wrap gap-2 justify-center min-[1400px]:grid min-[1400px]:grid-cols-2 min-[1400px]:gap-4 min-[1400px]:justify-items-center">
+            <div className="w-full flex flex-wrap gap-3 justify-center md:grid md:grid-cols-2 md:gap-4 md:justify-items-center">
               {projects.slice(0, 4).map((project, i) => (
-                <ProjectCard key={i} data={project} />
+                <ProjectCard key={i} data={project} direction={i % 2 === 0 ? "left" : "right"} />
               ))}
             </div>
           </div>
@@ -74,10 +72,10 @@ const Home = () => {
           <div className='w-full flex items-center justify-center'>
             <Button className={"m-3"} variant="outline" onClick={() => navigate('/projects')}>Show More</Button>
           </div>
-        </div>
+        </BlurFade>
 
         {/* Certifications */}
-        <div className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0'>
+        <BlurFade inView delay={0.15} className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0'>
           <div className='text-sm font-semibold dark:text-zinc-700 text-zinc-300 mt-5'>Featured</div>
           <div className='text-zinc-500 dark:text-zinc-300 font-bold text-2xl'>Certificates</div>
           <div className='mt-4'>
@@ -88,12 +86,11 @@ const Home = () => {
           <div className='w-full flex items-center justify-center'>
             <Button className={"m-3"} variant="outline" onClick={() => navigate('/certificates')}>Show More</Button>
           </div>
+        </BlurFade>
 
-        </div>
-
-        <div className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0'>
+        <BlurFade inView delay={0.15} className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0'>
           <HomeStack />
-        </div>
+        </BlurFade>
 
       </div>
       <Qoutes />

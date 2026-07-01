@@ -17,7 +17,7 @@ const Navlists = () => {
     })()
 
     return (
-        <div className='items-center hidden  sm:flex px-2.5 border border-zinc-500/70 rounded-4xl my-2.5 bg-white/70 dark:bg-zinc-950/30'>
+        <div className='items-center hidden sm:flex px-2.5 border border-zinc-500/70 rounded-4xl my-2.5 bg-white/70 dark:bg-zinc-950/30'>
             <Tabs value={activeTab}>
                 <TabsList variant='underline'>
                     <TabsTab onClick={() => navigate('/')} value="tab-1">Portfolio</TabsTab>
@@ -25,7 +25,9 @@ const Navlists = () => {
                     <TabsTab onClick={() => navigate('/projects')} value="tab-3">Projects</TabsTab>
                     <TabsTab onClick={() => navigate('/about')} value="tab-4">About</TabsTab>
                     <TabsTab onClick={() => navigate('/contact')} value="tab-5">Contact</TabsTab>
-                    <AnimatedThemeToggler origin="top-right" duration={1000} className={" px-2.5 cursor-pointer "} />
+                    <div className="ml-1 flex items-center">
+                        <AnimatedThemeToggler origin="top-right" duration={1000} className="px-2.5 cursor-pointer" />
+                    </div>
                 </TabsList>
             </Tabs>
         </div>
