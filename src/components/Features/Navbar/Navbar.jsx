@@ -10,13 +10,13 @@ const Navbar = () => {
       <div className=" w-full sm:w-1/2 sm:max-w-3xl  h-16  flex items-center justify-between mx-5 sm:justify-between">
         <NavImage />
         <Navlists />
-        <div className='flex items-center justify-center gap-3 sm:hidden'>
+        <div className="flex items-center gap-2 sm:hidden">
           <AnimatedThemeToggler
-          duration={1000}
-          origin="button"
-          className="inline-flex items-center justify-center p-2 rounded-lg border hover:bg-black/5 dark:hover:bg-white/10 hover:border-black/10 dark:hover:border-white/10"
-        />
-        <NavIcon />
+            origin="top-right"
+            duration={1000}
+            className="inline-flex items-center justify-center p-2 rounded-lg border border-zinc-300/70 bg-white/70 dark:bg-zinc-900/60 hover:bg-black/5 dark:hover:bg-white/10 hover:border-black/10 dark:hover:border-white/10"
+          />
+          <NavIcon />
         </div>
       </div>
     </div>

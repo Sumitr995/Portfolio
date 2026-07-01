@@ -1,9 +1,10 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { motion, useInView } from "motion/react";
 import { Globe, Github, ArrowRight } from "lucide-react";
 import { contrastClassFor } from "@/Utils/techIconUtils";
 import { Link } from "react-router-dom";
 
-export default function ProjectCard({ data }) {
+export default function ProjectCard({ data, direction = "up" }) {
   const [iconSrcByTech, setIconSrcByTech] = useState({});
   const [cdnIconByTech, setCdnIconByTech] = useState({});
 
@@ -60,63 +61,78 @@ export default function ProjectCard({ data }) {
 
   const projectId = data?.id;
 
+  const cardRef = useRef(null)
+  const inView = useInView(cardRef, { once: true, margin: "-40px" })
+
+  const fromOutside = useMemo(() => {
+    if (direction === "left") return { opacity: 0, x: -30 }
+    if (direction === "right") return { opacity: 0, x: 30 }
+    return { opacity: 0, y: 40 }
+  }, [direction])
+
+  const atRest = useMemo(() => {
+    if (direction === "left" || direction === "right") return { opacity: 1, x: 0 }
+    return { opacity: 1, y: 0 }
+  }, [direction])
+
   return (
-    <div className="group relative w-full min-[1400px]:max-w-sm rounded-3xl overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 shadow-sm hover:shadow-md transition-all duration-300">
+    <motion.div
+      ref={cardRef}
+      initial={fromOutside}
+      animate={inView ? atRest : {}}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="group relative w-full max-w-sm md:max-w-none rounded-2xl overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl hover:shadow-primary/10 dark:hover:shadow-primary/20 hover:border-primary/50 dark:hover:border-primary/60 transition-all duration-500">
 
       {/* Thumbnail */}
-      <div className="relative h-40 sm:h-44 overflow-hidden ">
+      <div className="relative h-44 sm:h-48 md:h-52 overflow-hidden">
+        {/* Hover gradient border accent */}
+        <div className="absolute inset-x-0 bottom-0 h-0.5 bg-linear-to-r from-primary/0 via-primary to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20" />
 
-        {/* Image */}
         <img
           src={data.preview}
           alt={data.title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
         />
 
-        {/* Dark overlay for readability */}
         <div className="absolute inset-0 bg-black/10" />
-
-        {/* Optional gradient overlay */}
-        <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
 
         {/* Top Right Icons */}
         <div className="absolute top-4 right-4 flex gap-2 z-10">
           {data?.["Live-Link"] && data["Live-Link"] !== "NIL" && (
             <a href={data["Live-Link"]} target="_blank" rel="noreferrer"
-              className="flex items-center justify-center w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm">
-              <Globe size={14} />
+              className="flex items-center justify-center w-8 h-8 rounded-full bg-white/10 hover:bg-white/25 text-white backdrop-blur-md transition-all hover:scale-110">
+              <Globe size={15} />
             </a>
           )}
           <a href={data["Github-Link"]} target="_blank" rel="noreferrer"
-            className="flex items-center justify-center w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm">
-            <Github size={14} />
+            className="flex items-center justify-center w-8 h-8 rounded-full bg-white/10 hover:bg-white/25 text-white backdrop-blur-md transition-all hover:scale-110">
+            <Github size={15} />
           </a>
         </div>
 
         {/* Status */}
-        <div className="absolute bottom-4 left-5 flex items-center gap-1.5 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-3 py-1 z-10">
+        <div className="absolute bottom-4 left-5 flex items-center gap-1.5 bg-black/20 backdrop-blur-md border border-white/10 rounded-full px-3 py-1 z-10">
           <span className={`w-1.5 h-1.5 rounded-full ${statusDotClass}`} />
-          <span className="text-[10px] text-white/80">{status}</span>
+          <span className="text-[10px] font-medium text-white/90 uppercase tracking-wider">{status}</span>
         </div>
       </div>
 
       {/* Content */}
-      <div className="px-5 pt-5 pb-5 space-y-4">
+      <div className="p-5 space-y-3">
 
         {/* Title */}
-        <h3 className="text-sm font-semibold text-zinc-900 dark:text-white leading-snug">
+        <h3 className="text-base font-semibold text-zinc-900 dark:text-white leading-snug group-hover:text-primary transition-colors">
           {data.title}
         </h3>
 
         {/* Description */}
-        <p className="text-xs text-zinc-600 dark:text-white/60 line-clamp-2">
+        <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed line-clamp-2">
           {data.description[0]}
         </p>
 
-        <div className="border-t border-zinc-200 dark:border-zinc-700" />
-
         {/* Tech Stack */}
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center pt-1">
 
           <div className="flex items-center">
             {data.techStack.slice(0, 4).map((tech, i) => (
@@ -134,49 +150,55 @@ export default function ProjectCard({ data }) {
                   <div
                     key={tech.name}
                     title={tech.name}
-                    className="w-6 h-6 rounded-full bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-600 flex items-center justify-center overflow-hidden"
                     style={{
-                      marginLeft: i === 0 ? 0 : "-6px",
+                      marginLeft: i === 0 ? 0 : "-8px",
                       zIndex: 10 - i,
                     }}
                   >
-                    <img
-                      src={src}
-                      alt={tech.name}
-                      className={`w-3.5 h-3.5 ${contrastClassFor(tech?.name)}`}
-                      onError={() => {
-                        setIconSrcByTech((prev) => {
-                          const current = prev[techKey];
-                          if (current === null) return prev;
+                    <div className="w-7 h-7 rounded-full bg-zinc-100 dark:bg-zinc-800 border-2 border-white dark:border-zinc-900 flex items-center justify-center overflow-hidden hover:scale-110 transition-transform">
+                      <img
+                        src={src}
+                        alt={tech.name}
+                        className={`w-4 h-4 ${contrastClassFor(tech?.name)}`}
+                        onError={() => {
+                          setIconSrcByTech((prev) => {
+                            const current = prev[techKey];
+                            if (current === null) return prev;
 
-                          const nextFallback = getCdnFallback(tech?.name);
-                          if (nextFallback && src !== nextFallback) {
-                            return { ...prev, [techKey]: nextFallback };
-                          }
+                            const nextFallback = getCdnFallback(tech?.name);
+                            if (nextFallback && src !== nextFallback) {
+                              return { ...prev, [techKey]: nextFallback };
+                            }
 
-                          return { ...prev, [techKey]: null };
-                        });
-                      }}
-                    />
+                            return { ...prev, [techKey]: null };
+                          });
+                        }}
+                      />
+                    </div>
                   </div>
                 );
               })()
             ))}
+            {data.techStack.length > 4 && (
+              <span className="ml-1 text-[10px] font-medium text-zinc-400 dark:text-zinc-500">
+                +{data.techStack.length - 4}
+              </span>
+            )}
           </div>
 
           {/* Button */}
           {projectId ? (
             <Link
               to={`/projects/${projectId}`}
-              className="flex items-center gap-1 text-xs font-medium text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition"
+              className="flex items-center gap-1.5 text-xs font-medium text-zinc-400 hover:text-primary dark:text-zinc-500 dark:hover:text-primary transition-colors"
             >
               View Details
-              <ArrowRight className="w-3 h-3" />
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
             </Link>
           ) : null}
 
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

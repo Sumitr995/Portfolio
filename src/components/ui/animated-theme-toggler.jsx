@@ -53,32 +53,37 @@ export const AnimatedThemeToggler = ({
       return
     }
 
-    const { innerWidth: w, innerHeight: h } = window
     const rect = buttonEl.getBoundingClientRect()
+    const viewportWidth = window.visualViewport?.width ?? window.innerWidth
+    const viewportHeight = window.visualViewport?.height ?? window.innerHeight
+    const scrollX = window.scrollX ?? 0
+    const scrollY = window.scrollY ?? 0
 
-    const x =
+    const clipPathFrames =
       origin === "top-right"
-        ? w
-        : Math.round(rect.left + rect.width / 2)
+        ? [
+            "circle(0px at 100% 0%)",
+            "circle(150vmax at 100% 0%)",
+          ]
+        : (() => {
+            const x = Math.round(scrollX + rect.left + rect.width / 2)
+            const y = Math.round(scrollY + rect.top + rect.height / 2)
+            const maxRadius = Math.max(
+              Math.hypot(x - scrollX, y - scrollY),
+              Math.hypot(x - (scrollX + viewportWidth), y - scrollY),
+              Math.hypot(x - scrollX, y - (scrollY + viewportHeight)),
+              Math.hypot(x - (scrollX + viewportWidth), y - (scrollY + viewportHeight))
+            )
 
-    const y =
-      origin === "top-right"
-        ? 0
-        : Math.round(rect.top + rect.height / 2)
-
-    const maxRadius = Math.max(
-      Math.hypot(x - 0, y - 0),
-      Math.hypot(x - w, y - 0),
-      Math.hypot(x - 0, y - h),
-      Math.hypot(x - w, y - h)
-    )
+            return [
+              `circle(0px at ${x}px ${y}px)`,
+              `circle(${maxRadius}px at ${x}px ${y}px)`,
+            ]
+          })()
 
     document.documentElement.animate(
       {
-        clipPath: [
-          `circle(0px at ${x}px ${y}px)`,
-          `circle(${maxRadius}px at ${x}px ${y}px)`,
-        ],
+        clipPath: clipPathFrames,
       },
       {
         duration,
