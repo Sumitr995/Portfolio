@@ -74,7 +74,7 @@ const projects = [
       { name: "Multer", icon: "/techstack/node-icon.png" },
       { name: "Zod", icon: "https://cdn.simpleicons.org/zod/000000" },
       { name: "PyMuPDF", icon: "/techstack/python-icon.png" },
-      { name: "Tailwind CSS", icon: "/techstack/tailwindcss-icon.png" },
+      // { name: "Tailwind CSS", icon: "/techstack/tailwindcss-icon.png" },
     ],
     description: [
       "Built an AI-powered document intelligence platform that transforms PDFs into structured, easy-to-read knowledge documents using Microsoft MarkItDown, AI-powered document understanding, and a modular Node.js–Python processing pipeline.",
@@ -200,32 +200,6 @@ const projects = [
     ],
     "Github-Link": "https://github.com/Sumitr995/Portfolio",
     "Live-Link": "https://sumitr995.me/",
-  },
-  {
-    id: "ai-cold-email-composer",
-    title: "AI Cold Email Composer",
-    duration: "Jan 2026 - Present",
-    preview: "/thumbnail/Cold-Email-Composer.png",
-    previews: [],
-    techStack: [
-      { name: "Node.js", icon: "/techstack/node-icon.png" },
-      { name: "Express.js", icon: "/techstack/express-icon.png" },
-      { name: "OpenAI API", icon: "/svgs/chatgpt.svg" },
-      { name: "Google Sheets API", icon: "/techstack/gcp-icon.png" },
-      { name: "Nodemailer", icon: "/techstack/nodemailer.png" },
-    ],
-    description: [
-      "Built an AI-powered backend system that generates personalized cold emails and automates lead management using Google Sheets as a lightweight database.",
-    ],
-    details: [
-      "Integrated OpenAI API to generate context-aware, personalized email content based on structured lead data.",
-      "Designed a RESTful backend to orchestrate AI generation, lead retrieval, and automated email delivery workflows.",
-      "Utilized Google Sheets API as a dynamic database for real-time lead storage and tracking.",
-      "Implemented automated email delivery using Nodemailer with Google SMTP, including validation and unique tracking.",
-      "Optimized and tested API workflows using Postman to ensure reliability and smooth automation.",
-    ],
-    "Github-Link": "https://github.com/Sumitr995/Cold-Email-Composer",
-    "Live-Link": "NIL",
   },
   {
     id: "hackathon-ticket-system",
