@@ -10,7 +10,7 @@ const projects = [
       { name: "TypeScript", icon: "/techstack/typescript.png" },
       { name: "Tailwind CSS", icon: "/techstack/tailwindcss-icon.png" },
       { name: "Shadcn UI", icon: "/techstack/shadcn-icon.png" },
-      { name: "Framer Motion", icon: "https://cdn.simpleicons.org/framer/0055ff" },
+      {name: "Framer Motion", icon: "https://cdn.simpleicons.org/framer/0055ff",},
       { name: "GSAP", icon: "https://cdn.simpleicons.org/greensock/88ce02" },
       { name: "Vercel", icon: "https://cdn.simpleicons.org/vercel/000000" },
       { name: "Figma", icon: "https://cdn.simpleicons.org/figma/000000" },
@@ -40,7 +40,7 @@ const projects = [
       { name: "Express.js", icon: "/techstack/express-icon.png" },
       { name: "MongoDB", icon: "/techstack/mongodb-icon.png" },
       { name: "JWT", icon: "/techstack/jwt-icon.png" },
-      { name: "Bcrypt", icon: "" },
+      { name: "Bcrypt", icon: "https://cdn.jsdelivr.net/npm/lucide-static@latest/icons/hash.svg" },
       { name: "Nodemailer", icon: "/techstack/nodemailer.png" },
     ],
     description: [
@@ -57,6 +57,124 @@ const projects = [
     "Live-Link": "https://auth.sumitr995.me/",
   },
   {
+    id: "markforge",
+    title: "MarkForge — AI Document Intelligence Platform",
+    duration: "Jul 2026 - Present",
+    preview: "/thumbnail/MarkForge.png",
+    previews: [],
+    techStack: [
+      { name: "React", icon: "/techstack/react-icon.png" },
+      { name: "TypeScript", icon: "/techstack/typescript.png" },
+      { name: "Node.js", icon: "/techstack/node-icon.png" },
+      { name: "Express.js", icon: "/techstack/express-icon.png" },
+      { name: "Python", icon: "/techstack/python-icon.png" },
+      { name: "Microsoft MarkItDown", icon: "/techstack/microsoft.png" },
+      { name: "Groq API", icon: "/techstack/api-icon.png" },
+      { name: "AI SDK", icon: "/svgs/chatgpt.svg" },
+      { name: "Multer", icon: "/techstack/node-icon.png" },
+      { name: "Zod", icon: "https://cdn.simpleicons.org/zod/000000" },
+      { name: "PyMuPDF", icon: "/techstack/python-icon.png" },
+      { name: "Tailwind CSS", icon: "/techstack/tailwindcss-icon.png" },
+    ],
+    description: [
+      "Built an AI-powered document intelligence platform that transforms PDFs into structured, easy-to-read knowledge documents using Microsoft MarkItDown, AI-powered document understanding, and a modular Node.js–Python processing pipeline.",
+    ],
+    details: [
+      "Designed a modular document processing pipeline integrating a TypeScript backend with Python services to extract, process, and transform PDF documents into structured Markdown.",
+      "Integrated Microsoft MarkItDown to accurately convert PDFs into Markdown while preserving headings, lists, tables, code blocks, and document structure.",
+      "Implemented seamless Node.js ↔ Python communication using child processes with structured JSON responses, UTF-8 encoding support, and centralized error handling.",
+      "Built an AI-powered document intelligence engine that automatically classifies uploaded documents into Resume, Research Paper, Book, Study Notes, Technical Documentation, or General categories.",
+      "Developed a prompt routing system with specialized AI prompts for different document types, enabling context-aware knowledge transformation instead of generic summarization.",
+      "Engineered a clean service-oriented backend architecture using Express.js, TypeScript, reusable services, centralized error middleware, async handlers, Zod validation, and standardized API responses.",
+      "Refactored the Python processing layer into dedicated services (markdown extraction and asset extraction) to improve maintainability and prepare for future rich media support.",
+      "Implemented automatic temporary file lifecycle management, ensuring uploaded documents are securely deleted after processing to optimize storage and improve privacy.",
+      "Established the foundation for rich document extraction by preparing support for images, diagrams, charts, and other embedded PDF assets using PyMuPDF.",
+      "Optimized AI workflows through document classification, prompt engineering, modular architecture, and preprocessing to improve scalability and support future large-document processing.",
+    ],
+    "Github-Link": "https://github.com/Sumitr995/MarkForge",
+    "Live-Link": "NIL",
+  },
+  {
+    id: "project-iris-auth-platform",
+    title: "Project I.R.I.S. — Authentication & Authorization Platform",
+    duration: "Jul 2026 - Present",
+    preview: "/thumbnail/project-iris.png",
+    previews: [],
+
+    techStack: [
+      { name: "Node.js", icon: "/techstack/node-icon.png" },
+      { name: "TypeScript", icon: "/techstack/typescript.png" },
+      { name: "Express.js", icon: "/techstack/express-icon.png" },
+      { name: "PostgreSQL", icon: "/techstack/postgres-icon.png" },
+      { name: "Prisma ORM", icon: "https://cdn.simpleicons.org/prisma/2D3748" },
+      { name: "Redis", icon: "https://cdn.simpleicons.org/redis/DC382D" },
+      { name: "JWT", icon: "/techstack/jwt-icon.png" },
+      { name: "Docker", icon: "/techstack/docker-icon.png" },
+      { name: "Zod", icon: "https://cdn.simpleicons.org/zod/000000" },
+      { name: "Pino", icon: "https://cdn.simpleicons.org/pino/687634" },
+      { name: "Jest", icon: "https://cdn.simpleicons.org/jest/C21325" },
+      { name: "Swagger", icon: "https://cdn.simpleicons.org/swagger/85EA2D" },
+    ],
+
+    description: [
+      "Building a production-grade Authentication & Authorization Platform inspired by Auth0, Clerk, Firebase Auth, and Supabase Auth with a strong focus on scalable backend architecture, security engineering, and system design.",
+      "Designed using Clean Architecture, Service & Repository patterns, PostgreSQL, Redis, and TypeScript to simulate how enterprise identity providers manage users, sessions, devices, roles, and permissions.",
+    ],
+
+    details: [
+      "Architected the backend using Clean Architecture with feature-based modules, Service Layer, Repository Pattern, DTOs, centralized configuration, structured logging, and global error handling.",
+      "Designed a relational PostgreSQL database supporting users, active sessions, registered devices, refresh tokens, verification tokens, roles, permissions, and RBAC relationships before implementation.",
+      "Implementing secure authentication workflows including registration, login, logout, email verification, password reset, refresh token rotation, session revocation, device management, and login history.",
+      "Building a flexible authorization system using Role-Based Access Control (RBAC), permission-based middleware, resource ownership checks, and hierarchical admin roles.",
+      "Integrating Redis for OTP storage, session caching, refresh token management, rate limiting, token blacklisting, and performance optimization using TTL-based caching strategies.",
+      "Applying security best practices including OWASP Top 10 protections, secure password hashing, HTTP security headers, brute-force mitigation, account lockout, secure cookies, and secrets management.",
+      "Planning OAuth 2.0 and OpenID Connect integrations with Google, GitHub, and Microsoft using Authorization Code Flow with PKCE.",
+      "Implementing Multi-Factor Authentication (MFA) using TOTP, Google Authenticator, QR code provisioning, and recovery codes.",
+      "Containerizing the complete stack with Docker Compose for the API server, PostgreSQL, and Redis while maintaining environment-specific configurations.",
+      "Developing comprehensive API documentation using Swagger/OpenAPI and ensuring reliability through unit and integration testing with Jest and Supertest.",
+    ],
+
+    "Github-Link": "https://github.com/Sumitr995/Project-I.R.I.S",
+    "Live-Link": "NIL",
+  },
+  {
+    id: "ai-cold-email-composer",
+    title: "AI Cold Email Composer",
+    duration: "Jan 2026 - Present",
+    preview: "/thumbnail/Cold-Email-Composer.png",
+    previews: [],
+
+    techStack: [
+      { name: "Node.js", icon: "/techstack/node-icon.png" },
+      { name: "Express.js", icon: "/techstack/express-icon.png" },
+      { name: "OpenAI API", icon: "/svgs/chatgpt.svg" },
+      { name: "Google Sheets API", icon: "/techstack/gcp-icon.png" },
+      { name: "Nodemailer", icon: "/techstack/nodemailer.png" },
+      { name: "REST API", icon: "/techstack/api-icon.png" },
+      { name: "Postman", icon: "/techstack/postman-icon.png" },
+    ],
+
+    description: [
+      "Developed an AI-powered backend platform that automates personalized cold email generation, lead management, and email delivery using OpenAI, Google Sheets, and Nodemailer.",
+      "Designed a modular REST API architecture that streamlines the complete outreach workflow—from lead retrieval and AI content generation to automated email dispatch and tracking.",
+    ],
+
+    details: [
+      "Engineered a scalable Express.js backend following RESTful design principles to orchestrate AI-powered email generation, lead management, and outbound email workflows.",
+      "Integrated the OpenAI API to generate personalized, context-aware cold emails using structured lead information such as company, role, recipient name, and business context.",
+      "Leveraged Google Sheets API as a lightweight cloud database for storing, updating, and managing lead records without requiring a traditional SQL database.",
+      "Implemented automated email delivery using Nodemailer with Google SMTP, including recipient validation, configurable sender settings, and reliable email dispatch.",
+      "Designed reusable service modules to separate business logic, AI integration, Google Sheets operations, and email services for improved maintainability and scalability.",
+      "Built secure REST endpoints for lead retrieval, AI email generation, and email sending with structured request validation and consistent API responses.",
+      "Tested and validated API workflows using Postman, ensuring reliable request handling, proper error responses, and smooth end-to-end automation.",
+      "Implemented comprehensive error handling and asynchronous workflow management to improve system reliability during external API interactions.",
+      "Created a reusable backend architecture that can be extended with features such as CRM integration, analytics dashboards, email scheduling, and multi-provider AI support.",
+    ],
+
+    "Github-Link": "https://github.com/Sumitr995/Cold-Email-Composer",
+    "Live-Link": "NIL",
+  },
+  {
     id: "personal-engineering-portfolio",
     title: "Personal Engineering Portfolio",
     duration: "Nov 2025 - Mar 2026",
@@ -64,11 +182,11 @@ const projects = [
     previews: [],
     techStack: [
       { name: "React 19", icon: "/techstack/react-icon.png" },
-      { name: "Bun", icon: "/techstack/bun-icon.png" },
+      { name: "Bun", icon: "/svgs/bun-icon.svg" },
       { name: "Tailwind CSS v4", icon: "/techstack/tailwindcss-icon.png" },
-      { name: "Framer Motion", icon: "" },
+      { name: "Framer Motion", icon: "https://cdn.simpleicons.org/framer/0055ff" },
       { name: "Shadcn UI", icon: "/techstack/shadcn-icon.png" },
-      { name: "Vercel", icon: "" },
+      { name: "Vercel", icon: "https://cdn.simpleicons.org/vercel/000000" },
     ],
     description: [
       "Built a high-performance, responsive portfolio using React 19 and Bun, showcasing full-stack projects with a focus on clean UI, smooth animations, and fast load times.",
@@ -114,8 +232,7 @@ const projects = [
     title: "Hackathon Ticket System",
     duration: "Nov 2024 - Dec 2025",
     preview: "/thumbnail/ticket-system.png",
-    previews: [
-    ],
+    previews: [],
     techStack: [
       { name: "React", icon: "/techstack/react-icon.png" },
       { name: "HTML", icon: "/techstack/html-icon.png" },
@@ -136,7 +253,6 @@ const projects = [
     "Github-Link": "https://github.com/Sumitr995/Ticket-System",
     "Live-Link": "https://ticketsystem-sumitr995.netlify.app/",
   },
-  
 ];
 
 export default projects;
