@@ -80,7 +80,7 @@ export default function ProjectCard({ data, direction = "up" }) {
       ref={cardRef}
       initial={fromOutside}
       animate={inView ? atRest : {}}
-      transition={{ duration: 0.6, ease: "easeOut" }}
+      transition={{ duration: 0.25, ease: "easeOut" }}
       className="group relative w-full max-w-sm md:max-w-none rounded-2xl overflow-hidden bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl hover:shadow-primary/10 dark:hover:shadow-primary/20 hover:border-primary/50 dark:hover:border-primary/60 transition-all duration-500">
 
       {/* Thumbnail */}
