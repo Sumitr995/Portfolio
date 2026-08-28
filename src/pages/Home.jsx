@@ -34,7 +34,13 @@ const Home = () => {
         <BlurFade inView delay={0.1} className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0'>
           <HomeProfile />
           <HomeHeading />
-          <HomeCTA />
+          <div className='hidden md:block'>
+            <HomeCTA />
+          </div>
+          <div className='md:hidden'>
+            <HomeButtons />
+            <HomeLinks />
+          </div>
         </BlurFade>
 
         {/* WORK EXPERIENCE */}

@@ -6,7 +6,7 @@ const HomeProfile = () => {
     const images = useMemo(() => ["/images/Profile-pic.png", "/images/Profilepic2.jpg"], []);
 
     return (
-        <div className="relative h-24 sm:h-48 md:h-[28vh] w-full overflow-hidden rounded-xl border border-zinc-200/90 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950">
+        <div className="relative h-24 sm:h-48 md:h-[28vh] w-full overflow-hidden rounded-xl  bg-zinc-50 dark:bg-zinc-950">
             <Threads
                 className="absolute inset-0 pointer-events-none opacity-35 dark:invert dark:opacity-25"
                 color={[0.2, 0.2, 0.24]}
