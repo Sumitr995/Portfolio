@@ -28,8 +28,8 @@ function waitForFonts() {
 }
 
 export default function Preloader({
-  minShowMs = 4000, // Increased to show animation
-  maxWaitMs = 15000,
+  minShowMs = 1400,
+  maxWaitMs = 8000,
   label = "Loading Experience...",
   onDone = () => {},
 }) {
@@ -42,14 +42,14 @@ export default function Preloader({
     let cancelled = false;
     const startTime = Date.now();
 
-    // Smooth progress increment
+    // Keep progress feeling smooth but complete sooner.
     const interval = setInterval(() => {
       if (progressRef.current < 90) {
-        progressRef.current += Math.random() * 2;
+        progressRef.current += 2 + Math.random() * 4;
         if (progressRef.current > 90) progressRef.current = 90;
         setProgress(progressRef.current);
       }
-    }, 100);
+    }, 80);
 
     (async () => {
       const ready = Promise.all([waitForWindowLoad(), waitForFonts()]);
@@ -75,7 +75,7 @@ export default function Preloader({
       }
 
       if (!cancelled) {
-        await sleep(500); // Small pause at 100%
+        await sleep(120);
         setVisible(false);
       }
     })();
@@ -97,7 +97,7 @@ export default function Preloader({
           initial={{ opacity: 1 }}
           exit={{ 
             opacity: 0,
-            transition: { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] } 
+            transition: { duration: 0.45, ease: [0.43, 0.13, 0.23, 0.96] } 
           }}
           className="fixed inset-0 z-9999 flex flex-col items-center justify-center bg-background text-foreground select-none"
           role="status"

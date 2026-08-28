@@ -2,7 +2,7 @@ import React from 'react'
 
 const HomeLinks = () => {
     return (
-        <div className='h-auto md:h-15 w-full flex flex-wrap gap-2 mt-8 sm:mt-2 items-center'>
+        <div className='h-auto md:h-15 w-auto flex flex-wrap gap-2 mt-8 sm:mt-2 items-center'>
             <a target='_blank' href="https://www.linkedin.com/in/Sumitr995/"><img className='cursor-pointer' src="/svgs/linkedin.svg" alt="linkedin" /></a>
             <a target='_blank' href="https://github.com/Sumitr995"><img className='cursor-pointer' src="/svgs/github-fill.svg" alt="github" /></a>
             <a target='_blank' href="https://leetcode.com/u/Sumitr995/"><img className='cursor-pointer' src="/svgs/Leetcode.svg" alt="LeetCode" /></a>

@@ -16,6 +16,7 @@ import HomeStack from '@/components/Features/Home/HomeStack'
 import certificates from '@/Data/certificates'
 import HomeCertificateList from '@/components/Features/Home/HomeCertificateList'
 import { BlurFade } from '@/components/ui/blur-fade'
+import HomeCTA from '@/components/Features/Home/HomeCTA'
 
 
 const Home = () => {
@@ -33,8 +34,7 @@ const Home = () => {
         <BlurFade inView delay={0.1} className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0'>
           <HomeProfile />
           <HomeHeading />
-          <HomeButtons />
-          <HomeLinks />
+          <HomeCTA />
         </BlurFade>
 
         {/* WORK EXPERIENCE */}

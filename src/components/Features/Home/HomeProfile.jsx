@@ -1,13 +1,22 @@
 import React, { useMemo } from "react";
 import PixelTransition from "@/components/ui/PixelTransition";
+import Threads from "@/components/ui/Threads";
 
 const HomeProfile = () => {
     const images = useMemo(() => ["/images/Profile-pic.png", "/images/Profilepic2.jpg"], []);
 
     return (
-        <div className="h-24 sm:h-48 md:h-[28vh] w-full relative">
+        <div className="relative h-24 sm:h-48 md:h-[28vh] w-full overflow-hidden rounded-xl border border-zinc-200/90 bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950">
+            <Threads
+                className="absolute inset-0 pointer-events-none opacity-35 dark:invert dark:opacity-25"
+                color={[0.2, 0.2, 0.24]}
+                amplitude={1.6}
+                distance={0.12}
+                enableMouseInteraction
+                aria-hidden="true"
+            />
             <PixelTransition
-                className="w-20 h-20 sm:w-24 sm:h-24 md:w-30 md:h-30 rounded-[60px] bg-amber-100 cursor-pointer border-2 border-black dark:border-zinc-500 absolute bottom-0 left-0 bg-cover bg-center bg-no-repeat text-black dark:text-zinc-100"
+                className="absolute left-1 top-1/2 z-10 h-20 w-20 -translate-y-1/2 rounded-[60px] border-2 border-black bg-amber-100 bg-cover bg-center bg-no-repeat text-black cursor-pointer dark:border-zinc-500 dark:text-zinc-100 sm:left-6 sm:h-24 sm:w-24 md:left-1 md:h-30 md:w-30"
                 aspectRatio="100%"
                 gridSize={13}
                 animationStepDuration={0.35}
