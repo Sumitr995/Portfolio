@@ -5,13 +5,14 @@ import { BlurFade } from "@/components/ui/blur-fade";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import AppRoutes from "./AppRoutes";
 import Preloader from "./components/other/Preloader";
+import { ClickSoundProvider } from "@/components/ui/click-sound-provider";
 // import UnderDevelopment from "./components/other/underDevelopment";
 
 export default function App() {
   const [preloadDone, setPreloadDone] = useState(false);
 
   return (
-    <>
+    <ClickSoundProvider>
       {!preloadDone && <Preloader onDone={() => setPreloadDone(true)} />}
       <Navbar />
       {/* Viewport pet */}
@@ -31,6 +32,6 @@ export default function App() {
         />
       )}
       {/* <UnderDevelopment /> */}
-    </>
+    </ClickSoundProvider>
   );
 }
