@@ -16,7 +16,7 @@ const HomeProfile = () => {
                 aria-hidden="true"
             />
             <PixelTransition
-                className="absolute left-1 top-1/2 z-10 h-20 w-20 -translate-y-1/2 rounded-[60px] border-2 border-black bg-amber-100 bg-cover bg-center bg-no-repeat text-black cursor-pointer dark:border-zinc-500 dark:text-zinc-100 sm:left-6 sm:h-24 sm:w-24 md:left-1 md:h-30 md:w-30"
+                className="absolute left-0 top-1/2 z-10 h-20 w-20 -translate-y-1/2 rounded-[60px] border-2 border-black bg-amber-100 bg-cover bg-center bg-no-repeat text-black cursor-pointer dark:border-zinc-500 dark:text-zinc-100 sm:left-6 sm:h-24 sm:w-24 md:left-1 md:h-30 md:w-30"
                 aspectRatio="100%"
                 gridSize={13}
                 animationStepDuration={0.35}
