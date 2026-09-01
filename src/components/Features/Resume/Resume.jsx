@@ -5,6 +5,8 @@ import Qoutes from '../Qoutes/Qoutes';
 import { BlurFade } from '@/components/ui/blur-fade'
 
 const Resume = () => {
+    const resumePdf = '/media/Sumit_Resume.pdf';
+
     return <>
         <div className='flex w-full flex-col items-center py-16 dark:bg-zinc-950'>
 
@@ -29,11 +31,11 @@ const Resume = () => {
                         <div className='w-3 h-3 rounded-full bg-green-500'></div>
 
                         <span className='ml-4 text-sm text-zinc-400'>
-                            ResumeSR4.pdf
+                            Sumit_Resume.pdf
                         </span>
                     </div>
                     <div className='ml-2 flex gap-4 items-center'>
-                        <a href="/media/ResumeSR4.pdf" download className='text-sm text-zinc-400 hover:text-zinc-300'>
+                        <a href={resumePdf} download className='text-sm text-zinc-400 hover:text-zinc-300'>
                             <img height={20} width={20} src="/svgs/download-2-line.svg" alt="Download" />
                         </a>
                         <a href={data.driveLink} target='_blank' rel="noopener noreferrer" className='text-sm text-zinc-400 hover:text-zinc-300'>
@@ -44,7 +46,7 @@ const Resume = () => {
 
                 {/* PDF */}
                 <iframe
-                    src="/media/ResumeSR4.pdf"
+                    src={resumePdf}
                     title="Resume"
                     className="w-full flex-1"
                 />
