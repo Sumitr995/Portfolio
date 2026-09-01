@@ -1,6 +1,8 @@
 "use client";
+
 import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "motion/react";
+
 import { cn } from "@/lib/utils";
 
 export const TextGenerateEffect = ({
@@ -8,47 +10,44 @@ export const TextGenerateEffect = ({
   className,
   filter = true,
   duration = 0.2,
-  staggerDelay = 0.05
+  staggerDelay = 0.05,
 }) => {
   const [scope, animate] = useAnimate();
-  let wordsArray = words.split(" ");
-  useEffect(() => {
-    animate("span", {
-      opacity: 1,
-      filter: filter ? "blur(0px)" : "none",
-    }, {
-      duration: duration ? duration : 1,
-      delay: stagger(staggerDelay),
-    });
-  }, [scope.current]);
+  const wordsArray = words.split(" ");
 
-  const renderWords = () => {
-    return (
-      <motion.div ref={scope}>
-        {wordsArray.map((word, idx) => {
-          return (
-            <motion.span
-              key={word + idx}
-              className="opacity-0"
-              style={{
-                filter: filter ? "blur(10px)" : "none",
-              }}>
-              {word}{" "}
-            </motion.span>
-          );
-        })}
-      </motion.div>
+  useEffect(() => {
+    animate(
+      "span",
+      {
+        opacity: 1,
+        filter: filter ? "blur(0px)" : "none",
+      },
+      {
+        duration: duration || 1,
+        delay: stagger(staggerDelay),
+      }
     );
-  };
+  }, [animate, duration, filter, staggerDelay, words]);
+
+  const renderWords = () => (
+    <motion.div ref={scope}>
+      {wordsArray.map((word, idx) => (
+        <motion.span
+          key={`${word}-${idx}`}
+          className="opacity-0"
+          style={{
+            filter: filter ? "blur(10px)" : "none",
+          }}
+        >
+          {word}{" "}
+        </motion.span>
+      ))}
+    </motion.div>
+  );
 
   return (
     <div className={cn("", className)}>
-      <div className="mt-4">
-        <div
-          className="leading-snug tracking-wide">
-          {renderWords()}
-        </div>
-      </div>
+      <div className="leading-snug tracking-wide">{renderWords()}</div>
     </div>
   );
 };
