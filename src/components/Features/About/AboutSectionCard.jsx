@@ -1,16 +1,13 @@
 import React from 'react'
+import { BentoCard, Label } from '@/components/Features/About/AboutBento'
 
-const AboutSectionCard = ({ title, eyebrow, children }) => {
+const AboutSectionCard = ({ title, eyebrow, icon: Icon, children, className = '' }) => {
   return (
-    <section className='rounded-3xl bg-transparent p-5'>
-      {eyebrow ? (
-        <div className='text-xs font-semibold text-zinc-500 dark:text-zinc-400'>{eyebrow}</div>
-      ) : null}
-      {title ? (
-        <h2 className='mt-1 text-lg font-bold text-zinc-700 dark:text-zinc-200'>{title}</h2>
-      ) : null}
-      <div className={title || eyebrow ? 'mt-4' : ''}>{children}</div>
-    </section>
+    <BentoCard className={className}>
+      {eyebrow ? <Label icon={Icon}>{eyebrow}</Label> : null}
+      {title ? <h3 className="mt-2 text-sm font-semibold text-foreground">{title}</h3> : null}
+      <div className={eyebrow || title ? 'mt-4' : ''}>{children}</div>
+    </BentoCard>
   )
 }
 

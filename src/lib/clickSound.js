@@ -83,7 +83,7 @@ export async function playClickSound() {
       const source = ctx.createBufferSource()
       source.buffer = buffer
       const gain = ctx.createGain()
-      gain.gain.value = 0.85
+      gain.gain.value = 0.425
       source.connect(gain).connect(ctx.destination)
       source.start(0, startSec, durSec + 0.02)
       // cleanup after
@@ -100,7 +100,7 @@ export async function playClickSound() {
     // Fallback: HTMLAudio element per play (allows overlap)
     const audio = new Audio(soundUrl)
     audio.preload = "auto"
-    audio.volume = 0.7
+    audio.volume = 0.35
     // need metadata before seeking; if not loaded, wait for canplay
     const playSlice = async () => {
       try {

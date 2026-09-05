@@ -1,17 +1,20 @@
 import React from 'react'
+import { BentoCard, Label } from '@/components/Features/About/AboutBento'
 
 const AboutFocus = ({ items }) => {
   if (!items?.length) return null
-
   return (
-    <div>
-      <h3 className='text-sm font-bold text-zinc-700 dark:text-zinc-200'>Now / Currently</h3>
-      <ul className='mt-2 list-disc space-y-1 pl-5 text-sm text-zinc-600 dark:text-zinc-300'>
-        {items.map((item) => (
-          <li key={item}>{item}</li>
+    <BentoCard>
+      <Label>Now • Currently</Label>
+      <div className="mt-4 flex flex-wrap gap-1.5">
+        {items.map((it) => (
+          <span key={it} className="inline-flex items-center rounded-full border bg-transparent px-2.5 py-1 text-xs font-medium text-foreground">
+            <span className="mr-1.5 h-1.5 w-1.5 rounded-full bg-primary" />
+            {it}
+          </span>
         ))}
-      </ul>
-    </div>
+      </div>
+    </BentoCard>
   )
 }
 
