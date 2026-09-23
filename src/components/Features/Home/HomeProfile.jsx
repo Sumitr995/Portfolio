@@ -3,7 +3,7 @@ import PixelTransition from "@/components/ui/PixelTransition";
 import Threads from "@/components/ui/Threads";
 
 const HomeProfile = () => {
-    const images = useMemo(() => ["/images/Profile-pic.png", "/images/Profilepic2.jpg"], []);
+    const images = useMemo(() => ["/images/Profile-pic.png", "/images/Profilepic2.jpg"] , []);
 
     return (
         <div className="relative h-24 sm:h-48 md:h-[28vh] w-full overflow-hidden rounded-xl  bg-zinc-50 dark:bg-zinc-950">

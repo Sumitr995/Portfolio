@@ -1,24 +1,22 @@
 import React from 'react'
+import { BentoCard, Label } from '@/components/Features/About/AboutBento'
 
 const AboutQuickFacts = ({ items }) => {
   const filtered = (items ?? []).filter((fact) => fact?.label && fact?.value)
   if (!filtered.length) return null
 
   return (
-    <div>
-      <h3 className='text-sm font-bold text-zinc-700 dark:text-zinc-200'>Quick Facts</h3>
-      <div className='mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2'>
+    <BentoCard>
+      <Label>Quick Facts</Label>
+      <div className="mt-4 grid grid-cols-2 gap-3">
         {filtered.map((fact) => (
-          <div
-            key={fact.label}
-            className='rounded-2xl border border-zinc-200 bg-white p-4 dark:border-zinc-700 dark:bg-zinc-900'
-          >
-            <div className='text-xs font-semibold text-zinc-500 dark:text-zinc-400'>{fact.label}</div>
-            <div className='mt-1 text-sm font-semibold text-zinc-700 dark:text-zinc-200'>{fact.value}</div>
+          <div key={fact.label} className="rounded-xl border bg-muted/10 p-3">
+            <div className="text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">{fact.label}</div>
+            <div className="mt-1 text-xs font-medium text-foreground truncate">{fact.value}</div>
           </div>
         ))}
       </div>
-    </div>
+    </BentoCard>
   )
 }
 

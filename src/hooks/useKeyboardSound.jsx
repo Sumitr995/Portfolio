@@ -1,7 +1,11 @@
-import { playClickSound } from "@/lib/clickSound"
+import { useClickSound } from "./useClickSound"
 
+/**
+ * @deprecated Use `useClickSound` from "@/hooks/useClickSound" instead.
+ * Kept for backwards compatibility.
+ */
 export function useKeyboardSound() {
-  return { play: playClickSound }
+  return useClickSound()
 }
 
 export default useKeyboardSound

@@ -17,6 +17,7 @@ import certificates from '@/Data/certificates'
 import HomeCertificateList from '@/components/Features/Home/HomeCertificateList'
 import { BlurFade } from '@/components/ui/blur-fade'
 import HomeCTA from '@/components/Features/Home/HomeCTA'
+import { WithClickSound } from '@/components/ui/click-sound'
 
 
 const Home = () => {
@@ -47,7 +48,9 @@ const Home = () => {
         <BlurFade inView delay={0.15} className='w-full md:w-1/2 md:max-w-3xl px-4 md:px-0'>
           <WorkExperience />
           <div className='w-full flex items-center justify-center'>
-            <Button className={"m-3"} variant="outline" onClick={() => navigate('/work')}>Show More</Button>
+            <WithClickSound>
+              <Button className={"m-3"} variant="outline" onClick={() => navigate('/work')}>Show More</Button>
+            </WithClickSound>
           </div>
         </BlurFade>
 
@@ -76,7 +79,9 @@ const Home = () => {
 
           {/* Project Button */}
           <div className='w-full flex items-center justify-center'>
-            <Button className={"m-3"} variant="outline" onClick={() => navigate('/projects')}>Show More</Button>
+            <WithClickSound>
+              <Button className={"m-3"} variant="outline" onClick={() => navigate('/projects')}>Show More</Button>
+            </WithClickSound>
           </div>
         </BlurFade>
 
@@ -90,7 +95,9 @@ const Home = () => {
 
           {/* Certificate Button */}
           <div className='w-full flex items-center justify-center'>
-            <Button className={"m-3"} variant="outline" onClick={() => navigate('/certificates')}>Show More</Button>
+            <WithClickSound>
+              <Button className={"m-3"} variant="outline" onClick={() => navigate('/certificates')}>Show More</Button>
+            </WithClickSound>
           </div>
         </BlurFade>
 

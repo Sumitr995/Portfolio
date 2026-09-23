@@ -125,6 +125,7 @@ const aboutData = {
     summary,
     email: basics?.email ?? "",
     locationText: locationText || "Mumbai, India",
+    city: basics?.location?.city ?? "Mumbai",
     profiles: {
       linkedin: basics?.profiles?.linkedin ?? "",
       github: basics?.profiles?.github ?? "",
@@ -142,10 +143,40 @@ const aboutData = {
   highlights: (data?.achievements ?? []).slice(0, 4),
   quickFacts: [
     { label: "Location", value: locationText || "" },
-    { label: "Education", value: education?.degree ?? "" },
     { label: "Email", value: basics?.email ?? "" },
-    { label: "Phone", value: basics?.phone ?? "" },
+    { label: "Timezone", value: "IST (UTC+5:30)" },
+    { label: "Availability", value: "Open to opportunities" },
   ].filter((f) => f.value),
+
+  // No-paragraph identity — chips & traits instead of summary paragraph
+  identity: {
+    roles: ["Full Stack Developer", "Realtime Systems Builder", "API Architect"],
+    traits: [
+      "Scalable systems",
+      "Event-driven",
+      "Cloud-native",
+      "Clean code",
+      "High-performance UX",
+      "Problem solver",
+    ],
+    focus: ["Realtime & IoT", "API Platforms", "Cloud Deployments", "System Design"],
+  },
+  pillars: [
+    { k: "Stack", v: "MERN + Cloud", sub: "Node • React • Postgres" },
+    { k: "Realtime", v: "WebSockets • MQTT", sub: "Event-driven pipelines" },
+    { k: "Infra", v: "Docker • GCP • Nginx", sub: "Monitored & automated" },
+  ],
+  principles: [
+    { title: "Ship fast, keep it clean", detail: "Readable • Tested • Documented" },
+    { title: "Reliability over hype", detail: "Monitored • Fail-safe • Observable" },
+    { title: "UX is the feature", detail: "Fast • Accessible • Delightful" },
+  ],
+  stats: [
+    { value: "25+", label: "Cloud badges", hint: "GCP Study Jam" },
+    { value: "700+", label: "Users served", hint: "Designathon platform" },
+    { value: "10+", label: "Projects shipped", hint: "Full-stack & IoT" },
+    { value: "12", label: "Devs mentored", hint: "Cloud Study Jam" },
+  ],
 
   tech: {
     row1,
