@@ -3,7 +3,6 @@ import data from "@/Data/Data.json";
 import projectsData from "@/Data/projects";
 import ProjectsTimelineRow from "@/components/Features/Project/ProjectsTimelineRow";
 import { getCategory } from "@/Utils/projectUtils";
-import { WithClickSound } from "@/components/ui/click-sound";
 
 export default function ProjectsTimeline() {
   const projects = useMemo(() => projectsData ?? [], []);
@@ -41,23 +40,21 @@ export default function ProjectsTimeline() {
         {filters.map((f) => {
           const isActive = filter === f.key;
           return (
-            <WithClickSound>
-              <button
-                key={f.key}
-                type="button"
-                onClick={() => {
-                  setFilter(f.key);
-                  setOpenIndex(null);
-                }}
-                className={
-                  isActive
-                    ? "text-zinc-900 dark:text-zinc-100 underline cursor-pointer underline-offset-8 decoration-primary"
-                    : "text-zinc-500 hover:text-zinc-900 cursor-pointer dark:hover:text-zinc-100 transition"
-                }
-              >
-                {f.label}
-              </button>
-            </WithClickSound>
+            <button
+              key={f.key}
+              type="button"
+              onClick={() => {
+                setFilter(f.key);
+                setOpenIndex(null);
+              }}
+              className={
+                isActive
+                  ? "text-zinc-900 dark:text-zinc-100 underline cursor-pointer underline-offset-8 decoration-primary"
+                  : "text-zinc-500 hover:text-zinc-900 cursor-pointer dark:hover:text-zinc-100 transition"
+              }
+            >
+              {f.label}
+            </button>
           );
         })}
       </div>

@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { Link } from 'react-router-dom';
-import { WithClickSound } from '@/components/ui/click-sound';
 
 const FooterContent = () => {
 
@@ -22,15 +21,13 @@ const FooterContent = () => {
 
             <div className="flex flex-wrap items-center w-full h-auto md:h-10 md:w-[80%] gap-x-3 gap-y-2 text-sm text-zinc-500">
                 {content.map((item, index) => (
-                    <WithClickSound>
-                        <Link
-                            key={index}
-                            to={item.link}
-                            className="cursor-pointer text-zinc-500 hover:text-zinc-700 "
-                        >
-                            {item.name}
-                        </Link>
-                    </WithClickSound>
+                    <Link
+                        key={index}
+                        to={item.link}
+                        className="cursor-pointer text-zinc-500 hover:text-zinc-700 "
+                    >
+                        {item.name}
+                    </Link>
                 ))}
             </div>
         </div>
